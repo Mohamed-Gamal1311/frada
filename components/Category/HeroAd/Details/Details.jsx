@@ -54,17 +54,20 @@ export default function Details(props) {
 
     return (
         <section>
-            <nav className='me-5 d-flex flex-row-reverse'>
+            <nav className='me-5 d-flex flex-row-reverse' >
 
 
 
 
                 <DropdownButton
+                    className='fw-bold'
+
                     as={ButtonGroup}
                     id={`dropdown-variants-transparent`}
                     variant="transparent"
+                    fontWeight="bold"
                     title='الترتيب حسب'
-
+                    align={{ xl: 'end' }}
                 >
                     <Dropdown.Item eventKey="1">Action</Dropdown.Item>
                     <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
@@ -73,7 +76,7 @@ export default function Details(props) {
                     </Dropdown.Item>
 
                 </DropdownButton>
-                <Button variant="button" onClick={handleButtonClick}>{buttonTitle} فلتر البحث</Button>
+                <Button variant="button" onClick={handleButtonClick} style={{ fontWeight: 'bold' }}>{buttonTitle} فلتر البحث</Button>
             </nav>
             <div className='d-flex flex-row ' style={{ transition: "all 0.3s" }}>
 

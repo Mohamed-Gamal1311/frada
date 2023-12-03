@@ -132,3 +132,7 @@ main {
 input[type=checkbox] {
   accent-color: #F6941C;
 }
+
+#dropdown-variants-transparent {
+  font-weight: 700 !important;
+}
