@@ -40,7 +40,7 @@ export default function Scroller(props) {
 
     return (
         <div className='filter'>
-            <Card style={{ width: '18rem', height: '100vh', overflowY: 'scroll', textAlign: 'right', border: 'none' }}>
+            <Card style={{ width: '18rem', height: '100vh', overflowY: 'scroll', textAlign: 'right', border: 'none', marginTop: '30%' }}>
                 <Card.Body className='border-bottom-1' style={{ height: 'min-content !important' }}>
                     <Card.Title style={{ fontSize: '1.3em', marginBottom: '4%', color: '#D17A52', fontWeight: 'bold' }}>العروض والخصومات</Card.Title>
                     <Form style={{ backgroundColor: 'none', border: 'none', boxShadow: 'none', fontSize: '1.1em', fontWeight: 'bold' }} >
