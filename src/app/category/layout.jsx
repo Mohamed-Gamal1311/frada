@@ -2,6 +2,7 @@
 
 // import './globals.css'
 import Header from '../../../components/Header/Header'
+import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 
 // const cairo = Cairo({ subsets: ['arabic'] })
 

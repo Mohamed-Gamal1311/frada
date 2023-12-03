@@ -1,0 +1,104 @@
+.price-slide .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-slide .slider {
+    position: relative;
+    width: 200px;
+}
+
+.price-slide .slider__track,
+.price-slide .slider__range,
+.price-slide .slider__left-value,
+.price-slide .slider__right-value {
+    position: absolute;
+}
+
+.price-slide .slider__track,
+.price-slide .slider__range {
+    border-radius: 3px;
+    height: 2px;
+}
+
+.price-slide .slider__track {
+    background-color: #959595;
+    width: 100%;
+    z-index: 1;
+}
+
+.price-slide .slider__range {
+    background-color: #D17A52;
+
+    z-index: 2;
+}
+
+.price-slide .slider__left-value,
+.price-slide .slider__right-value {
+    color: #dee2e6;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.price-slide .slider__left-value {
+    left: 6px;
+    color: #332C32;
+}
+
+.price-slide .slider__right-value {
+    right: -4px;
+    color: #332C32;
+}
+
+/* Removing the default appearance */
+.price-slide .thumb,
+.price-slide .thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.price-slide .thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 200px;
+    outline: none;
+}
+
+.price-slide .thumb--left {
+    z-index: 3;
+}
+
+.price-slide .thumb--right {
+    z-index: 4;
+}
+
+/* For Chrome browsers */
+.price-slide .thumb::-webkit-slider-thumb {
+    background-color: #fff;
+    border: 3.75px solid #D17A52;
+    border-radius: 50%;
+    /* box-shadow: 0 0 1px 1px #ced4da; */
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}
+
+/* For Firefox browsers */
+.price-slide .thumb::-moz-range-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}

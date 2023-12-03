@@ -1,0 +1,72 @@
+.filter form {
+    height: unset;
+    width: unset;
+    /* border: 1px solid #332C32; */
+}
+
+.form-check {
+    min-height: unset !important;
+
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0 !important;
+    border: 0.25px solid #332C32;
+}
+
+.form-check-input:focus {
+    border: 1px solid #d17a526e;
+    outline: 0;
+    border: #d17a5297
+}
+
+.form-check-input:checked {
+    background-color: #D17A52;
+    border: 0.25px solid;
+    border-color: #332C32;
+}
+
+.filter .card-body {
+    flex: unset;
+    /* padding-bottom: 0.25%; */
+    border-bottom: 1px solid #332C32;
+
+}
+
+.filter .card-body:last-child {
+    border-bottom: none;
+}
+
+.sizes {
+    /* padding: 3%; */
+    margin: 2.5%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.sizes:hover {
+    background-color: #332C32;
+    color: #D17A52;
+}
+
+.sizes:active {
+    background-color: #332C32;
+    color: #D17A52;
+}
+
+.circle-colors {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #332C32;
+    /* padding: 2%; */
+    margin: 2%;
+
+}
+
+.container {
+    padding: 0;
+    height: unset !important;
+}

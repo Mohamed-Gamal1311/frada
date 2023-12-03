@@ -108,9 +108,21 @@ a {
 
 
 /* @import url('https://fonts.googleapis.com/css2?family=Allura&family=Bebas+Neue&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
-
+*/
 
 body {
-  font-family: 'Cairo', sans-serif;
+  scrollbar-color: #F6941C
+}
 
-} */
+.cards-holder {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+input[type=checkbox] {
+  accent-color: #F6941C;
+}
