@@ -114,6 +114,12 @@ body {
   scrollbar-color: #F6941C
 }
 
+main {
+
+  overflow-x: clip;
+
+}
+
 .cards-holder {
   margin-left: 2.5%;
   margin-right: 2.5%;

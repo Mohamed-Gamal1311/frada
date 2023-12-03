@@ -15,32 +15,16 @@ import Trademarks from './Nav/ScrollNavComponents/Trademarks/Trademarks';
 import Sizes from './Nav/ScrollNavComponents/Sizes/Sizes';
 import CircleColors from './Nav/ScrollNavComponents/CircleColors/CircleColors';
 import Slider from './Nav/ScrollNavComponents/Slider/Slider';
+import ScrollNav from './Nav/ScrollNav';
 
 
 export default function Scroller(props) {
 
-    const [isClicked, setIsClicked] = useState(false);
-    const [isClickedCircle, setIsClickedCircle] = useState(false);
-
-
-
-
-
-
 
 
     return (
-        <div className='filter'>
-            <Card style={{ width: '18rem', height: '80vh', overflowY: 'scroll', textAlign: 'right', border: 'none', marginTop: '12.5%' }}>
-                <OffersDiscounts />
-                <ChooseDiscounts />
-                <Trademarks />
-                <Sizes />
-                <CircleColors />
-                <Slider />
-            </Card>
-
-
+        <div className='filter' id="filter">
+            <ScrollNav />
         </div >
 
 

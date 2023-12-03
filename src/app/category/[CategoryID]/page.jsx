@@ -6,11 +6,13 @@ import Panel from '../../../../components/Category/HeroAd/AdContent/Panel'
 import CategoriesAd from '../../../../components/Category/HeroAd/CategoriesAd'
 // import CategoryProducts from '../../../../components/Category/HeroAd/Details/CategoryProducts/CategoryProducts'
 import Details from '../../../../components/Category/HeroAd/Details/Details'
+// import HeaderFilter from '../../../../components/Category/HeroAd/Details/HeaderFilter'
 export default function Category() {
     return (
         <>
             {/* <Header /> */}
             <CategoriesAd subcategory={0} />
+            {/* <HeaderFilter /> */}
             <Details />
 
         </>
