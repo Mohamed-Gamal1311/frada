@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useState, } from 'react';
 // import RangeSlider from 'react-bootstrap-range-slider';
-import MultiRangeSlider from './Nav/ScrollNavComponents/MulltiRangeSlider';
+import MultiRangeSlider from './Nav/ScrollNavComponents/MultiRangeSlider/MulltiRangeSlider';
 
 export default function Scroller(props) {
 
@@ -78,7 +78,7 @@ export default function Scroller(props) {
 
                 </Card.Body>
                 <Card.Body className='border-bottom-1' style={{ height: 'min-content !important', textAlign: 'right' }}>
-                    <Card.Title style={{ fontSize: '1.3em', marginBottom: '4%', color: '#D17A52', fontWeight: 'bold' }}>العروض والخصومات</Card.Title>
+                    <Card.Title style={{ fontSize: '1.3em', marginBottom: '4%', color: '#D17A52', fontWeight: 'bold' }}> اختر من الخصومات</Card.Title>
                     <Form.Select aria-label="Default select example" style={{ textAlign: 'right', borderColor: '#332c32', borderRadius: '20px', fontWeight: 'bold' }}>
                         <option>10%</option>
                         <option value="1">بدون خصومات</option>
@@ -132,7 +132,7 @@ export default function Scroller(props) {
                 </Card.Body>
 
                 <Card.Body>
-                    <Card.Title style={{ fontSize: '1.3em', marginBottom: '4%', color: '#D17A52', fontWeight: 'bold', border: 'none' }}>المقاسات</Card.Title>
+                    <Card.Title style={{ fontSize: '1.3em', marginBottom: '4%', color: '#D17A52', fontWeight: 'bold', border: 'none' }}>السعر</Card.Title>
                     <div className='price-slide'>
                         <MultiRangeSlider
                             min={0}
