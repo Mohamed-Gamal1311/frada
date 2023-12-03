@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={cairo.className}>{children}</body>
+      <body className={cairo.className} suppressHydrationWarning={true}>{children}</body>
     </html>
   )
 }

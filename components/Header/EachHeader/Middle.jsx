@@ -14,43 +14,43 @@ export default function Middle() {
     return (
         <header className="header-nav flex-rows">
             <div className="logo">
-                <Image src={Logo} />
+                <Image src={Logo} alt="Logo" />
             </div>
             <form className="search-bar" action="">
                 <input type="text" placeholder="ابحث عن منتج..." name="search2" />
-                <button type="submit"><i className="fa fa-search"><Image src={Search} /></i></button>
+                <button type="submit"><i className="fa fa-search"><Image src={Search} alt="Search" /></i></button>
             </form>
             <div className="option-list flex-rows">
                 <div className="option  last-option">
-                    <Image src={MyAccount} className='option-img' />
+                    <Image src={MyAccount} alt="My Account" className='option-img' />
                     <p className="option-desc">حسابي</p>
                 </div>
                 <div className="option">
-                    <Image src={Help} className='option-img' />
+                    <Image src={Help} alt="Help" className='option-img' />
 
 
                     <p className="option-desc">مركز المساعدة</p>
                 </div>
                 <div className="option">
-                    <Image src={MyWishes} className='option-img' />
+                    <Image src={MyWishes} alt="Wishes" className='option-img' />
 
 
                     <p className="option-desc">أمنياتي</p>
                 </div>
                 <div className="option">
-                    <Image src={Cart} className='option-img' />
+                    <Image src={Cart} alt="Complete Transactions" className='option-img' />
 
 
                     <p className="option-desc">عربة التسوق</p>
                 </div>
                 <div className="option">
-                    <Image src={Exporters} className='option-img' />
+                    <Image src={Exporters} alt="Exporters" className='option-img' />
 
 
                     <p className="option-desc">تجار وموزعين</p>
                 </div>
                 <div className="option">
-                    <Image src={Checkout} className='option-img' />
+                    <Image src={Checkout} alt="Checkout" className='option-img' />
 
 
                     <p className="option-desc">متابعة الشراء</p>

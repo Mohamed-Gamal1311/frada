@@ -9,6 +9,8 @@ export default function HeroAd() {
             <Image
                 src={Hero}
                 className='ad-img'
+                alt="Hero Panel"
+
             />
         </div>
 

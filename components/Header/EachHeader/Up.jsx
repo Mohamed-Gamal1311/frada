@@ -12,22 +12,22 @@ export default function Up() {
     return (
         <div className="message flex-rows">
             <div className="header-content">
-                <Image className="header-svg" src={Phone} />
+                <Image className="header-svg" src={Phone} alt="Phone" />
                 <span className="bolder">
                     +966-55-372-5995
                 </span>:اتصل بنا اليوم
             </div>
             <div className="header-content">
-                <Image className="header-svg" src={Mail} />
+                <Image className="header-svg" src={Mail} alt="Mail" />
 
                 <p>تابع كل جديد من خلال الإشتراك في النشرة الإخبارية</p>
             </div>
             <div className="header-content-logos">
-                <Image className='header-svg' src={Facebook} />
-                <Image className='header-svg' src={Instagram} />
-                <Image className='header-svg' src={Snapchat} />
-                <Image className='header-svg' src={Tiktok} />
-                <Image className='header-svg' src={Twitter} />
+                <Image className='header-svg' src={Facebook} alt="Facebook" />
+                <Image className='header-svg' src={Instagram} alt="Instagram" />
+                <Image className='header-svg' src={Snapchat} alt="Snapchat" />
+                <Image className='header-svg' src={Tiktok} alt="Tiktok" />
+                <Image className='header-svg' src={Twitter} alt="Twitter" />
 
 
             </div>

@@ -72,33 +72,44 @@ export default function Panel() {
         <>
 
             <div className="wrapper">
-                <i id="left" class="fa-solid fa-angle-left" onClick={() => handleScroll('left')}></i>
+                <i id="left" className="fa-solid fa-angle-left" onClick={() => handleScroll('left')}></i>
 
-                <div class="carousel" ref={carouselRef}>
+                <div className="carousel" ref={carouselRef}>
 
                     <Image
                         src={Panel1}
                         ref={cardRef}
+                        alt="Ad Panel"
                     />
                     <Image
                         src={Panel2}
                         ref={cardRef}
+                        alt="Ad Panel"
+
                     />
                     <Image
                         src={Panel3}
                         ref={cardRef}
+                        alt="Ad Panel"
+
                     />
                     <Image
                         src={Panel4}
                         ref={cardRef}
+                        alt="Ad Panel"
+
                     />
                     <Image
                         src={Panel5}
                         ref={cardRef}
+                        alt="Ad Panel"
+
                     />
                     <Image
                         src={Panel6}
                         ref={cardRef}
+                        alt="Ad Panel"
+
                     />
 
                 </div>
