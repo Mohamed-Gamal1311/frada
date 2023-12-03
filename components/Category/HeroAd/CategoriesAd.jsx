@@ -9,7 +9,7 @@ export default function CategoriesAd(props) {
         <section className='h-100 position-relative' style={{ marginBottom: '10%' }}>
             < HeroAd />
             {
-                props.subcategory == 1 &&
+                props.subcategory == 0 &&
                 <Panel />
             }
 

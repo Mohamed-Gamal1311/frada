@@ -9,7 +9,7 @@ export default function Category() {
     return (
         <>
             {/* <Header /> */}
-            <CategoriesAd subcategory={1} />
+            <CategoriesAd subcategory={0} />
 
         </>
     )
