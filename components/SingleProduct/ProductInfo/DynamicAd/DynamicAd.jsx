@@ -15,9 +15,9 @@ function DynamicAd() {
 
     return (
 
-        <div style={{ height: '100%' }} >
-            <div style={{ width: '100%', height: '80%' }}>
-                <Image src={Ad} style={{ width: 'auto', height: 'auto' }} />
+        <div className="px-3 py-3" style={{ height: '100%', width: '20%' }} >
+            <div>
+                <Image src={Ad} style={{ width: '100%', height: 'auto' }} />
             </div>
         </ div>
     )

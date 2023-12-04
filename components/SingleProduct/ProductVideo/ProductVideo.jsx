@@ -5,12 +5,12 @@ import Card from 'react-bootstrap/Card';
 
 function ProductVideo() {
     return (
-        <section className='d-flex justify-content-center px-5'>
-            <Card className="d-flex flex-row-reverse w-75" style={{ textAlign: "right", border: "2px solid #d17a52" }} >
+        <section className='d-flex justify-content-center px-5 py-5'>
+            <Card className="d-flex flex-row-reverse w-100" style={{ textAlign: "right", border: "1px solid #d17a52" }} >
                 <Card.Body className='w-50'>
-                    <Card.Title style={{ color: "#d17a52", textDecoration: 'underline' }}>حذاء فرادا شرقي</Card.Title>
-                    <Card.Text style={{ textAlign: "right" }} >
-                        <span style={{ textAlign: 'justify' }}>
+                    <Card.Title style={{ color: "#d17a52", textDecoration: 'underline', fontSize: '2.2em' }}>حذاء فرادا شرقي</Card.Title>
+                    <Card.Text className='pe-2 pt-2' style={{ textAlign: "right", lineHeight: '2em' }} >
+                        <span style={{ textAlign: 'justify', fontSize: '1.2em' }}>
                             ء ### code، يعتبر هذا الحذاء من أحدث التصاميم الحصرية والمميزة، وتم تصميمه خصيصاً لرجال الأعمال ومن أجل المقابلات الرسمية ، كما تم وضع المنتج خلال فترة اختبار وجودة، والاهتمام بفرادة التصميم عن غيره من التصاميم المتداولة بعناية شديدة من رواد التصميم والموضة بفريق عمل فرادا.
 
                             هذا الحذاء الشرقي مصنع بأحدث الأجهزة والمعدات التي تخدم راحة عملائنا، كما تم استخدام مواد وجلود عالية الجودة ولأننا نهتم بصحة عملائنا الكرام،  تم اختيار دعسه طبية وبطانة علوية مريحة جدا للقدم ، وحرصنا كل الحرص ان يكون وزن الحذاء خفيف لشعور بالراحة أثناء المش
