@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import SingleProduct from '../../../../../../../../components/SingleProduct/SingleProduct'
 // // import styles from './page.module.css'
 // import Header from "../../../../../../components/Header/Header"
 // import CategoriesAd from '../../../../../../components/Category/HeroAd/CategoriesAd'
@@ -8,7 +9,7 @@ export default function Product() {
     return (
         <>
 
-            hi from product subcategory
+            <SingleProduct />
 
         </>
 
