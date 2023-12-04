@@ -1,0 +1,26 @@
+.product-size {
+    width: 100%;
+}
+
+.size-available {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.size-available p {
+    border: solid .1px #ebe5e5;
+    width: 13%;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.size-available p:hover {
+    color: #D17A52;
+    background: #332C32;
+}

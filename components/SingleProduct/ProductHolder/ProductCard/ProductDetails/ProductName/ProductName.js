@@ -9,20 +9,25 @@ export default function ProductName() {
 
     return (
         <div>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem', textAlign: 'right' }}>
 
                 <Card.Body>
-                    <Card.Title> حذاء فرادا</Card.Title>
+                    <Card.Title style={{ fontSize: "4em" }}> حذاء فرادا</Card.Title>
 
                 </Card.Body>
-                <ListGroup className="list-group-flush" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <ListGroup className="list-group-flush" style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row-reverse', alignItems: 'center' }}>
 
                     <ListGroup.Item> fA2dgg</ListGroup.Item>
-                    <ListGroup.Item> <Rating
+                    <ListGroup.Item style={{
+                        display: 'flex',
+                        justifyContent: "space-between",
+                        alignItems: 'center',
+                        flexDirection: 'row-reverse'
+                    }}> <Rating
 
-                        initialRating={4}
-                        readonly
-                    />
+                            initialRating={4}
+                            readonly
+                        />
                         <p>تقييم 15</p>
                     </ListGroup.Item>
 

@@ -1,0 +1,85 @@
+.buttons-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.myhopy {
+    width: 206px;
+    border: none;
+    height: 35px;
+    background: #332C32;
+    color: #D17A52;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    justify-content: center;
+
+}
+
+.myhopy span {
+    margin-right: 7px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.Btn {
+    width: 240px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+.leftContainer {
+    width: 204px;
+    height: 100%;
+    background-color: #D17A52;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 4PX;
+}
+
+.leftContainer .like {
+    color: white;
+    font-weight: 600;
+    font-family: 'Cairo', sans-serif;
+}
+
+.likeCount {
+    width: 77px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    position: relative;
+    background-color: white;
+}
+
+
+
+
+
+.Btn:active .leftContainer svg {
+    transform: scale(1.15);
+    transform-origin: top;
+}
