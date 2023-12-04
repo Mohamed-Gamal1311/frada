@@ -1,0 +1,30 @@
+.nav-link {
+    color: #d17a52 !important;
+    font-weight: 700;
+    font-size: small !important;
+}
+
+.nav-item:hover {
+    border-color: transparent !important
+}
+
+.nav-text {
+    color: #332c32 !important;
+    font-weight: 400;
+    font-size: small !important;
+}
+
+/* .nav-link {
+    color: #d17a52 !important;
+} */
+
+.active {
+    color: #332c32 !important;
+    font-weight: 700;
+}
+
+a.nav-link.active {
+    background-color: white !important;
+    border: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}

@@ -2,11 +2,11 @@ import ProductHolder from './ProductHolder/ProductHolder'
 
 export default function SingleProduct() {
   return (
-    <main>
+    <section>
 
       <ProductHolder />
 
-    </main>
+    </section>
   )
 }
 

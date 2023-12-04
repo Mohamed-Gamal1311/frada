@@ -1,0 +1,40 @@
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+ol {
+    border: 0 !important;
+}
+
+li {
+    border: 0 !important;
+}
+
+.list-group-item {
+    border: 0 !important;
+}
+
+.page-link:hover {
+    color: #332c32;
+
+}
+
+.page-link {
+    color: #332c32;
+}
+
+.active>.page-link,
+.page-link.active {
+    z-index: 3;
+
+    color: #332c32 !important;
+    background-color: #d17a52 !important;
+    border: 1px solid#d17a52;
+    /* border-color: var(--bs-pagination-active-border-color); */
+}
+
+span.page-link {
+    background-color: #d17a52 !important;
+    color: #332c32 !important;
+}
