@@ -1,0 +1,20 @@
+.top-policies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-policies h1 {
+    margin: 0;
+}
+
+.top-policies .arabic {
+    color: #D17A52;
+    text-align: center;
+}
+
+.top-policies .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

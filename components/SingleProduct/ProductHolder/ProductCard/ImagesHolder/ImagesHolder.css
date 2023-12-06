@@ -1,6 +1,8 @@
 .ImagesHolder-content {
     display: flex;
     justify-content: flex-end;
+
+
 }
 
 
@@ -9,30 +11,37 @@
 .ImagesHolder {
     display: flex;
     justify-content: flex-end;
+    height: 100%;
+    /* 
+    height: 60vh; */
+    /* width: 80%; */
+    /* margin-bottom: 30px; */
 
-    height: 60vh;
 }
 
-.ImagesHolder .card-img-top {
-    width: 100%;
+/*.ImagesHolder .card-img-top {
+     width: 100%;
     height: 100%;
 
-}
+}*/
 
 .ImagesHolder .small-image {
-    width: 17%;
-    height: 60vh;
+    width: 20%;
+    height: 100vh;
+    overflow-x: scroll;
 }
 
 
 
 .ImagesHolder .small-image .image-hover {
-    width: 100%;
-    height: 15%;
-    margin-bottom: 75%;
+    /* width: 100%; */
+    /* height: 15%; */
+    /* margin-bottom: 75%; */
+
 }
 
 .image-hover img {
-    width: auto;
+    width: 100%;
     height: 100%;
+
 }

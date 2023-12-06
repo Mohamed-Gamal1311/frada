@@ -1,0 +1,92 @@
+.pragraph .paragraph-cont {
+    width: 90%;
+    margin: auto;
+    padding-top: 4%;
+    position: relative;
+    font-family: 'Cairo', sans-serif;
+}
+
+.pragraph .paragraph-cont .paragraph-header {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 13px;
+    width: 33%;
+    margin: auto;
+    position: absolute;
+    top: 3%;
+    right: 33%;
+}
+
+.pragraph .paragraph-cont .paragraph-header h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #D17A52;
+}
+
+.pragraph .paragraph-cont .paragraph-header p {
+    text-align: center;
+}
+
+.pragraph .paragraph-cont .paragraph-border {
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #D17A52;
+    border-radius: 8px;
+}
+
+
+.pragraph .box-para {
+    padding-top: 25px;
+}
+
+.pragraph .paragraph-cont .paragraph-border .paragrapharabic {
+    margin-bottom: 20px;
+    text-align: end;
+    margin-right: 40px;
+    color: #D17A52;
+    font-family: 'Cairo', sans-serif;
+    font-size: 25px;
+}
+
+.pragraph .paragraph-cont .paragraph-border .paragraphenglish {
+    text-align: left;
+    margin-left: 40px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 25px;
+}
+
+@media(max-width:1640px) {
+    .pragraph .paragraph-cont .paragraph-border .paragraphenglish {
+
+        font-size: 21px;
+    }
+
+    .pragraph .paragraph-cont .paragraph-border .paragrapharabic {
+
+        font-size: 21px;
+    }
+
+    .pragraph .paragraph-cont .paragraph-header p {
+        font-size: 13px;
+    }
+}
+
+@media(max-width:1400px) {
+    .pragraph .paragraph-cont .paragraph-border .paragraphenglish {
+
+        font-size: 18px;
+    }
+
+    .pragraph .paragraph-cont .paragraph-border .paragrapharabic {
+
+        font-size: 17px;
+    }
+
+    .pragraph .paragraph-cont .paragraph-header p {
+        font-size: 13px;
+    }
+
+    .pragraph .paragraph-cont .paragraph-header p {
+        font-size: 10px;
+    }
+}

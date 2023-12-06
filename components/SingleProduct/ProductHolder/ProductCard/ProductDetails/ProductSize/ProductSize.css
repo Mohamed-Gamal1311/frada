@@ -1,11 +1,19 @@
 .product-size {
     width: 100%;
+    margin-top: 20px;
+}
+
+.chose-size {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: end;
 }
 
 .size-available {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
     width: 80%;
 }
@@ -15,7 +23,7 @@
     width: 13%;
     border-radius: 5px;
     margin: 5px;
-    font-size: 26px;
+    font-size: 22px;
     text-align: center;
     font-weight: 700;
 }
@@ -23,4 +31,9 @@
 .size-available p:hover {
     color: #D17A52;
     background: #332C32;
+}
+
+.parent-size {
+    display: flex;
+    justify-content: end;
 }

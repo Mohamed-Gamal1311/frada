@@ -19,32 +19,38 @@ const ProductQuantity = ({ minValue = 0, maxValue = 100 }) => {
     };
 
     return (
-        <div>
+        <div className="quantit-page">
             <p className="title-quantit">اختر الكميه</p>
-            <div className="quantity-price">
+            <div className="parent-quantity">
+                <div className="quantity-price" >
 
-                <div className=" price">
 
-                    <p className="discound">8.88</p>
-                    <p className="price-buy">8.88</p>
-                    <p className="seprate">/</p>
-                </div>
 
-                <div className="ProductQuantity">
 
-                    <div className="btn-group">
 
-                        <button className="increment-btn" onClick={handleIncrementCounter}>
-                            <span className="material-symbols-outlined">+</span>
-                        </button>
-                        <p>{count}</p>
-                        <button className="decrement-btn" onClick={handleDecrementCounter}>
-                            <span className="material-symbols-outlined">-</span>
-                        </button>
 
+                    <div className="ProductQuantity">
+                        <div className=" price">
+
+                            <p className="discound">8.88</p>
+                            <p className="price-buy">8.88</p>
+                            <p className="seprate">/</p>
+                        </div>
+                        <div className="btn-group">
+
+                            <button className="increment-btn" onClick={handleIncrementCounter}>
+                                <span className="material-symbols-outlined">+</span>
+                            </button>
+                            <p>{count}</p>
+                            <button className="decrement-btn" onClick={handleDecrementCounter}>
+                                <span className="material-symbols-outlined">-</span>
+                            </button>
+
+                        </div>
                     </div>
-                </div>
 
+
+                </div>
             </div>
         </div>
     );

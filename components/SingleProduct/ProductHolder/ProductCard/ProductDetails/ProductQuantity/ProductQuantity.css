@@ -14,10 +14,19 @@
 
 }
 
+.quantit-page {
+    margin-top: 25px;
+}
+
 .title-quantit {
     font-size: 20px;
+    font-weight: bold;
     text-align: end;
 }
+
+/*.parent-quantity {
+    display: flex;
+}*/
 
 .quantity-price .price {
     display: flex;
@@ -43,12 +52,13 @@
     position: absolute;
     right: 69%;
     font-size: 70px;
-    top: -103%;
+    top: -88%;
     transform: rotate(45deg);
 }
 
 .ProductQuantity .title-quantit {
     width: 100%;
+
 }
 
 .btn-group {
@@ -93,4 +103,18 @@
 
     font-size: 35px;
     font-weight: 600;
+}
+
+.btn-group {
+    border-radius: none;
+}
+
+.btn-group,
+.btn-group-vertical {
+    width: 205px;
+}
+
+.btn-group {
+    --bs-border-radius: 4px;
+    border-radius: 4px;
 }

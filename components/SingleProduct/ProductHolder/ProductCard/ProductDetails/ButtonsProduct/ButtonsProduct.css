@@ -15,7 +15,7 @@
 .myhopy {
     width: 206px;
     border: none;
-    height: 35px;
+    height: 48px;
     background: #332C32;
     color: #D17A52;
     border-radius: 5px;
@@ -23,6 +23,9 @@
     align-items: center;
     /* justify-content: space-around; */
     justify-content: center;
+    /* padding: 2px 29px; */
+    font-size: 17px;
+    font-family: 'Cairo', sans-serif;
 
 }
 
@@ -33,16 +36,17 @@
 
 .Btn {
     width: 240px;
-    height: 35px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     border: none;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+    font-size: 17px;
     cursor: pointer;
     background-color: transparent;
+
 
 }
 
@@ -54,7 +58,9 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    border-radius: 4PX;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: none;
 }
 
 .leftContainer .like {
@@ -69,10 +75,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    border: solid .25px #D17A52;
     font-weight: 600;
     position: relative;
     background-color: white;
+    border-left: none;
 }
 
 
