@@ -38,3 +38,7 @@ span.page-link {
     background-color: #d17a52 !important;
     color: #332c32 !important;
 }
+
+.css-ryrseu-MuiRating-root {
+    flex-direction: row-reverse;
+}

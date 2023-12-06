@@ -19,7 +19,7 @@ function ProductInfo() {
 
 
         <div className='w-75 align-right pt-3 pe-5' >
-            <Nav variant="tabs" style={{ color: '#d17a52', justifyContent: 'flex-end', border: 'none' }} defaultActiveKey="link-4" onSelect={handleTabSelect}>
+            <Nav variant="tabs" style={{ color: '#d17a52', flexDirection: 'row-reverse', justifyContent: 'flex-end', border: 'none' }} defaultActiveKey="link-4" onSelect={handleTabSelect}>
                 <Nav.Item style={{ border: 'none' }}>
                     <Nav.Link eventKey="link-1">مواصفات المنتج</Nav.Link>
                 </Nav.Item>

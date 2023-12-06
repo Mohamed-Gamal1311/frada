@@ -120,6 +120,28 @@ main {
 
 }
 
+.w-35 {
+  width: 35%
+}
+
+.w-60 {
+  width: 60%
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.w-85 {
+  width: 85% !important;
+
+}
+
+.w-90 {
+  width: 90% !important;
+
+}
+
 .cards-holder {
   margin-left: 2.5%;
   margin-right: 2.5%;

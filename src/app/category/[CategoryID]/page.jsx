@@ -10,7 +10,6 @@ import Details from '../../../../components/Category/HeroAd/Details/Details'
 export default function Category() {
     return (
         <>
-            {/* <Header /> */}
             <CategoriesAd subcategory={0} />
 
             <Details />
