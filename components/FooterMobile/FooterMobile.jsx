@@ -26,24 +26,24 @@ export default function FooterMobile() {
             <div className="box1">
                 <div className="box1-content">
                     <div className='footer-textmobile'>
-                        <h4>تسوق منتجاتنا</h4>
+                        <h4 style={{ paddingTop: '1%' }}>تسوق منتجاتنا</h4>
 
                         <div className='catoegry-footer'>
                             <div className='name-cateogry'>
                                 <p> العروض والخصومات</p>
-                                <p style={{ width: '30%' }}> العطــــــــــــــــــــــور</p>
+                                <p > العطــــــــــــــــــــــور</p>
                             </div>
                             <div className='name-cateogry'>
                                 <p> النعــــــــــــــــــــــــال</p>
-                                <p style={{ width: '30%' }}> الــــــزي السعــــودي </p>
+                                <p > الــــــزي السعــــودي </p>
                             </div>
                             <div className='name-cateogry'>
                                 <p >  أحـــــذية كــلاسيـــــك</p>
-                                <p style={{ width: '30%' }}> الإكسســــــــــــوارات</p>
+                                <p > الإكسســــــــــــوارات</p>
                             </div>
                             <div className='name-cateogry'>
                                 <p>  أحـــــذية سبــــــــــــور</p>
-                                <p style={{ width: '30%' }}>  مستلزمــــــات الرجال</p>
+                                <p >  مستلزمــــــات الرجال</p>
                             </div>
                         </div>
 
@@ -61,15 +61,15 @@ export default function FooterMobile() {
                         <div className='catoegry-footer'>
                             <div className='name-cateogry'>
                                 <p> من نحــــــــــــــن</p>
-                                <p style={{ width: '35%' }}> سياسة الاستبدال والاسترجـاع</p>
+                                <p > سياسة الاستبدال والاسترجـاع</p>
                             </div>
                             <div className='name-cateogry'>
                                 <p> تواصل معنـــــــا</p>
-                                <p style={{ width: '35%' }}>  سياسة الشحن والتوصيـــــــل</p>
+                                <p >  سياسة الشحن والتوصيـــــــل</p>
                             </div>
                             <div className='name-cateogry'>
                                 <p>  وظائف فــــــرادا</p>
-                                <p style={{ width: '35%' }}> سياسة الخصوصية والأمــــان</p>
+                                <p > سياسة الخصوصية والأمــــان</p>
                             </div>
 
                         </div>
@@ -91,7 +91,7 @@ export default function FooterMobile() {
             </div>
             <div>
                 <div className='flex2-part1mobile' style={{ paddingTop: '3%' }}>
-                    <h3>أشترك في النشرة البريدية</h3>
+                    <h4>أشترك في النشرة البريدية</h4>
                     <div className='input-emailmobile'>
                         <input placeholder='أدخل بريدك الإلكتروني   ' />
                         <Image src={email} />
@@ -107,7 +107,7 @@ export default function FooterMobile() {
             </div>
             <hr></hr>
             <div className='logo-footer'>
-                <div className='frada-log'><Image src={logofrada} style={{ width: '100%' }} /></div>
+                <div className='frada-log'><Image src={logofrada} /></div>
 
                 <div className='content-social'> <Image src={snapchat} className='social-media' />
                     <Image src={tiktok} className='social-media' />

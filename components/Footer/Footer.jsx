@@ -54,7 +54,7 @@ export default function Footer() {
                                 </div>
                                 <hr></hr>
                                 <div className='footer-text'>
-                                    <div className='title-footertext'><h4> تعرف علينا اكتر</h4>
+                                    <div className='title-footertext'><h4 className='know'> تعرف علينا اكتر</h4>
 
                                     </div>
 
@@ -96,8 +96,8 @@ export default function Footer() {
 
                             <div className='socialdisk' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '23%' }}>
                                 <div className='content-social'> <Image src={snapchat} className='social-media' />
-                                    <Image src={tiktok} className='social-media' />
-                                    <Image src={twitter} className='social-media' />
+                                    <Image src={tiktok} className='social-media' alt='tiktok' />
+                                    <Image src={twitter} className='social-media' alt='twitter' />
                                     <Image src={insta} className='social-media' />
                                     <Image src={facebook} className='social-media' />
                                 </div>

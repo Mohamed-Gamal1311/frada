@@ -1,0 +1,221 @@
+.Login-page .login-components {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    font-family: 'Cairo', sans-serif;
+
+}
+
+.Login-page .login-components .Image-login {
+    width: 50%;
+    height: 100%;
+}
+
+.Login-page .login-components .Image-login img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.Login-page .login-components .form-content {
+    margin-right: 20px;
+    width: 43%;
+}
+
+.Login-page .login-components .form-content h2 {
+    padding-right: 10px;
+}
+
+.Login-page .login-components .form-content p {
+
+    font-size: 14px;
+
+
+
+}
+
+.Login-page .login-components .form-content .strong-password p {
+    margin-block-end: 22px;
+    margin-top: 40px;
+}
+
+.Login-page .login-components .form-content p span {
+    font-weight: 600;
+    color: #D17A52;
+    text-decoration: underline;
+
+}
+
+.Login-page .login-components .form-content .image-iconlogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Login-page .login-components .form-content .image-iconlogin .apple {
+    width: 12%;
+    border: 1px solid #D8D8D8;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px
+}
+
+.Login-page .login-components .form-content .image-iconlogin .facebook {
+    width: 12%;
+    border: 1px solid #D8D8D8;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 0px;
+}
+
+.Login-page .login-components .form-content .image-iconlogin .google {
+
+    border: 1px solid #D8D8D8;
+    border-radius: 2px;
+    width: 58%;
+    padding: 6px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Login-page .login-components .form-content .image-iconlogin .google p {
+    margin: 0;
+}
+
+.Login-page .login-components .form-content .or {
+    text-align: center;
+    color: #05060538;
+}
+
+.Login-page .login-components .form-content .input-content label {
+    color: #05060538;
+    display: block;
+}
+
+.Login-page .login-components .form-content .input-content input {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    width: 100%;
+    border-bottom: 1px solid #05060538;
+}
+
+.Login-page .login-components .strong-password .measure-pass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Login-page .login-components .strong-password .measure-pass hr {
+    width: 23%;
+    color: #41AA4F;
+    height: 1px;
+    background-color: #41AA4F;
+}
+
+.Login-page .login-components .security p {
+    color: #050605;
+    font-size: 12px;
+    display: inline;
+}
+
+.Login-page .login-components .security {
+    margin-top: 14%;
+
+}
+
+.Login-page .login-components .security p span {
+    color: #080F269E;
+    text-decoration: underline;
+}
+
+
+
+
+
+.Login-page .login-components .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.Login-page .login-components .submit button {
+    background: #D17A52;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-family: 'Cairo', sans-serif;
+    padding: 6px 0px;
+}
+
+@media(max-width:1050px) {
+    .Login-page .login-components .Image-login {
+        display: none;
+    }
+
+    .Login-page .login-components .form-content {
+        width: 85%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+        border-radius: 6px;
+        margin: 0;
+        margin-top: 27px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .Login-page .login-components {
+        width: 100%;
+        background: #F6F6F6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .Login-page .login-components .form-content .input-content input {
+        width: 85%;
+    }
+}
+
+@media(max-width:700px) {
+    .Login-page .login-components .form-content h2 {
+        font-size: 15px;
+    }
+
+    .Login-page .login-components .form-content {
+        height: max-content;
+    }
+
+    .Login-page .login-components .form-content p {
+        font-size: 10px;
+    }
+
+    .Login-page .login-components .form-content .image-iconlogin .google {
+        padding: 5px 2px;
+        height: 27px;
+
+    }
+
+    .Login-page .login-components .form-content .image-iconlogin .apple {
+        padding: 5px 2px;
+        height: 27px;
+    }
+
+    .Login-page .login-components .form-content .image-iconlogin .facebook {
+        padding: 7px 2px;
+        height: 23px;
+    }
+}
