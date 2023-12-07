@@ -1,20 +1,100 @@
-import Image from 'next/image'
-import styles from '../../src/app/page.module.css'
-import Up from './EachHeader/Up'
-import Middle from './EachHeader/Middle'
-import Bottom from './EachHeader/Bottom'
-import "./Header.css"
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import home from "../../../public/Images/Bottomhead/home_icon.svg";
 
+import "./Bottom.css";
 
-export default function Header() {
+export default function Bottom() {
+    const [activeIndex, setActiveIndex] = useState(0);
 
+    useEffect(() => {
+        const listElements = document.querySelectorAll('.list');
 
+        const activeLink = (index) => {
+            listElements.forEach((item) => item.classList.remove('active'));
+            listElements[index].classList.add('active');
+        };
+
+        const handleClick = (index) => {
+            setActiveIndex(index);
+        };
+
+        listElements.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                activeLink(index);
+                handleClick(index);
+            });
+        });
+
+        // Cleanup event listeners on component unmount
+        return () => {
+            listElements.forEach((item, index) => {
+                item.removeEventListener('click', () => {
+                    activeLink(index);
+                    handleClick(index);
+                });
+            });
+        };
+    }, []); // Empty dependency array ensures the effect runs only once, on component mount
 
     return (
-        <>
-            <Up />
-            <Middle />
-            <Bottom />
-        </>
-    )
+        <div className='holder'>
+            <div className="navigation">
+                <ul>
+                    <li className={`list ${activeIndex === 0 ? 'active' : ''}`}>
+                        <a href="#">
+                            <span className="icon" width="50px" height="50px">
+
+                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+                            </span>
+                            <span className="text">Home</span>
+                        </a>
+                    </li>
+                    <li className={`list ${activeIndex === 1 ? 'active' : ''}`}>
+                        <a href="#">
+                            <span className="icon" width="50px" height="50px">
+
+                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+
+                            </span>
+                            <span className="text">Profile</span>
+                        </a>
+                    </li>
+                    <li className={`list ${activeIndex === 2 ? 'active' : ''}`}>
+                        <a href="#">
+                            <span className="icon" width="50px" height="50px">
+
+                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+
+                            </span>
+                            <span className="text">Message</span>
+                        </a>
+                    </li>
+                    <li className={`list ${activeIndex === 3 ? 'active' : ''}`}>
+                        <a href="#">
+                            <span className="icon" width="50px" height="50px">
+
+                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+
+                            </span>
+                            <span className="text">Photos</span>
+                        </a>
+                    </li>
+                    <li className={`list ${activeIndex === 4 ? 'active' : ''}`}>
+                        <a href="#">
+                            <span className="icon" width="50px" height="50px">
+                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+
+                            </span>
+                            <span className="text">Settings</span>
+                        </a>
+                    </li>
+                    <div className="indicator">
+
+
+                    </div>
+                </ul>
+            </div>
+        </div>
+    );
 }

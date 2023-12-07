@@ -7,7 +7,7 @@ import Middle from './EachHeader/Middle';
 import Bottom from './EachHeader/Bottom';
 import "./Header.css";
 import UpMobile from "./HeaderMobile/Up";
-
+import BottomMobile from "./HeaderMobile/Bottom"
 export default function Header() {
     const [isMobile, setIsMobile] = useState(false);
 
@@ -31,7 +31,10 @@ export default function Header() {
     return (
         <>
             {isMobile ? (
-                <UpMobile />
+                <>
+                    <UpMobile />
+                    <BottomMobile />
+                </>
             ) : (
                 <>
                     <Up />
