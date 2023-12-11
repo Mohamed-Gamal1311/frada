@@ -10,46 +10,103 @@ body {
 
 .Foooter-mobile .box1 {
     width: 65%;
-    margin: auto;
+
     font-family: 'Cairo', sans-serif;
 
 }
 
-.Foooter-mobile .box1 h4 {
-    text-align: center;
-    font-size: 25px;
-    margin: 0;
+.Foooter-mobile .flexx {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    width: 90%;
+    margin: auto;
 }
+
+.Foooter-mobile .flexx hr {
+    height: 149px;
+    transform: rotate(0deg);
+    border: revert-layer;
+}
+
+.Foooter-mobile .component-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+}
+
+.Foooter-mobile .component-footer .flexx2 {
+    display: flex;
+
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+.Foooter-mobile .component-footer .flexx2-pay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 90%;
+    margin: auto;
+
+}
+
+.Foooter-mobile .component-footer .flexx2-pay .pay-mobile {
+    display: flex;
+}
+
+.Foooter-mobile .box1 h4 {
+    text-align: right;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 11%;
+}
+
 
 .Foooter-mobile .box1 .catoegry-footer .name-cateogry {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
 }
 
 .Foooter-mobile .box1 .catoegry-footer p {
     display: block;
     margin-bottom: 8px;
+    margin-right: 11%;
+    font-size: 12px;
+    line-height: 24px;
+
 }
+
 
 .Foooter-mobile .paypart1-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 7%;
+    margin-left: 110px;
 }
 
 .paypart1-mobile img {
-    margin-left: 10px;
+    margin-left: 5px;
+    width: 12%;
+    height: auto;
 }
 
 .Foooter-mobile .flex2-part1mobile h4 {
-    text-align: center;
     font-family: 'Cairo', sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     margin: 0;
+    text-align: right;
+    padding-right: 9%;
+    margin-bottom: 10px;
 }
+
 
 .Foooter-mobile .flex2-part1mobile .input-emailmobile {
     margin: auto;
@@ -60,10 +117,15 @@ body {
 }
 
 .Foooter-mobile .flex2-part1mobile .input-emailmobile input {
-    width: 75%;
+    width: 85%;
     border-radius: 5px;
     padding: 1%;
     font-family: 'Cairo', sans-serif;
+    border: none;
+}
+
+.Foooter-mobile .flex2-part1mobile .input-emailmobile input::placeholder {
+    font-size: 11px;
 }
 
 .Foooter-mobile .flex2-part1mobile .input-emailmobile img {
@@ -71,17 +133,18 @@ body {
     right: 80%;
     top: 23%;
     height: 54%;
+    width: auto;
 }
 
 .Foooter-mobile .map-mobile {
     padding-top: 2%;
+    width: 55%;
 }
 
 .Foooter-mobile .map-mobile .map {
 
     margin: auto;
-    display: flex;
-    justify-content: center;
+
 }
 
 .Foooter-mobile .map-mobile .map iframe {
@@ -90,14 +153,15 @@ body {
 }
 
 .Foooter-mobile .content-social {
-    margin: auto;
+    width: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
 .Foooter-mobile .frada-log {
-    width: 100%;
+    width: 65%;
 }
 
 .Foooter-mobile hr {
@@ -107,11 +171,12 @@ body {
 
 .Foooter-mobile .frada-log img {
     width: 100%;
+    height: 100%;
 }
 
 .end-footermobile p {
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Cairo', sans-serif;
 }
 
@@ -129,15 +194,126 @@ body {
     font-Size: '25px';
 }
 
+.social-media {
+    padding: 0;
+
+}
+
+
+
+.parent-email {
+    width: 50%;
+}
+
 @media(max-width:1200px) {
     .Foooter-mobile {
         display: block;
     }
 }
 
-@media(max-width:600px) {
-    .Foooter-mobile .flex2-part1mobile .input-emailmobile input {
+@media(max-width:750px) {
+    .Foooter-mobile .flexx {
+        flex-wrap: wrap;
+        margin: 0;
+        width: 100%;
+    }
+
+    .Foooter-mobile .box1 .catoegry-footer .name-cateogry {
+        justify-content: space-between;
+    }
+
+    .Foooter-mobile .box1 {
+        width: 75%;
+
+        margin: auto;
+    }
+
+    .Foooter-mobile .flex2-part1mobile h4 {
+        margin-bottom: 5px;
         font-size: 10px;
+        width: 85%;
+        text-align: center;
+    }
+
+    .swprate-none {
+        display: none;
+    }
+
+    .seprate-div {
+        height: .75px;
+        width: 100%;
+        background: #707070;
+        opacity: 17.8%;
+    }
+
+    .Foooter-mobile .box1 .catoegry-footer p {
+        margin-right: 0;
+    }
+
+    .Foooter-mobile .component-footer .flexx2 {
+        flex-direction: column;
+    }
+
+    .Foooter-mobile .map-mobile .map {
+        margin-bottom: 3%;
+    }
+
+    .Foooter-mobile .map-mobile {
+        width: 100%;
+    }
+
+    .Foooter-mobile .map-mobile .map iframe {
+        width: 79%;
+        border-radius: 5px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Foooter-mobile .frada-log {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .Foooter-mobile .box1 h4 {
+        margin-right: 0;
+    }
+
+    .Foooter-mobile .component-footer {
+        flex-direction: column;
+    }
+
+    .Foooter-mobile .component-footer .flexx2-pay {
+        flex-direction: column;
+    }
+
+    .Foooter-mobile .paypart1-mobile {
+        margin-left: 0;
+        margin-bottom: 4%;
+    }
+
+    .parent-email {
+        width: 80%;
+    }
+
+    .social-media {
+        width: 10%;
+    }
+
+    .social-diff {
+        width: 6%;
+    }
+
+    .Foooter-mobile .content-social {
+        margin: auto;
+    }
+}
+
+@media(max-width:600px) {
+
+
+    .Foooter-mobile .box1 .catoegry-footer p {
+        font-size: 9px;
     }
 }
 
@@ -152,24 +328,25 @@ body {
         font-size: 13px;
     }
 
-    .social-media {
-        height: 26px;
-    }
+
 
     .paypart1-mobile img {
         width: 10%;
+        height: auto;
     }
 
     .Foooter-mobile .frada-log img {
         height: 130px;
     }
 
+    .Foooter-mobile .flex2-part1mobile .input-emailmobile input::placeholder {
+        font-size: 10px;
+    }
+
 }
 
 @media(max-width:450px) {
-    .Foooter-mobile .flex2-part1mobile .input-emailmobile input {
-        font-size: 8px;
-    }
+
 
     .footer-textmobile h4 {
         font-size: 17px;
@@ -177,11 +354,10 @@ body {
 
     .Foooter-mobile .box1 h4 {
         font-size: 17px;
+
     }
 
-    .Foooter-mobile .flex2-part1mobile h4 {
-        font-size: 17px;
-    }
+
 
 }
 
@@ -194,14 +370,11 @@ body {
         height: 100px;
     }
 
-    .social-media {
-        height: 22px;
-        margin: 0;
-    }
+
 }
 
-@media(max-width:350px) {
-    .Foooter-mobile .flex2-part1mobile .input-emailmobile input {
-        font-size: 6px;
+@media(max-width:370px) {
+    .Foooter-mobile .flex2-part1mobile .input-emailmobile input::placeholder {
+        font-size: 8px;
     }
 }

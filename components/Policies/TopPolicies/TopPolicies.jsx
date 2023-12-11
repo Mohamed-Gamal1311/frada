@@ -10,7 +10,7 @@ export default function TopPolicies() {
             <div className='topcont-policies'>
                 <h1 className='arabic'>من نحن</h1>
                 <h1>About Us</h1>
-                <div className='icon'> <Image src={image} /></div>
+                <div className='icon'> <Image src={image} alt='image' style={{ width: 'auto', height: 'auto' }} /></div>
             </div>
         </div>
     )
