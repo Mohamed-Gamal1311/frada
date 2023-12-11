@@ -6,30 +6,90 @@ import { useState } from 'react';
 import Image from 'next/image';
 import ProductCard from './ProductCard/ProductCard';
 import data from '../../../../../public/productsdata.jsx'
-
+import { useEffect } from 'react';
+import { useParams, useRouter } from 'next/navigation';
 
 export default function CategoryProducts(props) {
 
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const router = useRouter();
+    const params = useParams();
+    console.log(params)
+    useEffect(() => {
+
+        // {{URL}}/getProductsBySub/1
+        const fetchProducts = async () => {
+            try {
+                if (params.CategoryID && params.SubcategoryID == null) {
+                    const response = await fetch(`http://127.0.0.1:8000/api/getProducts/${params.CategoryID}`);
+                    const data = await response.json();
+                    setProducts(data.data);
+
+                } else {
+                    const response = await fetch(`http://127.0.0.1:8000/api/getProductsBySub/${params.SubcategoryID}`);
+                    const data = await response.json();
+                    setProducts(data.data);
+                }
+
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching products:', error);
+                setLoading(false);
+            }
+        };
 
 
-    const filteredProducts = data.filter(product => product.CategoryID == 1);
-    // <a href="https://ibb.co/yqfxQpw"><img src="https://i.ibb.co/VTjkqx7/7.jpg" alt="7" border="0"></a>
-    // <a href="https://ibb.co/RjsTmQw"><img src="https://i.ibb.co/3RjmqSZ/6.jpg" alt="6" border="0"></a>
-    // <a href="https://ibb.co/5cTCysb"><img src="https://i.ibb.co/Yj2JMfH/5.jpg" alt="5" border="0"></a>
-    // <a href="https://ibb.co/Z8kf9BR"><img src="https://i.ibb.co/BZSfkyH/4.jpg" alt="4" border="0"></a>
-    // <a href="https://ibb.co/MR5c2J4"><img src="https://i.ibb.co/sFJKmXG/3.jpg" alt="3" border="0"></a>
-    // <a href="https://ibb.co/6mNNqLm"><img src="https://i.ibb.co/mGSSPgG/2.jpg" alt="2" border="0"></a>
-    // <a href="https://ibb.co/9h1MXKj"><img src="https://i.ibb.co/nBYW2dS/1.jpg" alt="1" border="0"></a>
+
+        fetchProducts();
+
+    }, [params.CategoryID, params.SubcategoryID]);
+
+
+    // useEffect(() => {
+
+
+    //     const fetchProducts2 = async () => {
+    //         try {
+    //             const response = await fetch(`http://127.0.0.1:8000/api/getProductsBySub/${params.SubcategoryID}`);
+    //             const data = await response.json();
+    //             setProducts(data.data);
+    //             setLoading(false);
+    //         } catch (error) {
+    //             console.error('Error fetching products:', error);
+    //             setLoading(false);
+    //         }
+    //     };
+
+
+    //     fetchProducts2();
+
+    // }, [params.SubcategoryID]);
+
 
 
     return (
         <div className='cards-holder ms-5' style={{ fontSize: '15px' }}>
-            {filteredProducts.map(product => (
+            {products && products.length > 0 ? (
+                products.map((product) => (
+                    <ProductCard
+                        key={product.ProductID}
+                        id={product.ProductID}
+                        name={product.Name}
+                        colorid={product.Colors.length > 0 && product.Colors[0].ColorID}
+                        code={product.Barcode}
+                        price={Number(product.Price)}
+                        discount={Number(product.Discount)}
+                        mainphoto={product.MainPhoto}
+                        colornum={Number(product.NumOfColors)}
+                        photocolors={product.Colors}
+                    />
 
-                <ProductCard key={product.ProductID} name={product.Name} code={product.Barcode} price={product.Price} discount={Number(product.Discount)} />
 
-            ))
-            }
+                ))
+            ) : (
+                <p style={{ textAlign: 'center' }}>لا توجد منتجات هنا</p>
+            )}
 
 
 

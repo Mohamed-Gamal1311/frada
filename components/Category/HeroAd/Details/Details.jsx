@@ -82,7 +82,9 @@ export default function Details(props) {
 
 
                 {/* <Details show={1} /> */}
-                <CategoryProducts />
+                <div style={{ width: '100%' }}>
+                    <CategoryProducts />
+                </div>
                 {
                     <div id="filter" ref={filterRef} className='position-sticky ' style={{ transition: "all 0.3s", height: '100vh', top: 0, marginRight: `${filterMargin}px` }}>
                         <Filter />

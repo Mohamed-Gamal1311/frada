@@ -17,45 +17,42 @@ export default function ImagesHolder({ height }) {
 
 
     return (
-        <div className='ImagesHolder-content' style={{ width: { height } }}>
-            <div className='ImagesHolder' >
+        <div >
+            <div className='images-holder'>
+                <div className='mainimage-holder'>
+                    <Image src={hoveredPhoto} width={500} height={500} alt={'main-img'} />
+                </div>
+                <div className='subimage-holder'>
 
-                <div > <Card.Img src={hoveredPhoto} alt={'main-img'} /></div>
-                <div className='small-image' >
-
-                    <div className='image-hover' onMouseEnter={() => handlePhotoHover("https://i.ibb.co/VTjkqx7/7.jpg")}
-
-                    >
-                        <img src="https://i.ibb.co/VTjkqx7/7.jpg" alt={'small-img'} className="ml-2" />
+                    <div className='image-hover' onMouseEnter={() => handlePhotoHover("https://i.ibb.co/VTjkqx7/7.jpg")}>
+                        <Image src="https://i.ibb.co/VTjkqx7/7.jpg" width={80} height={80} alt={'small-Image'} className="ml-2" />
                     </div>
                     <div className='image-hover' onMouseEnter={() => handlePhotoHover("https://i.ibb.co/3RjmqSZ/6.jpg")}
                     >
-                        <img src="https://i.ibb.co/3RjmqSZ/6.jpg" alt={'small-img'} className="ml-2" />
+                        <Image src="https://i.ibb.co/3RjmqSZ/6.jpg" width={80} height={80} alt={'small-Image'} className="ml-2" />
                     </div>
-                    <div className='image-hover' onMouseEnter={() => handlePhotoHover("https://i.ibb.co/Yj2JMfH/5.jpg")}
+                    <div className='image-hover' width onMouseEnter={() => handlePhotoHover("https://i.ibb.co/Yj2JMfH/5.jpg")}
                     >
-                        <img src="https://i.ibb.co/Yj2JMfH/5.jpg" alt={'small-img'} className="ml-2" />
+                        <Image src="https://i.ibb.co/Yj2JMfH/5.jpg" width={80} height={80} alt={'small-Image'} className="ml-2" />
                     </div>
                     <div className='image-hover' onMouseEnter={() => handlePhotoHover("https://i.ibb.co/BZSfkyH/4.jpg")}
                     >
-                        <img src="https://i.ibb.co/BZSfkyH/4.jpg" alt={'small-img'} className="ml-2" />
+                        <Image src="https://i.ibb.co/BZSfkyH/4.jpg" width={80} height={80} alt={'small-Image'} className="ml-2" />
                     </div>
                     <div className='image-hover' onMouseEnter={() => handlePhotoHover("https://i.ibb.co/nBYW2dS/1.jpg")}
                     >
-                        <img src="https://i.ibb.co/nBYW2dS/1.jpg" alt={'small-img'} className="ml-2" />
+                        <Image src="https://i.ibb.co/nBYW2dS/1.jpg" width={80} height={80} alt={'small-Image'} className="ml-2" />
                     </div>
 
                     <div className='image-hover' onMouseEnter={() => handlePhotoHover("https://i.ibb.co/3RjmqSZ/6.jpg")}>
-                        <img src="https://i.ibb.co/3RjmqSZ/6.jpg" alt={'small-img'} className="ml-2" />
+                        <Image src="https://i.ibb.co/3RjmqSZ/6.jpg" width={80} height={80} alt={'small-img'} className="ml-2" />
                     </div>
 
                 </div>
-                {/* <div className='parent-smallimage'>
 
-                </div> */}
 
             </div>
-            <h1>{height}</h1>
+
         </div>
     )
 }
