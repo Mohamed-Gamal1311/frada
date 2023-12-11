@@ -3,6 +3,7 @@ import { Cairo } from 'next/font/google'
 import './globals.css'
 import Footer from '../../components/Footer/Footer'
 import FooterMobile from '../../components/FooterMobile/FooterMobile'
+import Header from '../../components/Header/Header'
 
 
 const cairo = Cairo({ subsets: ['arabic'] })
@@ -17,7 +18,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={cairo.className} suppressHydrationWarning={true} >{children}
-
 
 
       </body>

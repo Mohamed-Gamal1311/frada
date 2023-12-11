@@ -172,7 +172,7 @@
 
 .parentfooter-par2 {
     color: white;
-    font-family: 'Cairo', sans-serif;
+    /* font-family: 'Cairo', sans-serif; */
     width: 42%;
     display: flex;
     justify-content: space-between;
@@ -305,5 +305,11 @@
 
     .footer-frada {
         display: none;
+    }
+}
+
+@media(max-width:750px) {
+    .social-media {
+        padding: 0;
     }
 }

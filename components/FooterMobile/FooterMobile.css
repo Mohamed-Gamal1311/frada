@@ -277,6 +277,7 @@ body {
 
     .Foooter-mobile .box1 h4 {
         margin-right: 0;
+        text-align: center;
     }
 
     .Foooter-mobile .component-footer {
@@ -298,6 +299,7 @@ body {
 
     .social-media {
         width: 10%;
+        padding: 0;
     }
 
     .social-diff {
@@ -313,7 +315,7 @@ body {
 
 
     .Foooter-mobile .box1 .catoegry-footer p {
-        font-size: 9px;
+        font-size: 12px;
     }
 }
 
@@ -328,7 +330,9 @@ body {
         font-size: 13px;
     }
 
-
+    .Foooter-mobile .box1 h4 {
+        font-size: 14px;
+    }
 
     .paypart1-mobile img {
         width: 10%;
@@ -352,10 +356,7 @@ body {
         font-size: 17px;
     }
 
-    .Foooter-mobile .box1 h4 {
-        font-size: 17px;
 
-    }
 
 
 
