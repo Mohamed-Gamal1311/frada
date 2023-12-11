@@ -1,7 +1,7 @@
 /*************************************/
 .footer-frada {
     background: #332C32;
-
+    font-family: 'Cairo', sans-serif;
 }
 
 .footer-frada .container-footer {
@@ -21,6 +21,9 @@
 
 .footer-frada .footer-cont .footer-flex .footer-par1 .map {
     padding-top: 43px;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
 }
 
 .footer-frada .footer-cont .footer-flex .footer-par1 .map iframe {
@@ -71,7 +74,7 @@
 .flex2-footer {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+
 
 }
 
@@ -83,6 +86,8 @@
     text-align: justify;
     color: white;
     padding-bottom: 7px;
+    margin-block-start: 0;
+    margin: 0;
 }
 
 .flex2-footer .flex2-part1 .input-email {
@@ -90,17 +95,24 @@
     position: relative;
 }
 
+.footer-text h4 {
+    margin: 0;
+}
+
 .flex2-footer .flex2-part1 .input-email input {
-    width: 90%;
+    width: 58%;
     padding: 11px 22px;
     border: none;
     border-radius: 9px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 12px;
+
 }
 
 .flex2-footer .flex2-part1 .input-email img {
     position: absolute;
     top: 15%;
-    right: 87%;
+    right: 55%;
 }
 
 .flex2-footer .pay img {
@@ -114,17 +126,21 @@
 .end-footer .seprate-end {
     width: 100%;
     height: 2px;
-    background: #F2F2F2;
+    background: #707070;
 }
 
 .end-footer h3 {
-    height: 77px;
+    height: 49px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
 }
+
+
 
 .footer-mobile {
     display: none;
@@ -136,7 +152,7 @@
     width: 42%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
 }
 
 
@@ -153,7 +169,7 @@
 .parentfooter-par2 hr {
 
     transform: rotate(0deg);
-    height: 150px;
+    height: 165px;
     color: white;
     display: flex;
     justify-content: center;
@@ -162,26 +178,27 @@
 
 .parentfooter-par2 .catoegry-footer .name-cateogry p {
 
-    padding-right: 5px;
-    font-size: 12px;
-
+    padding-right: 5px !important;
+    font-size: 12px !important;
+    margin-block-end: 0 !important;
 }
 
 .know {
     margin-block-end: 0;
+    margin: 0;
 }
 
 .parentfooter-par2 .catoegry-footer .name-cateogry .p2 {
     display: flex;
     justify-content: stretch;
-    width: 45%;
+    width: 55%;
     padding-right: 5px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .parentfooter-par2 .footer-text {
 
-    padding-right: 10px;
+    padding-right: 24px;
     width: 48%;
 }
 
@@ -193,8 +210,8 @@
 .pay {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 33%;
+    width: 27%;
+
 }
 
 
@@ -202,6 +219,13 @@
 .socialdisk .content-social {
     width: 100%;
     margin: auto;
+    margin-block-start: 0;
+}
+
+@media(max-width:1700px) {
+    .flex2-footer .flex2-part1 .input-email input {
+        font-size: 11px;
+    }
 }
 
 @media(max-width:1400px) {
@@ -212,23 +236,25 @@
 
     }
 
-    .parentfooter-par2 .catoegry-footer .name-cateogry .p2 {
-
-        font-size: 10px;
-    }
-
-    .footer-frada .footer-cont .footer-flex .footer-par1 .map iframe {
-        height: 260px;
-    }
-
-    .parentfooter-par2 {
-        width: 48%;
-    }
-
-    .parentfooter-par2 h4 {
-        font-size: 16px;
+    .flex2-footer .flex2-part1 .input-email input {
+        font-size: 9px;
     }
 }
+
+.parentfooter-par2 .catoegry-footer .name-cateogry .p2 {
+
+    font-size: 10px;
+}
+
+
+.parentfooter-par2 {
+    width: 48%;
+}
+
+.parentfooter-par2 h4 {
+    font-size: 20px;
+}
+
 
 @media(max-width:1200px) {
 
@@ -241,9 +267,7 @@
     .parentfooter-par2 {
         width: 100%;
     }
-}
 
-@media(max-width:1050px) {
     .footer-frada {
         display: none;
     }

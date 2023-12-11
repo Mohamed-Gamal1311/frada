@@ -4,6 +4,7 @@ import './globals.css'
 import Footer from '../../components/Footer/Footer'
 import FooterMobile from '../../components/FooterMobile/FooterMobile'
 
+
 const cairo = Cairo({ subsets: ['arabic'] })
 
 export const metadata = {

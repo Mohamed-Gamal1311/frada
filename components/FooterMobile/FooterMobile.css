@@ -1,17 +1,24 @@
 .Foooter-mobile {
     background-color: #332C32;
     color: white;
+    display: none;
+}
+
+body {
+    margin: 0;
 }
 
 .Foooter-mobile .box1 {
     width: 65%;
     margin: auto;
     font-family: 'Cairo', sans-serif;
+
 }
 
 .Foooter-mobile .box1 h4 {
     text-align: center;
-
+    font-size: 25px;
+    margin: 0;
 }
 
 .Foooter-mobile .box1 .catoegry-footer .name-cateogry {
@@ -30,6 +37,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 7%;
 }
 
 .paypart1-mobile img {
@@ -39,6 +47,8 @@
 .Foooter-mobile .flex2-part1mobile h4 {
     text-align: center;
     font-family: 'Cairo', sans-serif;
+    font-size: 25px;
+    margin: 0;
 }
 
 .Foooter-mobile .flex2-part1mobile .input-emailmobile {
@@ -50,14 +60,15 @@
 }
 
 .Foooter-mobile .flex2-part1mobile .input-emailmobile input {
-    width: 50%;
+    width: 75%;
     border-radius: 5px;
     padding: 1%;
+    font-family: 'Cairo', sans-serif;
 }
 
 .Foooter-mobile .flex2-part1mobile .input-emailmobile img {
     position: absolute;
-    right: 69%;
+    right: 80%;
     top: 23%;
     height: 54%;
 }
@@ -74,7 +85,8 @@
 }
 
 .Foooter-mobile .map-mobile .map iframe {
-    width: 50%;
+    width: 75%;
+    border-radius: 5px;
 }
 
 .Foooter-mobile .content-social {
@@ -90,6 +102,7 @@
 
 .Foooter-mobile hr {
     margin: 0.5rem;
+    color: #707070;
 }
 
 .Foooter-mobile .frada-log img {
@@ -110,17 +123,30 @@
 
 }
 
+.footer-textmobile h4 {
+    padding-top: '8%';
 
+    font-Size: '25px';
+}
+
+@media(max-width:1200px) {
+    .Foooter-mobile {
+        display: block;
+    }
+}
+
+@media(max-width:600px) {
+    .Foooter-mobile .flex2-part1mobile .input-emailmobile input {
+        font-size: 10px;
+    }
+}
 
 @media(max-width:550px) {
     .Foooter-mobile h4 {
         font-size: 12px;
     }
 
-    .Foooter-mobile .flex2-part1mobile .input-emailmobile img {
 
-        right: 65%;
-    }
 
     .Foooter-mobile p {
         font-size: 13px;
@@ -140,6 +166,25 @@
 
 }
 
+@media(max-width:450px) {
+    .Foooter-mobile .flex2-part1mobile .input-emailmobile input {
+        font-size: 8px;
+    }
+
+    .footer-textmobile h4 {
+        font-size: 17px;
+    }
+
+    .Foooter-mobile .box1 h4 {
+        font-size: 17px;
+    }
+
+    .Foooter-mobile .flex2-part1mobile h4 {
+        font-size: 17px;
+    }
+
+}
+
 @media(max-width:400px) {
     .Foooter-mobile .box1 {
         width: 80%;
@@ -152,5 +197,11 @@
     .social-media {
         height: 22px;
         margin: 0;
+    }
+}
+
+@media(max-width:350px) {
+    .Foooter-mobile .flex2-part1mobile .input-emailmobile input {
+        font-size: 6px;
     }
 }

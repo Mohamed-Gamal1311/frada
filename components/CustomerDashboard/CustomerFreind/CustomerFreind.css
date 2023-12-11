@@ -1,0 +1,67 @@
+.CustomerFreind {
+    background: white;
+    font-family: 'Cairo', sans-serif;
+}
+
+.CustomerFreind h2 {
+    color: #D17A52;
+    margin-block-end: 0;
+}
+
+.CustomerFreind h2 span {
+    color: #707070;
+}
+
+.CustomerFreind hr {
+    color: #D17A52;
+    background: #D17A52;
+    height: 2px;
+    width: 250px;
+    text-align: right;
+    display: flex;
+    margin: 0;
+}
+
+.CustomerFreind .friend {
+    display: flex;
+    margin-top: 3%;
+}
+
+.CustomerFreind .friend .friend-form {
+    margin-right: 50px;
+    width: 47%;
+}
+
+.CustomerFreind .friend .friend-form input {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    width: 100%;
+    border-bottom: 1px solid #05060538;
+    margin-top: 25px;
+
+    outline: none;
+}
+
+.CustomerFreind .friend .friend-form label {
+    color: #A1A1A163;
+}
+
+.CustomerFreind .friend .friend-form .friend-info .input {
+    position: relative;
+}
+
+
+.CustomerFreind .friend .friend-form .friend-info .input img {
+    position: absolute;
+    left: 0;
+    bottom: 55%;
+}
+
+.CustomerFreind .friend .map-friend {
+    margin-top: 20px;
+}
+
+.CustomerFreind .friend .pading {
+    margin-top: 3%;
+}

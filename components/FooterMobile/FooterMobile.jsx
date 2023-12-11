@@ -26,7 +26,7 @@ export default function FooterMobile() {
             <div className="box1">
                 <div className="box1-content">
                     <div className='footer-textmobile'>
-                        <h4 style={{ paddingTop: '1%' }}>تسوق منتجاتنا</h4>
+                        <h4>تسوق منتجاتنا</h4>
 
                         <div className='catoegry-footer'>
                             <div className='name-cateogry'>
@@ -82,10 +82,10 @@ export default function FooterMobile() {
 
             <div className='pay-mobile'>
                 <div className='paypart1-mobile'>
-                    <Image src={visa} />
-                    <Image src={most} />
-                    <Image src={tamara} />
-                    <Image src={pay} />
+                    <Image src={visa} alt='visa' />
+                    <Image src={most} alt='most' />
+                    <Image src={mada} alt='most' />
+                    <Image src={pay} alt='pay' />
                 </div>
 
             </div>
@@ -93,8 +93,8 @@ export default function FooterMobile() {
                 <div className='flex2-part1mobile' style={{ paddingTop: '3%' }}>
                     <h4>أشترك في النشرة البريدية</h4>
                     <div className='input-emailmobile'>
-                        <input placeholder='أدخل بريدك الإلكتروني   ' />
-                        <Image src={email} />
+                        <input placeholder='أدخل بريدك الإلكتروني لتلقي أحدث المستجدات' />
+                        <Image src={email} alt='email' />
                     </div>
                 </div>
             </div>
@@ -107,13 +107,13 @@ export default function FooterMobile() {
             </div>
             <hr></hr>
             <div className='logo-footer'>
-                <div className='frada-log'><Image src={logofrada} /></div>
+                <div className='frada-log'><Image src={logofrada} alt='logo' /></div>
 
                 <div className='content-social'> <Image src={snapchat} className='social-media' />
-                    <Image src={tiktok} className='social-media' />
-                    <Image src={twitter} className='social-media' />
-                    <Image src={insta} className='social-media' />
-                    <Image src={facebook} className='social-media' />
+                    <Image src={tiktok} className='social-media' alt='tiktok' />
+                    <Image src={twitter} className='social-media' alt='twitter' />
+                    <Image src={insta} className='social-media' alt='inst' />
+                    <Image src={facebook} className='social-media' alt='facebook' />
                 </div>
             </div>
             <hr></hr>
