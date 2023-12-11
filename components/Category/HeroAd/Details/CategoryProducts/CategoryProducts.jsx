@@ -80,7 +80,7 @@ export default function CategoryProducts(props) {
                         code={product.Barcode}
                         price={Number(product.Price)}
                         discount={Number(product.Discount)}
-                        mainphoto={product.MainPhoto}
+                        mainphoto={product.MainPhoto && product.MainPhoto.Image}
                         colornum={Number(product.NumOfColors)}
                         photocolors={product.Colors}
                     />

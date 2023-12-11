@@ -2,7 +2,7 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import img from "../../../../../../public/Images/Hero.jpg"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -12,8 +12,9 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
 
     const [isHovered, setIsHovered] = useState(false);
     const [hoveredPhoto, setHoveredPhoto] = useState(`http://127.0.0.1:8000/Attachment/${id}/${colorid}/${mainphoto}`);
-
-    const handlePhotoHover = (photo) => {
+    console.log(photocolors)
+    const handlePhotoHoverSmall = (photo) => {
+        console.log(photo)
         setHoveredPhoto(photo);
     };
 
@@ -58,10 +59,10 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
                         <div>
                             {/* <Card.Title style={{ fontWeight: 'bold', fontSize: '0.9em' }}>حذاء فرادا شرقي مميز</Card.Title> */}
                             <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
-                                <p className='mx-2 d-flex align-items-center' style={{ fontWeight: "bold", fontSize: '1.2em', color: '#9A9A9A' }}>{colornum - 4 > 0 ? colornum - 4 : <div></div>}+</p>
+                                <p className='mx-2 d-flex align-items-center' style={{ fontWeight: "bold", fontSize: '1.2em', color: '#9A9A9A' }}>{colornum - 4 > 0 ? colornum - 4 : <span></span>}+</p>
 
-                                {photocolors.slice(0, 4).map((color, index) => (
-                                    <div key={index} style={{ marginLeft: "2%" }} onMouseEnter={() => handlePhotoHover(`http://127.0.0.1:8000/Attachment/${id}/${color.ColorID}/${color.Image}`)}>
+                                {photocolors.length > 0 && photocolors.slice(0, 4).map((color, index) => (
+                                    <div key={index} style={{ marginLeft: "2%" }} onMouseEnter={() => handlePhotoHoverSmall(`http://127.0.0.1:8000/Attachment/${id}/${color.ColorID}/${color.Image}`)}>
                                         <Image src={`http://127.0.0.1:8000/Attachment/${id}/${color.ColorID}/${color.Image}`} alt={`Image ${index}`} className="ml-2" width={40} height={40} />
                                     </div>
                                 ))}
