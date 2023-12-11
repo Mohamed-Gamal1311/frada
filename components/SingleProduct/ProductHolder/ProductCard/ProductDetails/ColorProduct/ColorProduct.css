@@ -1,33 +1,19 @@
-.ColorProduct {
-    width: 100%;
-    margin-top: 25px;
-}
-
-.ColorProduct {
-    font-size: 20px;
+.color-product-holder p {
     font-weight: bold;
-    text-align: end;
+    font-size: 1.2em;
+    margin-bottom: 0.6em !important;
 }
 
-.image-color {
+
+
+.color-image-holder {
     display: flex;
-    justify-content: space-between;
-    width: 72%;
-
+    flex-direction: row;
+    /* padding: 0.2em; */
+    justify-content: flex-end;
+    margin-bottom: 1.5em;
 }
 
-.image-color .image {
-    width: 15%;
-    padding: 2%;
-}
-
-.image-color img {
-    width: 92%;
-    height: 100%;
-    border-radius: 6px
-}
-
-.ColorProduct .parent-color {
-    display: flex;
-    justify-content: end;
+.color-image-holder div {
+    margin-left: 4%;
 }

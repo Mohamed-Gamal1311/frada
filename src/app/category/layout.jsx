@@ -1,6 +1,7 @@
 // import { Cairo } from 'next/font/google'
 
 // import './globals.css'
+import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header'
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
       <main>
 
         {children}
+
       </main>
+      <Footer />
 
     </>
   )

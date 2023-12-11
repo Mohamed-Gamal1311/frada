@@ -3,9 +3,13 @@ import SingleProductCard from './ProductCard/SingleProductCard'
 
 export default function ProductHolder() {
     return (
-        <section className='px-5 py-5 ' style={{ height: '100vh', backgroundColor: "#f2f2f2", marginTop: '0.5%' }}>
+
+        <div className='d-flex flex-row-reverse justify-content-start py-5' style={{ backgroundColor: "#f6f6f6", paddingRight: "10%" }}>
+
             <SingleProductCard />
-        </section>
+        </div>
+
+
     )
 }
 

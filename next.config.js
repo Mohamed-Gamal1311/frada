@@ -21,6 +21,9 @@ module.exports = {
                 hostname: "https://www.pexels.com/",
                 // ...
             },
+
+
         ],
+        domains: ['127.0.0.1'],
     },
 };

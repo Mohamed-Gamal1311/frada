@@ -1,0 +1,21 @@
+.single-sizes {
+    /* width: fit-content; */
+    border: 1px solid #CCCCCC;
+    background-color: #fff;
+
+    border-radius: 3px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* margin-left: 2.5%; */
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+.single-size {
+    /* margin-top: 0.3em !important;
+    margin-top: 0.3em !important;
+    margin-right: 1.75em !important;
+    margin-left: 1.75em !important; */
+}

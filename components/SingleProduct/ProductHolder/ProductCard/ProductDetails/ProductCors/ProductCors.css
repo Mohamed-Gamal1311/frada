@@ -1,0 +1,19 @@
+.single-cors-holder {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2em;
+}
+
+.single-cors-code {
+    font-size: 1.75em;
+    font-weight: bolder;
+}
+
+.single-cors-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
