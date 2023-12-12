@@ -14,13 +14,13 @@ import ProductInfo from './ProductInfo/ProductInfo';
 
 
 
-function Info() {
+function Info(props) {
 
 
     return (
         <section className='d-flex flex-row justify-content-around' style={{ backgroundColor: '#f2f2f2' }} >
             <DynamicAd />
-            <ProductInfo />
+            <ProductInfo desc={props.desc} />
         </section >
     )
 
