@@ -137,7 +137,7 @@ export default function SingleProductCard() {
                         <div className='size-product-container'>
                             <p>اختر الكمية</p>
                             <div className="size-holder">
-
+                                غير متاح للبيع حني الان
                             </div>
                         </div>
 

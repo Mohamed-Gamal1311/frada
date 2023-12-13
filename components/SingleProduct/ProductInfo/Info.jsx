@@ -20,7 +20,7 @@ function Info(props) {
     return (
         <section className='d-flex flex-row justify-content-around' style={{ backgroundColor: '#f2f2f2' }} >
             <DynamicAd />
-            <ProductInfo desc={props.desc} />
+            <ProductInfo desc={props.desc} info={props.info} />
         </section >
     )
 

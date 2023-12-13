@@ -19,19 +19,27 @@ function ProductInfo(props) {
 
 
         <div className='w-75 align-right pt-3 pe-5' >
-            <Nav variant="tabs" style={{ color: '#d17a52', flexDirection: 'row-reverse', justifyContent: 'flex-end', border: 'none' }} defaultActiveKey="link-1" onSelect={handleTabSelect}>
-                <Nav.Item style={{ border: 'none' }}>
-                    <Nav.Link eventKey="link-1">مواصفات المنتج</Nav.Link>
-                </Nav.Item>
+            <Nav variant="tabs" style={{ color: '#d17a52', flexDirection: 'row', justifyContent: 'flex-end', border: 'none' }} defaultActiveKey="link-1" onSelect={handleTabSelect}>
+                {props.info !== '' &&
+                    <Nav.Item>
+                        <Nav.Link eventKey="link-2">معلومات اضافية عن المنتج</Nav.Link>
+                    </Nav.Item>
+                }
+                {props.desc !== '' &&
+                    < Nav.Item style={{ border: 'none' }}>
+                        <Nav.Link eventKey="link-1">مواصفات المنتج</Nav.Link>
+                    </Nav.Item>
+
+                }
+
+                {/* 
                 <Nav.Item>
-                    <Nav.Link eventKey="link-2">معلومات اضافية عن المنتج</Nav.Link>
-                </Nav.Item>
+                    <Nav.Link eventKey="link-4">معلومات العلامة التجارية</Nav.Link>
+                </Nav.Item> 
                 <Nav.Item>
                     <Nav.Link eventKey="link-3">معرض صور المنتج</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-4">معلومات العلامة التجارية</Nav.Link>
-                </Nav.Item>
+                */}
             </Nav>
 
             {/* Content based on the selected tab */}
@@ -41,11 +49,11 @@ function ProductInfo(props) {
                     {props.desc}
 
                 </p>}
-                {activeTab === 'link-2' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>Content for Option 2</p>}
+                {activeTab === 'link-2' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>{props.info}</p>}
                 {activeTab === 'link-3' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>Content for Option 3</p>}
                 {activeTab === 'link-4' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>Content for Option 4</p>}
             </div>
-        </div>
+        </div >
 
 
 

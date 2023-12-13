@@ -60,10 +60,10 @@ export default function SingleProduct() {
 
       <ProductHolder />
       <AdContainer />
-      <Info desc={product.Description} />
-      <ProductVideo />
+      <Info desc={product.Description} info={product.AdditionalInfo} />
+      <ProductVideo title={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoTitle : ''} desc={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoDescription : ''} url={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoURL : ''} />
       <AdContainer />
-      <ProductReviews />
+      <ProductReviews reviews={product.Reviews} />
     </section>
   )
 }

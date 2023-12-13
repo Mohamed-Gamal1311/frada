@@ -21,6 +21,7 @@ export default function ProductDetails() {
             <ProductCors />
             <ColorProduct />
             <ProductSize />
+            <div>not avaialble fo selling now</div>
             <ProductQuantity />
             <ButtonsProduct />
 
