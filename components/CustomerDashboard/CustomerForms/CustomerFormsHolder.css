@@ -1,0 +1,35 @@
+.CustomerFormsHolder {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #f6f6f6;
+}
+
+.CustomerFormsHolder .dashboard-menu {
+    width: 20%;
+    text-align: center;
+}
+
+.CustomerFormsHolder .dashboard-menu .button-menu {
+    text-align: center;
+    /* border: 2px solid #D17A52; */
+    border-radius: 8px;
+    width: 75%;
+    padding: 5%;
+    margin-bottom: 3%;
+    background-color: #fff;
+
+}
+
+.button-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.CustomerFormsHolder .dashboard-menu .flex-column {
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}

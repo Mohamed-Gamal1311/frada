@@ -5,9 +5,32 @@ import image from '../../../public/Images/Login/0V5A3401.png'
 import apple from '../../../public/Images/Login/apple.png'
 import facebook from '../../../public/Images/Login/facebook.png'
 import google from '../../../public/Images/Login/bmnm.png'
+import axios from 'axios'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 
 export default function Signinpage() {
+
+    // let [name,setName]=useState();
+
+    // console.log(name);
+
+
+    async function setDataUSer() {
+        let x = await axios.post(`http://127.0.0.1:8000/api/auth/login?Email=kareem@gmail.com&password=123456`);
+
+        console.log("Ahmed");
+    }
+
+
+
+    useEffect(() => {
+        setDataUSer()
+        console.log("Ahmed")
+    }, [])
+
+
     return (
         <div className="Login-page" dir='rtl' lang='en'>
             <div className="login-components">
@@ -48,7 +71,7 @@ export default function Signinpage() {
                                     </p>
                                 </div>
                                 <div className='submit'>
-                                    <button> تسجيل الدخول</button>
+                                    <button  > تسجيل الدخول</button>
                                 </div>
 
                             </div>

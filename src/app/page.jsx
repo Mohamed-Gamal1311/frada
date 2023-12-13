@@ -26,7 +26,7 @@ export default function Home() {
       {/* <ProductVideo /> */}
       {/* <ProductReviews /> */}
       <Footer />
-
+      <FooterMobile />
 
     </>
   )

@@ -157,6 +157,17 @@
     padding: 6px 0px;
 }
 
+form {
+    color: #555;
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+    height: max-content;
+    width: 350px;
+}
+
 @media(max-width:1050px) {
     .Login-page .login-components .Image-login {
         display: none;

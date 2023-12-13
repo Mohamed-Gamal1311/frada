@@ -1,0 +1,68 @@
+.wishes h3 {
+    text-align: end;
+
+}
+
+.Wishes .search-wishes {
+    width: 52%;
+    display: flex;
+    justify-content: end;
+    margin: 8%;
+    margin-top: 0%;
+    margin-bottom: 0;
+}
+
+.Wishes .search-wishes .search {
+    width: 93%;
+}
+
+.Wishes .search-wishes .search .search-bar {
+    width: 100%;
+}
+
+.Wishes .search-wishes .search .search-bar input {
+    width: 100%;
+}
+
+.wishes-cards {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 95%;
+    flex-wrap: wrap;
+    direction: rtl;
+    /* justify-content: left;*/
+
+
+}
+
+.wishes-cards .cardwishcontent {
+    width: 15%;
+    margin: 3.5%;
+    MARGIN-TOP: 0.5%;
+    MARGIN-BOTTOM: 0%;
+}
+
+
+.cardwishcontent .image {
+    width: 100%;
+}
+
+.cardwishcontent .image img {
+    width: 100%;
+    height: auto;
+}
+
+.cardwishcontent .model-code {
+    color: #9A9A9A;
+}
+
+.cardwishcontent .price {
+    display: flex;
+}
+
+.cardwishcontent .discound {
+    color: #9A9A9A;
+    text-decoration: line-through;
+    margin-right: 8%;
+}

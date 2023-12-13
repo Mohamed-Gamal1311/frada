@@ -1,0 +1,145 @@
+.form-content-dashboard {
+    width: unset !important;
+    height: unset !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-items: center;
+    border: none;
+    padding-left: 3em;
+    padding-right: 10em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    box-shadow: none !important;
+
+}
+
+.customer-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    justify-content: flex-end;
+    margin-bottom: 3%;
+
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-content .customer-form {
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+.form-header {
+    width: 100%;
+    text-align: right;
+    color: #d17a52;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3%;
+
+}
+
+.form-header h2 {
+    font-size: 1.5em;
+}
+
+.customer-form .customer-info input {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+
+    border-bottom: 1px solid #05060538;
+    /* margin-top: 25px; */
+    width: 100%;
+    outline: none;
+    text-align: right;
+}
+
+.customer-form .customer-info label {
+    color: #A1A1A163;
+    color: #A1A1A163;
+    width: 100%;
+    text-align: right;
+    display: block;
+    font-size: 0.8em;
+}
+
+.customer-info {
+    width: 35%;
+    margin-left: 5%;
+}
+
+.input-dashboard {
+    position: relative;
+}
+
+.icon-edit {
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+}
+
+.input-dashboard .icon-edit img {
+    width: 20px;
+}
+
+.container-shadow {
+    box-shadow: 0px 3px 6px #D17A5247;
+    mix-blend-mode: multiply;
+    margin-top: 2%;
+    width: 70%;
+    border-radius: 5px;
+    padding-top: 2%;
+    padding-right: 2%;
+    position: relative;
+}
+
+.CustomerFreind {
+    width: unset !important;
+    height: unset !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-items: center;
+    border: none;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    box-shadow: none !important;
+
+
+}
+
+.form-content button {
+    background: #D17A52 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    padding: 0px 21px;
+    font-family: 'Cairo', sans-serif;
+    position: absolute;
+    right: 3%;
+    bottom: -5%;
+}
+
+.add-friend {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.add-friend h2 {
+    font-size: 1em;
+    color: #D17A52;
+}
+
+.header-customerfriend {
+    width: 70%;
+}
