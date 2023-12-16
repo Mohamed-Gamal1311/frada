@@ -20,7 +20,7 @@ export default function SingleProduct() {
     // {{URL}}/getProductsBySub/1
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/getProduct/${params.ProductID}`);
+        const response = await fetch(`https://fradaksa.com/api/getProduct/${params.ProductID}`);
         const data = await response.json();
 
         setProduct(data.data);

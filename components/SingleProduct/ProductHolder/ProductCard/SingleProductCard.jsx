@@ -27,7 +27,7 @@ export default function SingleProductCard() {
         // {{URL}}/getProductsBySub/1
         const fetchProducts = async () => {
             try {
-                const response = await fetch(`http://127.0.0.1:8000/api/getProduct/${params.ProductID}`);
+                const response = await fetch(`https://fradaksa.com/api/getProduct/${params.ProductID}`);
                 const data = await response.json();
 
                 setProduct(data.data);
@@ -99,7 +99,7 @@ export default function SingleProductCard() {
                                 <div key={index} style={{ cursor: 'pointer' }} onClick={() => handleImageClick(color.ColorID, color.Images, color.Images[0])}>
                                     <Image
                                         key={index}
-                                        src={`http://127.0.0.1:8000/Attachment/${product.ProductID}/${color.ColorID}/${color.Images[0]}`}
+                                        src={`https://fradaksa.com/Attachment/${product.ProductID}/${color.ColorID}/${color.Images[0]}`}
                                         width={50}
                                         height={50}
                                         alt={`${color}-Image`}

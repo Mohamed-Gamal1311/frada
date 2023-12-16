@@ -11,7 +11,7 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
 
 
     const [isHovered, setIsHovered] = useState(false);
-    const [hoveredPhoto, setHoveredPhoto] = useState(`http://127.0.0.1:8000/Attachment/${id}/${colorid}/${mainphoto}`);
+    const [hoveredPhoto, setHoveredPhoto] = useState(`https://fradaksa.com/Attachment/${id}/${colorid}/${mainphoto}`);
     console.log(photocolors)
     const handlePhotoHoverSmall = (photo) => {
         console.log(photo)
@@ -62,8 +62,8 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
                                 <p className='mx-2 d-flex align-items-center' style={{ fontWeight: "bold", fontSize: '1.2em', color: '#9A9A9A' }}>{colornum - 4 > 0 ? colornum - 4 : <span></span>}+</p>
 
                                 {photocolors.length > 0 && photocolors.slice(0, 4).map((color, index) => (
-                                    <div key={index} style={{ marginLeft: "2%" }} onMouseEnter={() => handlePhotoHoverSmall(`http://127.0.0.1:8000/Attachment/${id}/${color.ColorID}/${color.Image}`)}>
-                                        <Image src={`http://127.0.0.1:8000/Attachment/${id}/${color.ColorID}/${color.Image}`} alt={`Image ${index}`} className="ml-2" width={40} height={40} />
+                                    <div key={index} style={{ marginLeft: "2%" }} onMouseEnter={() => handlePhotoHoverSmall(`https://fradaksa.com/Attachment/${id}/${color.ColorID}/${color.Image}`)}>
+                                        <Image src={`https://fradaksa.com/Attachment/${id}/${color.ColorID}/${color.Image}`} alt={`Image ${index}`} className="ml-2" width={40} height={40} />
                                     </div>
                                 ))}
 
