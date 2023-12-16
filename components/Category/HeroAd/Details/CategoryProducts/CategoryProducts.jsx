@@ -22,12 +22,12 @@ export default function CategoryProducts(props) {
         const fetchProducts = async () => {
             try {
                 if (params.CategoryID && params.SubcategoryID == null) {
-                    const response = await fetch(`https://fradaksa.com/api/getProducts/${params.CategoryID}`);
+                    const response = await fetch(`https://www.fradaksa.com/api/getProducts/${params.CategoryID}`);
                     const data = await response.json();
                     setProducts(data.data);
 
                 } else {
-                    const response = await fetch(`https://fradaksa.com/api/getProductsBySub/${params.SubcategoryID}`);
+                    const response = await fetch(`https://www.fradaksa.com/api/getProductsBySub/${params.SubcategoryID}`);
                     const data = await response.json();
                     setProducts(data.data);
                 }

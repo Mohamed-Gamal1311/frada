@@ -23,7 +23,7 @@ module.exports = {
             },
             {
                 protocol: "https",
-                hostname: "https://www.fradaksa.com/",
+                hostname: "https://www.fradaksa.com",
                 // ...
             },
 

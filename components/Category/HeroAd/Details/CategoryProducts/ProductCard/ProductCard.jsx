@@ -11,7 +11,7 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
 
 
     const [isHovered, setIsHovered] = useState(false);
-    const [hoveredPhoto, setHoveredPhoto] = useState(`https://fradaksa.com/Attachment/${id}/${colorid}/${mainphoto}`);
+    const [hoveredPhoto, setHoveredPhoto] = useState(`https://www.fradaksa.com/Attachment/${id}/${colorid}/${mainphoto}`);
     console.log(photocolors)
     const handlePhotoHoverSmall = (photo) => {
         console.log(photo)
