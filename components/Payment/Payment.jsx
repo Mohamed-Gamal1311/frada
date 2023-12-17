@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image'
-import aplle from '../../public/Images/payment/pay.svg'
+import aplle from '../../public/Images/Payment/pay.svg'
 import mostcard from '../../public/Images/Payment/moste card.svg'
 import mada from '../../public/Images/Payment/مدي.svg'
 import './Payment.css'
