@@ -1,0 +1,9 @@
+.card-product {
+    width: 32%;
+}
+
+@media (max-width:550px) {
+    .card-product {
+        width: 40%;
+    }
+}

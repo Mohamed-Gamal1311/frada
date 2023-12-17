@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import "./ProductCard.css"
 
 export default function ProductCard({ id, name, colorid, code, price, discount, mainphoto, colornum, photocolors }) {
 
@@ -24,7 +25,8 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
     return (
 
         // <Link href="#">
-        <Card style={{ cursor: 'pointer', width: "32%", textAlign: 'right', border: 'none', borderRadius: 'none', marginBottom: '5%', backgroundColor: 'transparent' }}
+
+        <Card className='card-product' style={{ cursor: 'pointer', textAlign: 'right', border: 'none', borderRadius: 'none', marginBottom: '5%', backgroundColor: 'transparent' }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

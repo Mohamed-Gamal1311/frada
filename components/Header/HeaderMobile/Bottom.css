@@ -8,11 +8,12 @@
 } */
 
 :root {
-    --clr: #f6f6f6;
+    --clr: white;
 }
 
 .text {
     color: black;
+    font-weight: bolder !important;
 }
 
 .holder {
@@ -25,6 +26,7 @@
     bottom: 0;
     width: 100%;
     background: var(--clr);
+    z-index: 9
 }
 
 .navigation {
@@ -95,7 +97,7 @@
 
 .indicator {
     position: absolute;
-    top: -50%;
+    top: -47%;
     width: 70px;
     height: 70px;
     background: #332C32;
