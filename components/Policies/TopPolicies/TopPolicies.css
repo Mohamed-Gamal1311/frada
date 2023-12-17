@@ -18,3 +18,14 @@
     justify-content: center;
     align-items: center;
 }
+
+@media(max-width:560px) {
+    .top-policies .arabic {
+        font-size: 20px;
+    }
+
+    .top-policies h1 {
+        font-size: 20px;
+    }
+
+}

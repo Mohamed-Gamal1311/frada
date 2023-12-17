@@ -1,0 +1,29 @@
+.Otheroffer {
+    margin-top: 2%;
+}
+
+.Otheroffer .container {
+    width: 85%;
+    margin: auto;
+}
+
+.Otheroffer .Otheroffer-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+.Otheroffer .Otheroffer-cards .Otheroffer-part1 {
+    width: 40%;
+}
+
+.Otheroffer .Otheroffer-cards .Otheroffer-part1 h3 {
+    text-align: end;
+}
+
+.Otheroffer .Otheroffer-cards .Otheroffer-part1 img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,81 @@
+.pay-gate .gate-content {
+    display: flex;
+
+    direction: rtl;
+
+}
+
+.pay-gate {
+    background-color: #F6F6F6;
+
+}
+
+.pay-gate .container {
+    width: 90%;
+    margin: auto;
+}
+
+.pay-gate .gate-content .gate-box1 {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    width: 60%;
+    margin: 2%;
+
+}
+
+.pay-gate .header-gate {
+    display: flex;
+}
+
+.pay-gate .chose-gate {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1%;
+}
+
+.pay-gate .chose-gate .card-gate {
+    margin-right: 2%;
+    width: 75%;
+}
+
+.pay-gate .chose-gate .card-gate div {
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.pay-gate span {
+    color: #332C32;
+    margin-right: 1.4%;
+}
+
+.pay-gate .gate-box2 {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    height: fit-content;
+    margin: 2%;
+    width: 25%;
+    margin-top: 3%;
+}
+
+.pay-gate .gate-box2 .detail-gate {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1%;
+}
+
+.pay-gate button {
+    background: #D58B69 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: 'Cairo', sans-serif;
+    border: none;
+    padding: 1.8% 12%;
+}
+
+.pay-gate button:hover {
+    color: #D58B69;
+    background: #F6F6F6;
+    border: solid 1px #D58B69;
+}

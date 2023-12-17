@@ -10,11 +10,16 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 13px;
-    width: 33%;
+    width: max-content;
     margin: auto;
-    position: absolute;
-    top: 3%;
-    right: 33%;
+    margin-top: 1%;
+    z-index: 999999;
+    position: relative;
+    padding-top: 1%;
+    margin-bottom: -2%;
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .pragraph .paragraph-cont .paragraph-header h3 {
@@ -36,13 +41,18 @@
 
 
 .pragraph .box-para {
-    padding-top: 25px;
+    padding: 4%;
+}
+
+.pragraph .paragrapharabic p {
+    direction: rtl;
+    text-align: justify
 }
 
 .pragraph .paragraph-cont .paragraph-border .paragrapharabic {
     margin-bottom: 20px;
     text-align: end;
-    margin-right: 40px;
+
     color: #D17A52;
     font-family: 'Cairo', sans-serif;
     font-size: 25px;
@@ -50,7 +60,7 @@
 
 .pragraph .paragraph-cont .paragraph-border .paragraphenglish {
     text-align: left;
-    margin-left: 40px;
+
     font-family: 'Cairo', sans-serif;
     font-size: 25px;
 }
@@ -66,9 +76,7 @@
         font-size: 21px;
     }
 
-    .pragraph .paragraph-cont .paragraph-header p {
-        font-size: 13px;
-    }
+
 }
 
 @media(max-width:1400px) {
@@ -86,7 +94,41 @@
         font-size: 13px;
     }
 
+
+}
+
+@media(max-width:750px) {
+    .pragraph .paragraph-cont .paragraph-header h3 {
+
+        font-size: 17px;
+
+    }
+
+    .pragraph .paragraph-cont .paragraph-header {
+        padding: 2%;
+    }
+}
+
+@media(max-width:570px) {
+    .pragraph .paragraph-cont .paragraph-header h3 {
+
+        font-size: 14px;
+
+    }
+
     .pragraph .paragraph-cont .paragraph-header p {
         font-size: 10px;
+    }
+}
+
+@media(max-width:390px) {
+    .pragraph .paragraph-cont .paragraph-header h3 {
+
+        font-size: 11px;
+
+    }
+
+    .pragraph .paragraph-cont .paragraph-header p {
+        font-size: 8px;
     }
 }

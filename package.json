@@ -24,8 +24,10 @@
     "react-card-slider-component": "^1.0.9",
     "react-dom": "^18",
     "react-just-parallax": "^3.1.16",
+    "react-responsive-carousel": "^3.2.23",
     "react-simple-star-rating": "^5.1.7",
     "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "webpack": "^5.89.0"
   },
   "devDependencies": {

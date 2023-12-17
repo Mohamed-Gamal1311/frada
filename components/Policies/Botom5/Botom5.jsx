@@ -5,22 +5,19 @@ export default function Botom5() {
                 <div className='paragraph-cont'>
                     <div className='paragraph-header'>
                         <h3 className='fs-xl-1  fs-lg-2 fs-md-3'>
-                            الأناقة المترفة لرجال المملكة
+                            الرسالة
                         </h3>
                         <p>
-                            Elevating Saudi Arabian Men's Fashion with Timeless Sophistication
+                            Message
                         </p>
                     </div>
                     <div className='paragraph-border'>
                         <div className='box-para'>
                             <div className='paragrapharabic fs-xxl-1 fs-xl-2 fs-lg-3 fs-md-4'>
-                                <p> تعد فرادا علامة تجارية رائدة  في مجال الأحذية والجزم والأزياء الخليجية والعطور والإكسسوارات الرجالية في المملكة العربية السعودية
-                                    <br></br> تتميز بتصاميمها الأنيقة وجودتها الممتازة، وتلبي احتياجات الرجال الذين يسعون للتميز والأناقة في مظهرهم الشخصي. <br></br>
-                                    تعبر فرادا عن الرؤية والرسالة المستوحاة من أناقة وثقة الرجل العربي الخليجي مواكبةً لعصر الموضة.<br></br>
-                                </p>
+                                <p>تهدف فرادا إلى أن تصبح العلامة التجارية الرائدة والمفضلة لرجال المملكة العربية السعودية. تسعى لتقديم تشكيلة متنوعة من المنتجات الفاخرة والأنيقة، وتضمن الحفاظ على مستوى عالٍ من الجودة والتصميم الابتكاري. تسعى فرادا لتميز نفسها كوجهة أزياء رجالية مرموقة تلبي احتياجات العملاء الذين يبحثون عن الأناقة والتميز.</p>
                             </div>
 
-                            <div className='paragraphenglish fs-xxl-1 fs-xl-2 fs-lg-3 fs-md-4'><p>Frada is a leading brand in the Kingdom of Saudi Arabia, specializing in slippers, shoes, sneakers, Gulf fashion, perfumes, and men's<br></br> accessories. Renowned for its elegant designs and exceptional quality, Frada caters to the needs of men who strive for distinction and <br></br>elegance in their personal appearance. Frada embodies a vision and message inspired by the elegance and confidence of Gulf Arab men,<br></br> staying in line with the fashion era.</p></div>
+                            <div className='paragraphenglish fs-xxl-1 fs-xl-2 fs-lg-3 fs-md-4'><p>Frada aspires to become the leading and preferred brand for men in the Kingdom of Saudi Arabia. It aims to provide a diverse range of luxurious and stylish products while maintaining a high level of quality and innovative design. Frada strives to establish itself as a prestigious men's fashion destination that meets the needs of customers who seek elegance and exclusivity.</p></div>
                         </div>
 
                     </div>

@@ -1,0 +1,79 @@
+.Weekoffers .container {
+    width: 95%;
+    margin: auto;
+}
+
+.Weekoffers {
+    margin-top: 2%;
+}
+
+.Weekoffers .Weekoffers-content {
+    text-align: end;
+}
+
+.Weekoffers-content .Weekoffers-parts {
+    position: relative;
+}
+
+.Weekoffers-content .Weekoffers-parts img {
+    width: 100%;
+    height: auto;
+}
+
+.Weekoffers-content .Weekoffers-parts button {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #D17A52;
+    border-radius: 8px;
+    font-family: 'Cairo', sans-serif;
+    padding: .5% 3%;
+    font-size: 20px;
+    position: absolute;
+    left: 10%;
+    top: 74%;
+    color: #D17A52;
+
+}
+
+.Weekoffers-content .Weekoffers-parts button:hover {
+    background: #D17A52;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+.Weekoffers .Weekoffers-text h2 {
+    text-align: center;
+    color: #D17A52;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.Weekoffers .Weekoffers-text h3 {
+    text-align: center;
+}
+
+.Weekoffers .Weekoffers-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    flex-direction: row-reverse;
+}
+
+.Weekoffers .Weekoffers-button button {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #D17A52;
+    border-radius: 4px;
+    font-family: 'Cairo', sans-serif;
+    color: #D17A52;
+    padding: .5% 3.5%;
+    font-size: 20px;
+
+}
+
+.Weekoffers .Weekoffers-button button:hover {
+    background: #D17A52;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+
+}

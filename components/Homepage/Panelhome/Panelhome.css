@@ -1,0 +1,17 @@
+.Panelhome .panel-contennt {
+    background-image: url('../../../public/Images/Homepage/Panel/WhatsApp\ Image\ 2023-12-17\ at\ 8.29.37\ AM.jpeg');
+
+    height: 320px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Panelhome .panel-border {
+    border: 2px solid #D17A52;
+    height: 91%;
+    width: 98%;
+}

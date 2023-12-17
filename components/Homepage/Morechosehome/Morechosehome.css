@@ -1,0 +1,31 @@
+.Morechosehome .container {
+    width: 95%;
+    margin: auto;
+}
+
+.Morechosehome {
+    margin-top: 2%;
+}
+
+.Morechosehome .Morechosehome-content h3 {
+    text-align: end;
+}
+
+.Morechosehome-content .Morechosehome-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top: 1%;
+}
+
+.Morechosehome-content .Morechosehome-cards .Morechosehome-card {
+    width: 32.5%;
+
+}
+
+.Morechosehome-cards .Morechosehome-card img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 3px 6px #D17A52;
+}

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 // import styles from '../../src/app/page.module.css'
 // import "./Header.css"
+//import '../Header.css'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
