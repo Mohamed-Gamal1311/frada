@@ -10,6 +10,7 @@ import ProductVideo from '../../components/SingleProduct/ProductVideo/ProductVid
 import ProductReviews from '../../components/SingleProduct/ProductReviews/ProductReviews'
 import FooterMobile from '../../components/FooterMobile/FooterMobile'
 import Footer from '../../components/Footer/Footer'
+import Homepage from '../../components/Homepage/Homepage'
 
 export default function Home() {
 
@@ -25,6 +26,7 @@ export default function Home() {
       {/* <DynamicAd /> */}
       {/* <ProductVideo /> */}
       {/* <ProductReviews /> */}
+      <Homepage />
       <Footer />
       <FooterMobile />
 
