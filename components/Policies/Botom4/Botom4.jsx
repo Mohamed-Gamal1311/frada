@@ -8,7 +8,7 @@ export default function Botom4() {
                             الرؤية
                         </h3>
                         <p>
-                            Vision
+                            Elevating Saudi Arabian Men&apos;s Fashion with Timeless Sophistication
                         </p>
                     </div>
                     <div className='paragraph-border' style={{ background: '#F2F2F2' }}>
@@ -17,7 +17,7 @@ export default function Botom4() {
                                 <p>تهدف فرادا إلى أن تصبح العلامة التجارية الرائدة والمفضلة لرجال المملكة العربية السعودية. تسعى لتقديم تشكيلة متنوعة من المنتجات الفاخرة والأنيقة، وتضمن الحفاظ على مستوى عالٍ من الجودة والتصميم الابتكاري. تسعى فرادا لتميز نفسها كوجهة أزياء رجالية مرموقة تلبي احتياجات العملاء الذين يبحثون عن الأناقة والتميز.</p>
                             </div>
 
-                            <div className='paragraphenglish fs-xxl-1 fs-xl-2 fs-lg-3 fs-md-4'><p>Frada aspires to become the leading and preferred brand for men in the Kingdom of Saudi Arabia. It aims to provide a diverse range of luxurious and stylish products while maintaining a high level of quality and innovative design. Frada strives to establish itself as a prestigious men's fashion destination that meets the needs of customers who seek elegance and exclusivity.</p></div>
+                            <div className='paragraphenglish fs-xxl-1 fs-xl-2 fs-lg-3 fs-md-4'><p>Frada is a leading brand in the Kingdom of Saudi Arabia, specializing in slippers, shoes, sneakers, Gulf fashion, perfumes, and men&apos;s<br></br> accessories. Renowned for its elegant designs and exceptional quality, Frada caters to the needs of men who strive for distinction and <br></br>elegance in their personal appearance. Frada embodies a vision and message inspired by the elegance and confidence of Gulf Arab men,<br></br> staying in line with the fashion era.</p></div>
                         </div>
 
                     </div>

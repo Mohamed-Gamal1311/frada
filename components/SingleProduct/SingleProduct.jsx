@@ -20,7 +20,7 @@ export default function SingleProduct() {
     // {{URL}}/getProductsBySub/1
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/getProduct/${params.ProductID}`);
+        const response = await fetch(`https://www.fradaksa.com/api/getProduct/${params.ProductID}`);
         const data = await response.json();
 
         setProduct(data.data);
@@ -60,10 +60,10 @@ export default function SingleProduct() {
 
       <ProductHolder />
       <AdContainer />
-      <Info desc={product.Description} />
-      <ProductVideo />
+      <Info desc={product.Description} info={product.AdditionalInfo} />
+      <ProductVideo title={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoTitle : ''} desc={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoDescription : ''} url={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoURL : ''} />
       <AdContainer />
-      <ProductReviews />
+      <ProductReviews reviews={product.Reviews} />
     </section>
   )
 }

@@ -14,7 +14,7 @@ export default function ImagesHolder(props) {
 
 
     const [hoveredPhoto, setHoveredPhoto] = useState(null);
-    const photo = `http://127.0.0.1:8000/Attachment/${props.id}/${props.colorid}/${props.images[0]}`
+    const photo = `https://fradaksa.com/Attachment/${props.id}/${props.colorid}/${props.images[0]}`
     const handlePhotoHover = (photo) => {
         setHoveredPhoto(photo);
     };
@@ -23,7 +23,7 @@ export default function ImagesHolder(props) {
     useEffect(() => {
 
 
-        setHoveredPhoto(`http://127.0.0.1:8000/Attachment/${props.id}/${props.colorid}/${props.images[0]}`)
+        setHoveredPhoto(`https://fradaksa.com/Attachment/${props.id}/${props.colorid}/${props.images[0]}`)
 
 
     }, [props.images, props.id, props.colorid]);
@@ -40,8 +40,8 @@ export default function ImagesHolder(props) {
                 <div className='subimage-holder'>
 
                     {props.images.length > 0 ? props.images.map((image, index) => (
-                        <div key={index} className='image-hover' onMouseEnter={() => handlePhotoHover(`http://127.0.0.1:8000/Attachment/${props.id}/${props.colorid}/${image}`)}>
-                            <Image src={`http://127.0.0.1:8000/Attachment/${props.id}/${props.colorid}/${image}`} width={80} height={80} alt={`Image-${index}`} className="ml-2" />
+                        <div key={index} className='image-hover' onMouseEnter={() => handlePhotoHover(`https://fradaksa.com/Attachment/${props.id}/${props.colorid}/${image}`)}>
+                            <Image src={`https://fradaksa.com/Attachment/${props.id}/${props.colorid}/${image}`} width={80} height={80} alt={`Image-${index}`} className="ml-2" />
                         </div>
                     )) : (<div>none</div>)}
 

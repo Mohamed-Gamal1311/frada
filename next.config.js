@@ -21,9 +21,15 @@ module.exports = {
                 hostname: "https://www.pexels.com/",
                 // ...
             },
+            {
+                protocol: "https",
+                hostname: "https://www.fradaksa.com",
+                // ...
+            },
 
 
         ],
         domains: ['127.0.0.1'],
+        domains: ['fradaksa.com'],
     },
 };

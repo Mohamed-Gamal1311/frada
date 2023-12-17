@@ -3,17 +3,15 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function ProductVideo() {
+function ProductVideo(props) {
     return (
         <section className='d-flex justify-content-center px-5 py-5'>
             <Card className="d-flex flex-row-reverse w-100" style={{ textAlign: "right", border: "1px solid #d17a52" }} >
                 <Card.Body className='w-50'>
-                    <Card.Title style={{ color: "#d17a52", textDecoration: 'underline', fontSize: '2.2em' }}>حذاء فرادا شرقي</Card.Title>
+                    <Card.Title style={{ color: "#d17a52", textDecoration: 'underline', fontSize: '2.2em' }}>{props.title}</Card.Title>
                     <Card.Text className='pe-2 pt-2' style={{ textAlign: "right", lineHeight: '2em' }} >
                         <span style={{ textAlign: 'justify', fontSize: '1.2em' }}>
-                            ء ### code، يعتبر هذا الحذاء من أحدث التصاميم الحصرية والمميزة، وتم تصميمه خصيصاً لرجال الأعمال ومن أجل المقابلات الرسمية ، كما تم وضع المنتج خلال فترة اختبار وجودة، والاهتمام بفرادة التصميم عن غيره من التصاميم المتداولة بعناية شديدة من رواد التصميم والموضة بفريق عمل فرادا.
-
-                            هذا الحذاء الشرقي مصنع بأحدث الأجهزة والمعدات التي تخدم راحة عملائنا، كما تم استخدام مواد وجلود عالية الجودة ولأننا نهتم بصحة عملائنا الكرام،  تم اختيار دعسه طبية وبطانة علوية مريحة جدا للقدم ، وحرصنا كل الحرص ان يكون وزن الحذاء خفيف لشعور بالراحة أثناء المش
+                            {props.desc !== null ? props.desc : ''}
                         </span>
                     </Card.Text>
                     <div className='d-flex '>
@@ -22,7 +20,7 @@ function ProductVideo() {
                 </Card.Body>
                 <Card.Body className='w-50' >
                     <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        src={`${props.url}`}>
                     </iframe>
                 </Card.Body>
 
