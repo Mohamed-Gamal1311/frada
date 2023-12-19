@@ -97,9 +97,9 @@
 
 .indicator {
     position: absolute;
-    top: -60%;
-    width: 70px;
-    height: 70px;
+    top: -54%;
+    width: 65px;
+    height: 65px;
     background: #332C32;
     border-radius: 50%;
     border: 6px solid var(--clr);
@@ -132,11 +132,11 @@
 
 /* Indicator Transitions */
 .navigation ul li:nth-child(1).active~.indicator {
-    transform: translateX(-6px);
+    transform: translateX(-4px);
 }
 
 .navigation ul li:nth-child(2).active~.indicator {
-    transform: translateX(calc(64px * 1));
+    transform: translateX(calc(67px * 1));
 }
 
 .navigation ul li:nth-child(3).active~.indicator {
@@ -144,9 +144,9 @@
 }
 
 .navigation ul li:nth-child(4).active~.indicator {
-    transform: translateX(calc(68px * 3));
+    transform: translateX(calc(69px * 3));
 }
 
 .navigation ul li:nth-child(5).active~.indicator {
-    transform: translateX(calc(68.5px * 4));
+    transform: translateX(calc(69px * 4));
 }
