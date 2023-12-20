@@ -7,9 +7,10 @@
     margin-top: 2%;
 }
 
-.Morechosehome .Morechosehome-content h3 {
+.title-more {
     text-align: end;
 }
+
 
 .Morechosehome-content .Morechosehome-cards {
     display: flex;
@@ -17,6 +18,10 @@
     align-items: center;
     flex-direction: row-reverse;
     margin-top: 1%;
+}
+
+.Morechosehome-content .Morechosehome-cards .Morechosehome-card {
+    text-align: end;
 }
 
 .Morechosehome-content .Morechosehome-cards .Morechosehome-card {
@@ -28,4 +33,41 @@
     width: 100%;
     height: auto;
     box-shadow: 0px 3px 6px #D17A52;
+}
+
+
+
+@media(max-width:1200px) {
+    .Morechosehome-cards h3 {
+
+        font-size: 16px;
+    }
+}
+
+@media(max-width:750px) {
+    .Morechosehome-content .Morechosehome-cards {
+        flex-wrap: wrap;
+    }
+
+    .Morechosehome-content .Morechosehome-cards .Morechosehome-card {
+        width: 100%;
+        margin-bottom: 5%;
+
+    }
+
+    .Morechosehome-cards .Morechosehome-card img {
+        width: 100%;
+    }
+
+    .title-more {
+        text-align: center;
+        font-size: 17px;
+        margin-bottom: 4%;
+    }
+
+    .Morechosehome-content .Morechosehome-cards .Morechosehome-card h3 {
+        font-size: 14px;
+    }
+
+
 }

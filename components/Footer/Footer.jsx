@@ -78,7 +78,7 @@ export default function Footer() {
 
 
                             <div className='footer-par1'>
-                                <div className='map'><iframe width="85%" height="220px" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=elmokatam%20Cairo+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                                <div className='map'><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14485.688365750524!2d46.6356799!3d24.815235!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee5dad86c258d%3A0xd870f6653aa0238!2z2YHYsdin2K_Ypw!5e0!3m2!1sar!2seg!4v1703029098092!5m2!1sar!2seg" style={{ width: '85%', height: '250px' }} ></iframe>
 
                                 </div>
 
@@ -121,6 +121,7 @@ export default function Footer() {
                     </div>
                     <h3>جميع الحقوق محفوظة لشركة فرادا 2023</h3>
                 </div>
+
             </div>
 
         </div>

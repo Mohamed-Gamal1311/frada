@@ -1,0 +1,12 @@
+.Recentelyarrived-title {
+    text-align: end;
+    margin-right: 5%;
+
+}
+
+@media(max-width:750px) {
+    .Recentelyarrived-title {
+        font-size: 17px;
+
+    }
+}

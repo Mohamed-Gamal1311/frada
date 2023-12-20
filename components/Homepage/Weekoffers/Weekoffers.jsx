@@ -1,4 +1,7 @@
 "use client"
+import im1 from '../../../public//Images/Homepage/Weekoffers/this-week-1.jpg'
+import im2 from '../../../public//Images/Homepage/Weekoffers/this-week-2.jpg'
+import im3 from '../../../public//Images/Homepage/Weekoffers/this-week-3.jpg'
 
 import Image from 'next/image'
 import './Weekoffers.css'
@@ -14,6 +17,23 @@ export default function Weekoffers() {
                         <button>تسوق الآن</button>
                     </div>
                 </div>
+                <div className='Weekoffers-mobile'>
+                    <div className='cheapup'></div>
+                    <div className='Weekoffers-mobilecon'>
+                        <div className='card-weekoffer' >
+                            <div style={{ height: '100%' }}><Image src={im3} alt='image' /></div>
+                        </div>
+                        <div className='card-weekoffer' >
+                            <div style={{ height: '100%' }}><Image src={im2} alt='image' /></div>
+                        </div>
+                        <div className='card-weekoffer' style={{ width: '100%', position: 'relative' }}>
+                            <div style={{ height: '100%' }}><Image src={im1} alt='image' /></div>
+                            <button>تسوق الآن</button>
+                        </div>
+                        <div className='cheapup'></div>
+                    </div>
+
+                </div>
                 <div className='Weekoffers-text'>
                     <h2>الحذاء المثـــــالي هو الهدية المثالية</h2>
                     <h3>الأفضل جودة, الأكثر أناقة و الأكثر راحة بالتأكيد هو الهدية المثالية</h3>
@@ -23,6 +43,7 @@ export default function Weekoffers() {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

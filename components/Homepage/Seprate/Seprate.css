@@ -1,0 +1,52 @@
+.Seprate .container {
+    width: 95%;
+    margin: auto;
+}
+
+.Seprate {
+    margin-top: 2%;
+}
+
+.seprate-block {
+    background: black;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.seprate-block .seprate-border {
+    border: 2px solid #D17A52;
+    height: 91%;
+    width: 98%;
+}
+
+.mobile-seprate {
+    display: none;
+    width: 100%;
+}
+
+.mobile-seprate img {
+
+    width: 100%;
+}
+
+@media(max-width:1000px) {
+    .seprate-block .seprate-border {
+        height: 91%;
+        width: 97%;
+    }
+}
+
+
+
+@media(max-width:750px) {
+    .mobile-seprate {
+        display: block;
+    }
+
+    .seprate-block {
+        display: none;
+    }
+}

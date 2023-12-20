@@ -31,11 +31,11 @@ export default function Header() {
     return (
         <>
             {isMobile ? (
-                // <>
-                //     <UpMobile />
-                //     <BottomMobile />
-                // </>
-                <div>hi</div>
+                <>
+                    <UpMobile />
+                    <BottomMobile />
+                </>
+
             ) : (
                 <>
                     <Up />

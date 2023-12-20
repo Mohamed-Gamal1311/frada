@@ -1,0 +1,42 @@
+#main-slider-container {
+    width: 100%;
+}
+
+.slider-card-image {
+    height: 100%;
+}
+
+.slider-card {
+
+    border-radius: 0%;
+}
+
+.most-seller h3 {
+    text-align: end;
+    margin-right: 2%;
+
+}
+
+.most-seller {
+    margin-top: 3%;
+}
+
+
+@media(max-width:750px) {
+    .most-seller {
+        margin-top: 20%;
+        font-size: 11px;
+    }
+
+    .slider-icon.right {
+        display: none;
+    }
+
+    .slider-icon.left {
+        display: none;
+    }
+
+    .title-most {
+        font-size: 17px;
+    }
+}
