@@ -6,12 +6,13 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import "./ProductCard.css"
 
 export default function ProductCard({ id, name, colorid, code, price, discount, mainphoto, colornum, photocolors }) {
 
 
     const [isHovered, setIsHovered] = useState(false);
-    const [hoveredPhoto, setHoveredPhoto] = useState(`https://www.fradaksa.com/Attachment/${id}/${colorid}/${mainphoto}`);
+    const [hoveredPhoto, setHoveredPhoto] = useState(`https://back.fradaksa.net/Attachment/${id}/${colorid}/${mainphoto}`);
     console.log(photocolors)
     const handlePhotoHoverSmall = (photo) => {
         console.log(photo)
@@ -24,7 +25,8 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
     return (
 
         // <Link href="#">
-        <Card style={{ cursor: 'pointer', width: "32%", textAlign: 'right', border: 'none', borderRadius: 'none', marginBottom: '5%', backgroundColor: 'transparent' }}
+
+        <Card className='card-product' style={{ cursor: 'pointer', textAlign: 'right', border: 'none', borderRadius: 'none', marginBottom: '5%', backgroundColor: 'transparent' }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -62,8 +64,8 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
                                 <p className='mx-2 d-flex align-items-center' style={{ fontWeight: "bold", fontSize: '1.2em', color: '#9A9A9A' }}>{colornum - 4 > 0 ? colornum - 4 : <span></span>}+</p>
 
                                 {photocolors.length > 0 && photocolors.slice(0, 4).map((color, index) => (
-                                    <div key={index} style={{ marginLeft: "2%" }} onMouseEnter={() => handlePhotoHoverSmall(`https://fradaksa.com/Attachment/${id}/${color.ColorID}/${color.Image}`)}>
-                                        <Image src={`https://fradaksa.com/Attachment/${id}/${color.ColorID}/${color.Image}`} alt={`Image ${index}`} className="ml-2" width={40} height={40} />
+                                    <div key={index} style={{ marginLeft: "2%" }} onMouseEnter={() => handlePhotoHoverSmall(`https://back.fradaksa.net/Attachment/${id}/${color.ColorID}/${color.Image}`)}>
+                                        <Image src={`https://back.fradaksa.net/Attachment/${id}/${color.ColorID}/${color.Image}`} alt={`Image ${index}`} className="ml-2" width={40} height={40} />
                                     </div>
                                 ))}
 

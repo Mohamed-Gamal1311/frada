@@ -69,7 +69,7 @@ export default function CategoryProducts(props) {
 
 
     return (
-        <div className='cards-holder ms-5' style={{ fontSize: '15px' }}>
+        <div className='cards-holder ms-2 ms-lg-5 ms-xl-5 ms-md-5 ' style={{ fontSize: '15px' }}>
             {products && products.length > 0 ? (
                 products.map((product) => (
                     <ProductCard

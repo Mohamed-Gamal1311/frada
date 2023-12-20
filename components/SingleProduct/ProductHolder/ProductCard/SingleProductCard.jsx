@@ -99,7 +99,7 @@ export default function SingleProductCard() {
                                 <div key={index} style={{ cursor: 'pointer' }} onClick={() => handleImageClick(color.ColorID, color.Images, color.Images[0])}>
                                     <Image
                                         key={index}
-                                        src={`https://fradaksa.com/Attachment/${product.ProductID}/${color.ColorID}/${color.Images[0]}`}
+                                        src={`https://back.fradaksa.net/Attachment/${product.ProductID}/${color.ColorID}/${color.Images[0]}`}
                                         width={50}
                                         height={50}
                                         alt={`${color}-Image`}

@@ -16,7 +16,7 @@ export default function Bottom() {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('https://www.fradaksa.com/api/categories');
+                const response = await fetch('https://back.fradaksa.net/api/categories');
                 const data = await response.json();
                 setCategories(data.data);
                 setLoading(false);

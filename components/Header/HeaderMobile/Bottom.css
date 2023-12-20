@@ -8,11 +8,12 @@
 } */
 
 :root {
-    --clr: #f6f6f6;
+    --clr: white;
 }
 
 .text {
     color: black;
+    font-weight: bolder !important;
 }
 
 .holder {
@@ -25,6 +26,7 @@
     bottom: 0;
     width: 100%;
     background: var(--clr);
+    z-index: 9
 }
 
 .navigation {
@@ -74,7 +76,7 @@
 }
 
 .navigation ul li.active a .icon {
-    transform: translateY(-32px);
+    transform: translateY(-35px);
 }
 
 .navigation ul li a .text {
@@ -90,21 +92,21 @@
 
 .navigation ul li.active a .text {
     opacity: 1;
-    transform: translateY(10px);
+    transform: translateY(15px);
 }
 
 .indicator {
     position: absolute;
-    top: -50%;
-    width: 70px;
-    height: 70px;
+    top: -54%;
+    width: 65px;
+    height: 65px;
     background: #332C32;
     border-radius: 50%;
     border: 6px solid var(--clr);
     transition: 0.5s;
 }
 
-.indicator::before {
+/* .indicator::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -114,9 +116,9 @@
     background: transparent;
     border-top-right-radius: 20px;
     box-shadow: 1px -10px 0 0 var(--clr);
-}
+} */
 
-.indicator::after {
+/* .indicator::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -126,25 +128,25 @@
     background: transparent;
     border-top-left-radius: 20px;
     box-shadow: -1px -10px 0 0 var(--clr);
-}
+} */
 
 /* Indicator Transitions */
 .navigation ul li:nth-child(1).active~.indicator {
-    transform: translateX(calc(70px * 0));
+    transform: translateX(-4px);
 }
 
 .navigation ul li:nth-child(2).active~.indicator {
-    transform: translateX(calc(70px * 1));
+    transform: translateX(calc(67px * 1));
 }
 
 .navigation ul li:nth-child(3).active~.indicator {
-    transform: translateX(calc(70px * 2));
+    transform: translateX(calc(67.5px * 2));
 }
 
 .navigation ul li:nth-child(4).active~.indicator {
-    transform: translateX(calc(70px * 3));
+    transform: translateX(calc(69px * 3));
 }
 
 .navigation ul li:nth-child(5).active~.indicator {
-    transform: translateX(calc(70px * 4));
+    transform: translateX(calc(69px * 4));
 }

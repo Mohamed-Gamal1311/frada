@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import home from "../../../public/Images/Bottomhead/home_icon.svg";
-
+import crosshair from "../../../public/Images/ICONS-phone/orders.svg"
+import frada from "../../../public/Images/ICONS-phone/Frada.svg"
+import My_account_icon from "../../../public/Images/ICONS-phone/My_account_icon.svg"
+import My_Wishes_Button_icon from "../../../public/Images/ICONS-phone/My_Wishes_Button_icon.svg"
+import supporticon from "../../../public/Images/ICONS-phone/suport icon.svg"
 import "./Bottom.css";
 
 export default function Bottom() {
@@ -45,48 +49,48 @@ export default function Bottom() {
                         <a href="#">
                             <span className="icon" width="50px" height="50px">
 
-                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+                                <ion-icon name="home-outline"><Image src={supporticon} width={25} height={25} alt="icon" /></ion-icon>
                             </span>
-                            <span className="text">Home</span>
+                            <span className="text">تواصل معنا</span>
                         </a>
                     </li>
                     <li className={`list ${activeIndex === 1 ? 'active' : ''}`}>
                         <a href="#">
                             <span className="icon" width="50px" height="50px">
 
-                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+                                <ion-icon name="home-outline"><Image src={crosshair} width={25} height={25} alt="icon" /></ion-icon>
 
                             </span>
-                            <span className="text">Profile</span>
+                            <span className="text">طلباتي</span>
                         </a>
                     </li>
                     <li className={`list ${activeIndex === 2 ? 'active' : ''}`}>
                         <a href="#">
                             <span className="icon" width="50px" height="50px">
 
-                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+                                <ion-icon name="home-outline"><Image src={frada} width={25} height={25} alt="icon" /></ion-icon>
 
                             </span>
-                            <span className="text">Message</span>
+                            <span className="text">فرادا</span>
                         </a>
                     </li>
                     <li className={`list ${activeIndex === 3 ? 'active' : ''}`}>
                         <a href="#">
                             <span className="icon" width="50px" height="50px">
 
-                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+                                <ion-icon name="home-outline"><Image src={My_Wishes_Button_icon} width={25} height={25} alt="icon" /></ion-icon>
 
                             </span>
-                            <span className="text">Photos</span>
+                            <span className="text">امنياتي</span>
                         </a>
                     </li>
                     <li className={`list ${activeIndex === 4 ? 'active' : ''}`}>
                         <a href="#">
                             <span className="icon" width="50px" height="50px">
-                                <ion-icon name="home-outline"><Image src={home} width={25} height={25} alt="icon" /></ion-icon>
+                                <ion-icon name="home-outline"><Image src={My_account_icon} width={25} height={25} alt="icon" /></ion-icon>
 
                             </span>
-                            <span className="text">Settings</span>
+                            <span className="text">حسابي</span>
                         </a>
                     </li>
                     <div className="indicator">
