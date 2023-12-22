@@ -1,0 +1,71 @@
+@media(max-width:1150px) {
+    .Customerfriendmo .form-content .customer-form {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .CustomerFreind {
+        padding-bottom: 0;
+    }
+
+    .Customerfriendmo .customer-info {
+        width: 80%;
+        margin-bottom: 3%;
+    }
+
+    .Customerfriendmo .customer-form .customer-info label {
+        font-size: 20px;
+    }
+
+    .Customerfriendmo .customer-info input {
+        font-size: 20px;
+    }
+
+    .add-friend h2 {
+        font-size: 1.5em;
+    }
+
+    .container-shadow {
+        padding-bottom: 6%;
+        margin-bottom: 5%;
+    }
+
+}
+
+@media(max-width:750px) {
+    .Customerfriendmo .container-shadow {
+        width: 90% !important;
+    }
+
+    .Customerfriendmo .customer-form .customer-info label {
+        font-size: 14px;
+    }
+
+    .Customerfriendmo .customer-info input {
+        font-size: 14px;
+    }
+
+    .CustomerFreind {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .add-friend h2 {
+        font-size: 1em;
+    }
+}
+
+@media(max-width:550px) {
+    .Customerfriendmo .container-shadow {
+        width: 95% !important;
+    }
+
+    .Customerfriendmo .customer-form .customer-info label {
+        font-size: 10px;
+    }
+
+    .Customerfriendmo .customer-info input {
+        font-size: 10px;
+    }
+}

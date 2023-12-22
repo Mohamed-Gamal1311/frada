@@ -29,8 +29,7 @@ export default function Homepage() {
             <Seprate />
             <Shoppingnow />
             <Shopingnowmobile />
-            <Footer />
-            <FooterMobile />
+
         </div>
     )
 }

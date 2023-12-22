@@ -1,0 +1,6 @@
+@media(max-width:1250px) {
+    .CustomerFreind .container-shadow {
+        width: 90% !important;
+        margin-bottom: 3%;
+    }
+}

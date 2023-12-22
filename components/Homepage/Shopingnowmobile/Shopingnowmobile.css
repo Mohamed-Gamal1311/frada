@@ -27,6 +27,9 @@
     height: 465px !important;
     width: 395px !important;
 
+    position: relative !important;
+
+
 }
 
 #main-slider-container {
@@ -36,6 +39,35 @@
 .shopingnow-mo {
     direction: rtl;
     display: none;
+}
+
+.shopingnow-mo #slider:last-child .slider-card-title {
+
+    display: none !important;
+}
+
+.shopingnow-mo #first:last-child .slider-card-title {
+
+    display: none !important;
+}
+
+.shopingnow-mo #slider .slider-card-title {
+    font-weight: 500;
+    margin-top: 10px;
+    position: absolute;
+    top: 75%;
+    right: 33%;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #D17A52;
+    border-radius: 8px;
+    background: white;
+    color: #D17A52;
+    padding: 1% 6%;
+}
+
+.shopingnow-mo .slider-card-title:hover {
+    background: #D17A52;
+    color: white;
 }
 
 @media(max-width:1100px) {

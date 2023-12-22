@@ -108,3 +108,25 @@
     color: white;
     font-weight: 600;
 }
+
+@media(max-width:1250px) {
+    .background-card h2 {
+        margin-right: 4% !important;
+    }
+}
+
+@media(max-width:1100px) {
+    .background-card h2 {
+        font-size: 17px;
+    }
+
+    .payment-cards .card-content {
+        width: 47%;
+
+        margin: 1%;
+
+    }
+
+
+
+}

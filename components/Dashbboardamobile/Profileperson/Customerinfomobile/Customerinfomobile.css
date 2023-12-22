@@ -1,0 +1,95 @@
+.header-customerfriend {
+    width: 90%;
+}
+
+.link-acount p {
+    color: #D17A52;
+}
+
+.contactwith-us img:hover {
+    fill: #D17A52;
+}
+
+@media(max-width:1150px) {
+    .Customerinfomobile .customer-form {
+        flex-wrap: wrap !important;
+        margin-bottom: 0 !important;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .Customerinfomobile .customer-info {
+        width: 80% !important;
+        margin-bottom: 1%;
+    }
+
+    .Customerinfomobile .customer-info input {
+        font-size: 20px;
+    }
+
+    .Customerinfomobile .customer-form .customer-info label {
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:750px) {
+    .Customerinfomobile .form-content-dashboard {
+        padding-right: 2em;
+        padding-left: 0;
+    }
+
+    .Customerinfomobile .customer-info {
+        width: 90% !important;
+        margin-bottom: 2%;
+    }
+
+    .Customerinfomobile .adress-friend {
+        width: 90%;
+    }
+
+    .Customerinfomobile .customer-info input {
+        font-size: 14px;
+    }
+
+    .Customerinfomobile .customer-form .customer-info label {
+        font-size: 14px;
+    }
+
+    .contactwith-us img {
+        width: 20px;
+    }
+
+}
+
+@media(max-width:500px) {
+
+    .Customerinfomobile .customer-info {
+
+        margin-bottom: 1%;
+    }
+
+    .Customerinfomobile .adress-friend {
+        width: 90%;
+    }
+
+    .Customerinfomobile .customer-info input {
+        font-size: 10px;
+    }
+
+    .Customerinfomobile .customer-form .customer-info label {
+        font-size: 10px;
+    }
+
+    .contactwith-us img {
+        width: 16px;
+    }
+
+    .contactwith-us svg:hover {
+        fill: #D17A52;
+    }
+
+    .contactwith-us .face {
+        width: 10px;
+    }
+}

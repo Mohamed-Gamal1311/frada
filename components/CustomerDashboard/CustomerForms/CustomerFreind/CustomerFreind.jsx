@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import edit from '../../../../public/Images/Customerifo/Group 37669.svg'
 import '../InformationCustomer/InformationCustomer.css'
+import './CustomerFreind.css'
 
 export default function CustomerFreind() {
     return (
@@ -20,6 +21,20 @@ export default function CustomerFreind() {
                         <div className='customer-info'>
 
                             <label>
+                                رقم الهاتف
+                            </label>
+                            <div className="input-dashboard">
+                                <input type="number" />
+                                <div className="icon-edit">
+                                    <Image src={edit} alt='edit' />
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className='customer-info'>
+
+                            <label>
                                 اسم الصديق
                             </label>
 
@@ -33,23 +48,12 @@ export default function CustomerFreind() {
                             </div>
 
                         </div>
-                        <div className='customer-info'>
 
-                            <label>
-                                رقم الهاتف
-                            </label>
-                            <div className="input-dashboard">
-                                <input type="number" />
-                                <div className="icon-edit">
-                                    <Image src={edit} alt='edit' />
-
-                                </div>
-                            </div>
-
-                        </div>
 
                     </div>
                     <div className='customer-form'>
+
+
                         <div className='customer-info'>
 
                             <label>
@@ -79,22 +83,11 @@ export default function CustomerFreind() {
 
                         </div> */}
 
+
+
                     </div>
                     <div className='customer-form'>
-                        <div className='customer-info'>
 
-                            <label>
-                                عنوان الصديق بالتفصيل
-                            </label>
-                            <div className="input-dashboard">
-                                <input type="text" />
-                                <div className="icon-edit">
-                                    <Image src={edit} alt='edit' />
-
-                                </div>
-                            </div>
-
-                        </div>
                         <div className='customer-info'>
 
                             <label>
@@ -109,14 +102,42 @@ export default function CustomerFreind() {
                             </div>
 
                         </div>
+                        <div className='customer-info'>
 
+                            <label>
+                                عنوان الصديق بالتفصيل
+                            </label>
+                            <div className="input-dashboard">
+                                <input type="text" />
+                                <div className="icon-edit">
+                                    <Image src={edit} alt='edit' />
+
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                     <div><button>إزالة صديق</button></div>
 
                 </div>
 
-                <div className='form-content container-shadow'>
+                <div className='form-content container-shadow' style={{ marginTop: '4%' }}>
                     <div className='customer-form'>
+
+                        <div className='customer-info'>
+
+                            <label>
+                                رقم الهاتف
+                            </label>
+                            <div className="input-dashboard">
+                                <input type="number" />
+                                <div className="icon-edit">
+                                    <Image src={edit} alt='edit' />
+
+                                </div>
+                            </div>
+
+                        </div>
                         <div className='customer-info'>
 
                             <label>
@@ -133,23 +154,9 @@ export default function CustomerFreind() {
                             </div>
 
                         </div>
-                        <div className='customer-info'>
-
-                            <label>
-                                رقم الهاتف
-                            </label>
-                            <div className="input-dashboard">
-                                <input type="number" />
-                                <div className="icon-edit">
-                                    <Image src={edit} alt='edit' />
-
-                                </div>
-                            </div>
-
-                        </div>
-
                     </div>
                     <div className='customer-form'>
+
                         <div className='customer-info'>
 
                             <label>
@@ -164,6 +171,7 @@ export default function CustomerFreind() {
                             </div>
 
                         </div>
+
                         {/* <div className='customer-info'>
 
                             <label>
@@ -179,15 +187,16 @@ export default function CustomerFreind() {
 
                         </div> */}
 
+
+
                     </div>
                     <div className='customer-form'>
+
                         <div className='customer-info'>
 
-                            <label>
-                                عنوان الصديق بالتفصيل
-                            </label>
+
                             <div className="input-dashboard">
-                                <input type="text" />
+                                <input type="password" />
                                 <div className="icon-edit">
                                     <Image src={edit} alt='edit' />
 
@@ -197,9 +206,11 @@ export default function CustomerFreind() {
                         </div>
                         <div className='customer-info'>
 
-
+                            <label>
+                                عنوان الصديق بالتفصيل
+                            </label>
                             <div className="input-dashboard">
-                                <input type="password" />
+                                <input type="text" />
                                 <div className="icon-edit">
                                     <Image src={edit} alt='edit' />
 

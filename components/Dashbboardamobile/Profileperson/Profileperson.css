@@ -1,0 +1,73 @@
+.Profileperson .CustomerFormsHolder .dashboard-menu .button-menu {
+    height: 55px;
+}
+
+.Profileperson .dashboard-menu .flex-column {
+    padding-top: 3em !important;
+}
+
+.Profileperson .CustomerFormsHolder .dashboard-menu .button-menu {
+    margin-bottom: 20%;
+}
+
+@media(max-width:1150px) {
+
+    .Profileperson .CustomerFormsHolder .dashboard-menu .button-menu {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        /* padding-bottom: 14%; */
+        /* padding: revert; */
+        padding-right: 0;
+        padding-left: 0;
+
+
+    }
+
+    .Profileperson .CustomerFormsHolder .dashboard-menu {
+        width: 24%;
+
+    }
+
+    .Profileperson .CustomerFormsHolder .dashboard-menu .button-menu img {
+        width: 100% !important;
+    }
+
+    .Profileperson .icon-dash {
+        width: 60%;
+    }
+
+
+    /* 
+    .Profileperson-menu .button-menu a {
+        display: none !important;
+    } */
+}
+
+@media(max-width:600px) {
+
+    .Profileperson .CustomerFormsHolder .dashboard-menu .button-menu {
+        width: 60px;
+
+        height: 50px;
+
+    }
+
+    .adress-friend iframe {
+        height: 70px;
+    }
+
+    .Profileperson .CustomerFormsHolder .dashboard-menu .button-menu {
+        margin-bottom: 43%;
+    }
+}
+
+@media(max-width:450px) {
+
+    .Profileperson .CustomerFormsHolder .dashboard-menu .button-menu {
+        width: 50px;
+
+        height: 45px;
+
+    }
+}

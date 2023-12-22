@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Ad from "../../../../public/Images/DynamicAd.jpg"
 // import Image from 'react-bootstrap';
 import Image from 'next/image';
+import './DynamicAd.css'
 
 
 function DynamicAd() {
@@ -15,11 +16,12 @@ function DynamicAd() {
 
     return (
 
-        <div className="px-3 py-3" style={{ height: '100%', width: '20%' }} >
+        <div className="px-3 py-3 " style={{ height: '100%', width: '20%' }} >
             <div>
                 <Image src={Ad} style={{ width: '100%', height: 'auto' }} />
             </div>
         </ div>
+
     )
 
 

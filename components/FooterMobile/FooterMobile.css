@@ -67,10 +67,13 @@ body {
     margin-right: 11%;
 }
 
+.boxbadel h4 {
+    margin-right: 5% !important;
+}
 
 .Foooter-mobile .box1 .catoegry-footer .name-cateogry {
     display: flex;
-
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -220,6 +223,7 @@ body {
 
     .Foooter-mobile .box1 .catoegry-footer .name-cateogry {
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .Foooter-mobile .box1 {

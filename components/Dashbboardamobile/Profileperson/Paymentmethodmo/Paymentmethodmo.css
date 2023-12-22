@@ -1,0 +1,54 @@
+.Paymentmethodmo .background-card {
+    background-position-y: 100%;
+
+}
+
+.Paymentmethodmo .payment-cards .card-content {
+    height: 25vh;
+}
+
+.payment-cards .confirm-payment button {
+    margin-bottom: 2%;
+}
+
+@media(max-width:1150px) {
+    .Paymentmethodmo .payment-cards .card-content {
+        width: 80%;
+    }
+
+    .Paymentmethodmo .payment-cards {
+        justify-content: center;
+        margin-top: 3%;
+    }
+
+}
+
+@media(max-width:750px) {
+
+
+    .background-card h2 {
+        font-size: 13px;
+    }
+
+    .background-card {
+
+        background-size: 128%;
+    }
+
+    .Paymentmethodmo .payment-cards .card-content {
+        width: 90%;
+    }
+
+    .big-title {
+        font-size: 18px !important;
+    }
+
+}
+
+@media(max-height:500px) {
+    .Paymentmethodmo .payment-cards .card-content {
+        height: 270px;
+    }
+   
+
+}

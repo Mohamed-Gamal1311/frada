@@ -186,7 +186,7 @@
 .parentfooter-par2 .catoegry-footer .name-cateogry {
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;
 
 
 }
@@ -207,7 +207,7 @@
 .parentfooter-par2 .catoegry-footer .name-cateogry p {
 
     padding-right: 5px !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     margin-block-end: 0 !important;
     margin-block-start: 0;
 }
@@ -222,7 +222,7 @@
     justify-content: stretch;
     width: 55%;
     padding-right: 5px;
-    font-size: 13px;
+    font-size: 13px !important;
 }
 
 .parentfooter-par2 .footer-text {
@@ -261,19 +261,20 @@
     .parentfooter-par2 .catoegry-footer .name-cateogry p {
 
 
-        font-size: 10px;
+        font-size: 12px;
 
+    }
+
+    .parentfooter-par2 .catoegry-footer .name-cateogry .p2 {
+        font-size: 12px !important;
     }
 
     .flex2-footer .flex2-part1 .input-email input {
         font-size: 9px;
     }
+
 }
 
-.parentfooter-par2 .catoegry-footer .name-cateogry .p2 {
-
-    font-size: 10px;
-}
 
 
 .parentfooter-par2 {

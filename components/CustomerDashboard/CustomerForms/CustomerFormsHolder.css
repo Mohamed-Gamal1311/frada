@@ -7,6 +7,7 @@
 .CustomerFormsHolder .dashboard-menu {
     width: 20%;
     text-align: center;
+    height: 100vh;
 }
 
 .CustomerFormsHolder .dashboard-menu .button-menu {
@@ -17,12 +18,21 @@
     padding: 5%;
     margin-bottom: 3%;
     background-color: #fff;
+    display: flex;
+    align-items: center;
 
+
+}
+
+.CustomerFormsHolder .dashboard-menu .button-menu img {
+    width: 100%;
+    height: 100%;
 }
 
 .button-menu a {
     text-decoration: none;
     color: inherit;
+    width: 77%;
 }
 
 .CustomerFormsHolder .dashboard-menu .flex-column {
@@ -32,4 +42,41 @@
     align-items: center;
     flex-direction: column;
 
+}
+
+@media(max-width:1250px) {
+    .CustomerFormsHolder .dashboard-menu h6 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .CustomerFormsHolder .dashboard-menu {
+        width: 28%;
+    }
+
+    .button-menu a {
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width:1150px) {
+
+    .CustomerFormsHolder .dashboard-menu .button-menu img {
+        width: 85%;
+
+    }
+
+    .button-menu a {
+        display: none;
+    }
+}
+
+@media(max-width:800px) {
+
+
+
+    .button-menu a {
+        font-size: 12px;
+    }
 }

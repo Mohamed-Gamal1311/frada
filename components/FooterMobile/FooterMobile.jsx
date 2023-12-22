@@ -2,6 +2,8 @@
 
 import Image from 'next/image'
 
+
+
 import logofrada from '../../public/Images/Footer/Frada logo.svg'
 import snapchat from '../../public/Images/Footer/Icon awesome-snapchat-ghost.svg'
 import tiktok from '../../public/Images/Footer/Icon simple-tiktok.svg'
@@ -16,36 +18,50 @@ import mada from '../../public/Images/Footer/مدي.svg'
 import pay from '../../public/Images/Footer/pay.svg'
 import most from '../../public/Images/Footer/moste card.svg'
 
-
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import './FooterMobile.css'
 
 
 export default function FooterMobile() {
+
+    const [categories, setCategories] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const router = useRouter();
+    const route = usePathname();
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await fetch('https://back.fradaksa.net/api/categories');
+                const data = await response.json();
+                setCategories(data.data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+                setLoading(false);
+            }
+        };
+
+        fetchCategories();
+    }, []);
+
     return (
 
         <div className="Foooter-mobile" dir='rtl' lang='ar'>
             <div className='flexx'>
-                <div className="box1">
+                <div className="box1 boxbadel">
                     <div className="box1-content">
                         <div className='footer-textmobile'>
                             <h4>تسوق منتجاتنا</h4>
 
                             <div className='catoegry-footer'>
                                 <div className='name-cateogry'>
-                                    <p> العروض والخصومات</p>
-                                    <p > العطــــــــــــــــــــــور</p>
-                                </div>
-                                <div className='name-cateogry'>
-                                    <p> النعــــــــــــــــــــــــال</p>
-                                    <p > الــــــزي السعــــودي </p>
-                                </div>
-                                <div className='name-cateogry'>
-                                    <p >  أحـــــذية كــلاسيـــــك</p>
-                                    <p > الإكسســــــــــــوارات</p>
-                                </div>
-                                <div className='name-cateogry'>
-                                    <p>  أحـــــذية سبــــــــــــور</p>
-                                    <p >  مستلزمــــــات الرجال</p>
+                                    {categories.map((category) => (
+
+                                        <Link href={"category/" + category.CategoryID} as={`/category/${category.CategoryID}`} style={{ textDecoration: 'none', color: 'unset', width: '40%' }} ><p>{category.Name}</p></Link>
+
+                                    ))}
                                 </div>
                             </div>
 

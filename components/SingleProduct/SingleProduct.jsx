@@ -60,10 +60,14 @@ export default function SingleProduct() {
 
       <ProductHolder />
       <AdContainer />
-      <Info desc={product.Description} info={product.AdditionalInfo} />
-      <ProductVideo title={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoTitle : ''} desc={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoDescription : ''} url={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoURL : ''} />
+
+      {/* <Info desc={product.Description && product.Description.length > 0 ? product.Description[0] : ''} info={product.AdditionalInfo && product.AdditionalInfo > 0 ? product.AdditionalInfo[0] : ''} /> */}
+      <Info />
+      {/* <ProductVideo title={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoTitle : ''} desc={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoDescription : ''} url={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoURL : ''} /> */}
+      <ProductVideo />
       <AdContainer />
-      <ProductReviews reviews={product.Reviews} />
+      {/* <ProductReviews reviews={product.Reviews} /> */}
+      <ProductReviews />
     </section>
   )
 }
