@@ -14,7 +14,7 @@ export default function ImagesHolder(props) {
 
 
     const [hoveredPhoto, setHoveredPhoto] = useState(null);
-    const photo = `https://fradaksa.com/Attachment/${props.id}/${props.colorid}/${props.images[0]}`
+    const photo = `https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${props.images[0]}`
     const handlePhotoHover = (photo) => {
         setHoveredPhoto(photo);
     };
@@ -23,7 +23,7 @@ export default function ImagesHolder(props) {
     useEffect(() => {
 
 
-        setHoveredPhoto(`https://fradaksa.com/Attachment/${props.id}/${props.colorid}/${props.images[0]}`)
+        setHoveredPhoto(`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${props.images[0]}`)
 
 
     }, [props.images, props.id, props.colorid]);
@@ -40,8 +40,8 @@ export default function ImagesHolder(props) {
                 <div className='subimage-holder'>
 
                     {props.images.length > 0 ? props.images.map((image, index) => (
-                        <div key={index} className='image-hover' onMouseEnter={() => handlePhotoHover(`https://fradaksa.com/Attachment/${props.id}/${props.colorid}/${image}`)}>
-                            <Image src={`https://fradaksa.com/Attachment/${props.id}/${props.colorid}/${image}`} width={80} height={80} alt={`Image-${index}`} className="ml-2" />
+                        <div key={index} className='image-hover' onMouseEnter={() => handlePhotoHover(`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`)}>
+                            <Image src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={80} height={80} alt={`Image-${index}`} className="ml-2" />
                         </div>
                     )) : (<div>none</div>)}
 
