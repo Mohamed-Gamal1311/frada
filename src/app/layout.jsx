@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
 
       <body className={cairo.className} suppressHydrationWarning={true} >{children}
 
-
       </body>
     </html>
   )
