@@ -23,7 +23,7 @@ const ProductReviews = (props) => {
     return (
         <section style={{ border: '0 !important' }} className="px-5 d-flex flex-column justify-content-center border-0 align-items-center py-5">
             <Card style={{ border: 'none', textAlign: 'center' }} className="w-75">
-                <Card.Title style={{ fontWeight: 700, fontSize: 'medium' }}>
+                <Card.Title style={{ fontWeight: 700, fontSize: '1.2em' }}>
                     التقييمات والتعليقات على المنتج
                 </Card.Title>
             </Card>

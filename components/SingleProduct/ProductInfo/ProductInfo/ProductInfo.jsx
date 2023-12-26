@@ -5,7 +5,25 @@ import Nav from 'react-bootstrap/Nav';
 import { useState } from 'react';
 
 
+
 function ProductInfo(props) {
+
+
+    const [productInfo, setProductInfo] = useState(null);
+
+    useEffect(() => {
+        const fetchProductInfo = async () => {
+            try {
+                const response = await fetch(`API_ENDPOINT/products/${productId}`);
+                const data = await response.json();
+                setProductInfo(data);
+            } catch (error) {
+                console.error('Error fetching product information:', error);
+            }
+        };
+
+        fetchProductInfo();
+    }, [productId]);
 
     const [activeTab, setActiveTab] = useState('link-1'); // Initial active tab
 
@@ -22,7 +40,7 @@ function ProductInfo(props) {
             <Nav variant="tabs" style={{ color: '#d17a52', flexDirection: 'row', justifyContent: 'flex-end', border: 'none' }} defaultActiveKey="link-1" onSelect={handleTabSelect}>
                 {props.info !== '' &&
                     <Nav.Item>
-                        <Nav.Link eventKey="link-2">معلومات اضافية عن المنتج</Nav.Link>
+                        <Nav.Link eventKey="link-2">معلومات اضافية  <span>عن المنتج</span></Nav.Link>
                     </Nav.Item>
                 }
                 {props.desc !== '' &&
@@ -49,7 +67,7 @@ function ProductInfo(props) {
                     {props.desc}
 
                 </p>}
-                {activeTab === 'link-2' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>{props.info}</p>}
+                {activeTab === 'link-2' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>{props.info} </p>}
                 {activeTab === 'link-3' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>Content for Option 3</p>}
                 {activeTab === 'link-4' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>Content for Option 4</p>}
             </div>

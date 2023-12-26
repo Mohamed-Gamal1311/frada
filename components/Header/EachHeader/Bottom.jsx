@@ -48,7 +48,7 @@ export default function Bottom() {
                         <Link href={"category/" + category.CategoryID} as={`/category/${category.CategoryID}`} className="listed-desc" style={{ textDecoration: 'none', color: 'unset' }} >{category.Name}</Link>
                         {category.subcategories.length > 0 && (
                             <div className="dropdown-content">
-                                <Link href={"category/" + category.CategoryID} as={`/category/${category.CategoryID}`} >عرض الكل</Link>
+                                <Link href={"category/" + category.Name} as={`/category/${category.CategoryID}`} >عرض الكل</Link>
                                 {category.subcategories.map((subcategory) => (
                                     <Link key={subcategory.SubcategoryID} href={"category/" + category.CategoryID + "/subcategory/" + subcategory.SubcategoryID} as={`/category/${category.CategoryID}/subcategory/${subcategory.SubcategoryID}`} >
                                         {subcategory.Name}

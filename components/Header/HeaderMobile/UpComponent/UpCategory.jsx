@@ -4,6 +4,8 @@ import Collapse from 'react-bootstrap/Collapse';
 import Button from 'react-bootstrap/Button';
 import { useEffect, useState } from 'react';
 import UpSubcategory from './UpSubcategory/UpSubcategory';
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 // import "./Up.css"
 import c1 from "../../../../public/Images/icon/Slippers.svg"
 import c2 from "../../../../public/Images/icon/Shoes.svg"
@@ -90,6 +92,7 @@ export default function UpCategory(props) {
     }, [props.active]);
 
 
+
     return (
         <>
             {/* <input className='w-100' /> */}
@@ -134,16 +137,21 @@ export default function UpCategory(props) {
                 {
                     categoriesData.subcategories.some(subcategory => subcategory.CategoryID === props.categoryId) &&
                     <Collapse in={open} >
-                        <div className='w-75 '>
+                        <div style={{ width: '75%' }} >
                             <div className='mb-0 mt-2'>
                                 {filteredSubcategories.map((subcategory, index) => (
                                     subcategory.CategoryID == props.categoryId &&
                                     <div key={subcategory.SubcategoryID}>
-                                        <UpSubcategory
-                                            name={subcategory.Name}
-                                            isFirst={index === 0}
-                                            isLast={index === filteredSubcategories.length - 1}
-                                        />
+                                        <div className='control-menu' >
+
+                                            <UpSubcategory
+
+                                                name={subcategory.Name}
+                                                isFirst={index === 0}
+                                                isLast={index === filteredSubcategories.length - 1}
+
+                                            />
+                                        </div>
                                     </div>
                                 ))}
                             </div>

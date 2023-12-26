@@ -7,7 +7,7 @@ import facebook from '../../../../public/Images/Dahboard/facebook.svg'
 import tiktok from '../../../../public/Images/Dahboard/Icon simple-tiktok.svg'
 import twitter from '../../../../public/Images/Dahboard/Icon awesome-twitter.svg'
 import snap from '../../../../public/Images/Dahboard/Icon awesome-snapchat-ghost.svg'
-import facebookkk from '../../../../public/Images/Dahboard/Icon awesome-facebook-f.svg'
+import facebookkk from '../../../../public/Images/Dahboard/Icon awesome-facebook-ornge.svg'
 import insta from '../../../../public/Images/Dahboard/Icon awesome-instagram.svg'
 import './InformationCustomer.css'
 export default function InformationCustomer() {

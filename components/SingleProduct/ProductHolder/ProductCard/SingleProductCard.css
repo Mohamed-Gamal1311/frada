@@ -70,3 +70,66 @@
     color: #D17A52 !important;
 
 }
+
+@media(max-width:1024px) {
+    .image-holder-content {
+        width: 100% !important;
+    }
+
+    .detail-content {
+        background-color: transparent;
+        text-align: right;
+        border: none;
+        width: 84% !important;
+
+        margin: auto !important;
+
+    }
+
+    .image-color {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    .image-color img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+}
+
+.single-cors-holder h6 {
+
+    color: #707070;
+    font-weight: 600 !important;
+}
+
+
+@media(max-width:750px) {
+    .single-product-holder {
+        font-size: 19px !important;
+    }
+
+    .detail-content {
+        width: 100% !important;
+        background-color: #fff;
+    }
+
+    .single-cors-holder h6 {
+        font-size: 14px;
+        font-weight: 600 !important;
+        color: #707070;
+    }
+
+    .card-body {
+        background-color: #fff !important;
+    }
+
+    .single-sizes {
+        width: 50px;
+    }
+
+    .css-ryrseu-MuiRating-root {
+        font-size: 16PX !important;
+    }
+}

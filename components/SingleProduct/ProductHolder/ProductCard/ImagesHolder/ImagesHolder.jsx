@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 
 import { MouseParallax } from 'react-just-parallax';
 import { useParams } from 'next/navigation';
+import { Carousel } from 'react-bootstrap';
 
 export default function ImagesHolder(props) {
 
@@ -50,7 +51,19 @@ export default function ImagesHolder(props) {
 
 
             </div>
+            <div className='slider-single-mo'>
+                <Carousel className='slider-single' interval={2000}>
+                    {props.images.length > 0 ? props.images.map((image, index) => (
+                        <Carousel.Item>
 
+                            <Carousel.Caption>
+
+                                <Image src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={350} height={350} alt={`Image-${index}`} className="ml-2" />
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    )) : (<div>none</div>)}
+                </Carousel>
+            </div>
         </div>
     )
 }

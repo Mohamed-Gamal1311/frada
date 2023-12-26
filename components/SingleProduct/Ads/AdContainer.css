@@ -1,0 +1,15 @@
+.seorate-single .image-add-mobile {
+    display: none;
+}
+
+@media(max-width:750px) {
+    .seorate-single .image-add {
+        display: none;
+    }
+
+    .seorate-single .image-add-mobile {
+        display: block;
+
+    }
+
+}

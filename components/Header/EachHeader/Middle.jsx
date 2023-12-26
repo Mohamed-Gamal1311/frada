@@ -9,7 +9,10 @@ import Exporters from "../../../public/Images/SVG Header Icons/Icon.svg"
 import Logo from "../../../public/Images/Icons/2nd Bar/Frada logo.svg"
 import Search from "../../../public/Images/Icons/2nd Bar/Union 1.svg"
 
+
 export default function Middle() {
+
+
 
     return (
         <header className="header-nav flex-rows">

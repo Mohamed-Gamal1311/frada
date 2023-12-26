@@ -18,7 +18,7 @@ import Weekoffers from './Weekoffers/Weekoffers'
 export default function Homepage() {
 
     return (
-        <div>
+        <div >
 
             <Panelhome />
             <Morechosehome />

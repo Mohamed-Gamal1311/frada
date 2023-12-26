@@ -26,7 +26,7 @@
     bottom: 0;
     width: 100%;
     background: var(--clr);
-    z-index: 9
+    z-index: 9999999;
 }
 
 .navigation {
@@ -98,8 +98,8 @@
 .indicator {
     position: absolute;
     top: -54%;
-    width: 65px;
-    height: 65px;
+    width: 77px !important;
+    height: 77px !important;
     background: #332C32;
     border-radius: 50%;
     border: 6px solid var(--clr);

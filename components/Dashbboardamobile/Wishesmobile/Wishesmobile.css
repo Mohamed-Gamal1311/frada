@@ -1,3 +1,13 @@
+.Wishesmobile {
+    display: none !important;
+}
+
+@media(max-width:1350px) {
+    .Wishesmobile {
+        display: block !important;
+    }
+}
+
 @media(max-width:650px) {
     .cardwishcontent h4 {
         font-size: 11px;

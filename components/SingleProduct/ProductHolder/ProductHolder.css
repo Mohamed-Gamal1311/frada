@@ -1,0 +1,5 @@
+@media(max-width:1024px) {
+    .single-parent {
+        padding-right: 0 !important;
+    }
+}

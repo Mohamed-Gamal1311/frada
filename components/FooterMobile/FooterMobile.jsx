@@ -79,8 +79,8 @@ export default function FooterMobile() {
 
                             <div className='catoegry-footer'>
                                 <div className='name-cateogry'>
-                                    <p> من نحــــــــــــــن</p>
-                                    <p > سياسة الاستبدال والاسترجـاع</p>
+                                    <Link href={"policies/"} style={{ textDecoration: 'none', color: 'unset' }} >     <p> من نحــــــن</p> </Link>
+                                    <p >سياسة الاستبدال والاسترجـاع</p>
                                 </div>
                                 <div className='name-cateogry'>
                                     <p> تواصل معنـــــــا</p>
@@ -145,7 +145,7 @@ export default function FooterMobile() {
             <div className='end-footermobile'>
                 <p>جميع الحقوق محفوظة لفرادا 2023</p>
             </div>
-            <div className='end-footermobile'>
+            <div className='end-footermobile' style={{ height: '100px' }}>
 
             </div>
 

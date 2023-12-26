@@ -2,12 +2,26 @@
     height: 55px;
 }
 
+.Profileperson {
+    display: none !important;
+}
+
 .Profileperson .dashboard-menu .flex-column {
     padding-top: 3em !important;
 }
 
+.row {
+    --bs-gutter-x: 0 !important;
+}
+
 .Profileperson .CustomerFormsHolder .dashboard-menu .button-menu {
     margin-bottom: 20%;
+}
+
+@media(max-width:1350px) {
+    .Profileperson {
+        display: block !important;
+    }
 }
 
 @media(max-width:1150px) {
@@ -25,7 +39,7 @@
     }
 
     .Profileperson .CustomerFormsHolder .dashboard-menu {
-        width: 24%;
+        width: 17%;
 
     }
 
@@ -59,6 +73,10 @@
 
     .Profileperson .CustomerFormsHolder .dashboard-menu .button-menu {
         margin-bottom: 43%;
+    }
+
+    .Profileperson .CustomerFormsHolder .dashboard-menu {
+        background-image: linear-gradient(to bottom, #FFFFFF, #F6F6F6);
     }
 }
 

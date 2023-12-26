@@ -12,6 +12,10 @@ import { useState } from 'react';
 
 
 export default function EachSize(props) {
+
+
+
+
     const [isClicked, setIsClicked] = useState(false);
 
     const handleColClick = () => {

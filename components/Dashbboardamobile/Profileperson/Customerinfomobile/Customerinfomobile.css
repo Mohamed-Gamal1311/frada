@@ -10,6 +10,10 @@
     fill: #D17A52;
 }
 
+.w-75 {
+    width: 75% !important
+}
+
 @media(max-width:1150px) {
     .Customerinfomobile .customer-form {
         flex-wrap: wrap !important;

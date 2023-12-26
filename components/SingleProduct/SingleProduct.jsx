@@ -65,7 +65,7 @@ export default function SingleProduct() {
       <Info />
       {/* <ProductVideo title={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoTitle : ''} desc={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoDescription : ''} url={product.Videos && product.Videos.length > 0 ? product.Videos[0].VideoURL : ''} /> */}
       <ProductVideo />
-      <AdContainer />
+
       {/* <ProductReviews reviews={product.Reviews} /> */}
       <ProductReviews />
     </section>

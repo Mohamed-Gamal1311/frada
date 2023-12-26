@@ -212,6 +212,10 @@
     margin-block-start: 0;
 }
 
+.parentfooter-par2 .catoegry-footer .name-cateogry p:hover {
+    filter: contrast(0.5);
+}
+
 .know {
     margin-block-end: 0;
     margin: 0;

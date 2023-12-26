@@ -24,6 +24,10 @@
     text-align: end;
 }
 
+.Morechosehome-content .Morechosehome-cards .Morechosehome-card h3 {
+    margin-top: 3%;
+}
+
 .Morechosehome-content .Morechosehome-cards .Morechosehome-card {
     width: 32.5%;
 

@@ -3,6 +3,10 @@
 
 }
 
+.wishes {
+    transition: all 0.5s;
+}
+
 .Wishes .search-wishes {
     width: 52%;
     display: flex;
@@ -66,6 +70,8 @@
     text-decoration: line-through;
     margin-right: 8%;
 }
+
+
 
 @media(max-width:1250px) {
     .wishes-cards .cardwishcontent {

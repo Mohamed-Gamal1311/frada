@@ -8,7 +8,20 @@
     width: 20%;
     text-align: center;
     height: 100vh;
+    background-image: linear-gradient(to bottom, #FFFFFF, #F6F6F6);
 }
+
+.w-75 {
+    width: 75% !important;
+}
+
+.CustomerFormsHolder a.nav-link .active {
+    background-color: #F6F6F6 !important;
+
+
+}
+
+
 
 .CustomerFormsHolder .dashboard-menu .button-menu {
     text-align: center;
@@ -17,22 +30,31 @@
     width: 75%;
     padding: 5%;
     margin-bottom: 3%;
-    background-color: #fff;
+
     display: flex;
     align-items: center;
-
+    transition: all 0.5s;
 
 }
 
 .CustomerFormsHolder .dashboard-menu .button-menu img {
     width: 100%;
     height: 100%;
+    filter: grayscale(1);
+
+}
+
+.CustomerFormsHolder .dashboard-menu .button-menu .title-imge {
+    width: 62% !important;
 }
 
 .button-menu a {
     text-decoration: none;
     color: inherit;
     width: 77%;
+    font-weight: bold;
+    font-size: 14px;
+
 }
 
 .CustomerFormsHolder .dashboard-menu .flex-column {
@@ -42,6 +64,16 @@
     align-items: center;
     flex-direction: column;
 
+}
+
+.col-sm-3 {
+    width: 100%;
+}
+
+@media(max-width:1350px) {
+    .CustomerFormsHolder-all {
+        display: none;
+    }
 }
 
 @media(max-width:1250px) {

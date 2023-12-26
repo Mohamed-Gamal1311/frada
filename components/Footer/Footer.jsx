@@ -12,12 +12,12 @@ import email from '../../public/Images/Footer/Icon awesome-mail-bulk.svg'
 import visa from '../../public/Images/Footer/visa.svg'
 
 import mada from '../../public/Images/Footer/مدي.svg'
-
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import pay from '../../public/Images/Footer/pay.svg'
 import most from '../../public/Images/Footer/moste card.svg'
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+
 
 export default function Footer() {
 
@@ -74,8 +74,8 @@ export default function Footer() {
 
                                     <div className='catoegry-footer'>
                                         <div className='name-cateogry'>
-                                            <p> من نحــــــــــــــن  </p>
-                                            <p className='p2' > سياسة الاستبدال والاسترجـاع </p>
+                                            <Link href={"policies/"} style={{ textDecoration: 'none', color: 'unset' }} ><p> من نحــــــــــــــن  </p> </Link>
+                                            <p className='p2' >سياسةالاستبدالوالاسترجـاع</p>
                                         </div>
                                         <div className='name-cateogry'>
                                             <p> تواصل معنـــــــا </p>

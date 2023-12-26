@@ -24,6 +24,7 @@ export default function UpSubcategory(props) {
                         borderTopRightRadius: props.isFirst ? '5px !important' : '0', // Apply border-radius to top-right if it's the first subcategory
                         borderBottomRightRadius: props.isLast ? '5px !important' : '0', // Apply border-radius to top-right if it's the first subcategory
                         borderBottomLeftRadius: props.isLast ? '5px !important' : '0', // Apply border-radius to top-right if it's the first subcategory
+
                         borderBottom: props.isLast ? '0' : '1px solid #D17A52 !important'
                     }}
                 >

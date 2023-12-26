@@ -165,6 +165,7 @@
 .link-acount {
     display: flex;
     flex-direction: row-reverse;
+    margin-bottom: 2%;
 }
 
 .link-acount-comp {
@@ -200,6 +201,15 @@
 
 .contactwith-us img {
     margin-right: 4px;
+    filter: grayscale(1);
+    opacity: 0.5;
+    width: 20px;
+    height: 20px;
+}
+
+.contactwith-us img:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }
 
 @media(max-width:1250px) {

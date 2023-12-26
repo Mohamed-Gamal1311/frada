@@ -6,6 +6,8 @@ import frada from "../../../public/Images/ICONS-phone/Frada.svg"
 import My_account_icon from "../../../public/Images/ICONS-phone/My_account_icon.svg"
 import My_Wishes_Button_icon from "../../../public/Images/ICONS-phone/My_Wishes_Button_icon.svg"
 import supporticon from "../../../public/Images/ICONS-phone/suport icon.svg"
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import "./Bottom.css";
 
 export default function Bottom() {
@@ -85,13 +87,14 @@ export default function Bottom() {
                         </a>
                     </li>
                     <li className={`list ${activeIndex === 4 ? 'active' : ''}`}>
-                        <a href="#">
+
+                        <Link href="dashboard">
                             <span className="icon" width="50px" height="50px">
                                 <ion-icon name="home-outline"><Image src={My_account_icon} width={25} height={25} alt="icon" /></ion-icon>
 
                             </span>
                             <span className="text">حسابي</span>
-                        </a>
+                        </Link>
                     </li>
                     <div className="indicator">
 

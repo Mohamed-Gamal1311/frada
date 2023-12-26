@@ -29,6 +29,7 @@
     background-color: #fff !important;
     color: #332c23 !important;
     border: 1px solid transparent !important;
+
     /* border-radius: 0; */
 }
 
@@ -71,7 +72,11 @@
         font-size: 0.8em;
     }
 
+    .w-75 {
+        width: 75%;
+    }
 }
+
 
 @media (max-width:330px) {
     .category-head {
@@ -88,3 +93,11 @@
     transform: scaleY(-1);
     transition: transform 0.3s ease;
 }
+
+/* @media(max-width: 750px) {
+    .w-75 {
+        width: 30% !important;
+        margin: auto !important;
+        padding-right: 0 !important;
+    }
+} */

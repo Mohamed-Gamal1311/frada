@@ -47,6 +47,10 @@ export default function CategoryProducts(props) {
     }, [params.CategoryID, params.SubcategoryID]);
 
 
+
+
+
+
     // useEffect(() => {
 
 
@@ -73,6 +77,7 @@ export default function CategoryProducts(props) {
         <div className='cards-holder ms-2 ms-lg-5 ms-xl-5 ms-md-5 ' style={{ fontSize: '15px' }}>
             {products && products.length > 0 ? (
                 products.map((product) => (
+
                     <ProductCard
                         key={product.ProductID}
                         id={product.ProductID}
@@ -84,10 +89,12 @@ export default function CategoryProducts(props) {
                         mainphoto={product.MainPhoto && product.MainPhoto.Image}
                         colornum={Number(product.NumOfColors)}
                         photocolors={product.Colors}
+
                     />
 
 
                 ))
+
             ) : (
                 <p style={{ textAlign: 'center' }}>لا توجد منتجات هنا</p>
             )}

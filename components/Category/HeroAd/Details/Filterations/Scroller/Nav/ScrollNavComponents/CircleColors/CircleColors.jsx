@@ -26,7 +26,7 @@ export default function CircleColors(props) {
     const componentsArray = Array.from({ length: numberOfTimes }, (_, index) => index);
     return (
         <Card.Body>
-            <Card.Title style={{ fontSize: '1.3em', marginBottom: '4%', color: '#D17A52', fontWeight: 'bold', borderBottom: "0 !important" }}>الألوان</Card.Title>
+            {/* <Card.Title style={{ fontSize: '1.3em', marginBottom: '4%', color: '#D17A52', fontWeight: 'bold', borderBottom: "0 !important" }}>الألوان</Card.Title>
             <Container>
                 <Row className="justify-content-end" md={1} style={{ textAlign: 'center', fontWeight: 'bold' }}>
 
@@ -36,7 +36,7 @@ export default function CircleColors(props) {
                     ))}
 
                 </Row>
-            </Container>
+            </Container> */}
         </Card.Body>
     )
 }

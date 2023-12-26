@@ -4,7 +4,7 @@ import Search from "../../../../public/Images/Icons/2nd Bar/Union 1.svg"
 import product from '../../../../public//Images/Dahboard/WhatsApp Image 2023-12-13 at 12.09.35 AM.jpeg'
 export default function Wishes() {
     return (
-        <div className="Wishes" >
+        <div className="Wishes"  >
             <div className='hrader-payment' style={{ margin: '4%', width: '100%', marginBottom: '0', display: 'flex', justifyContent: 'space-between', flexDirection: 'row-reverse', marginTop: '1%', alignItems: 'center' }} >
 
                 <div style={{ marginRight: '12%', width: '20%' }}>
@@ -12,7 +12,7 @@ export default function Wishes() {
                     <hr style={{ backgroundColor: '#d17a52', height: '1px', border: 'none', width: '100%' }}></hr>
 
                 </div>
-                <div className="search-wishes">
+                {/* <div className="search-wishes">
 
                     <div class="search">
                         <form className="search-bar" action="">
@@ -20,8 +20,10 @@ export default function Wishes() {
                             <button type="submit"><i className="fa fa-search"><Image src={Search} alt="Search" /></i></button>
                         </form>
                     </div>
-                </div>
+                </div> */}
+
             </div>
+            <h1 className='title-head' style={{ textAlign: 'center', fontSize: '20px', marginTop: '3%', color: '#D17A52' }}>قائمة امنياتي</h1>
             <div className='wishes-content'>
                 <h3 style={{ margin: '4%', width: '88%', marginBottom: '0', textAlign: 'end', marginTop: '2%' }}>الترتيب حسب</h3>
                 <div className='wishes-cards'>

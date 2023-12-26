@@ -202,7 +202,14 @@ body {
 
 }
 
+.social-media:hover {
 
+    filter: invert(1);
+}
+
+.Foooter-mobile .box1 .catoegry-footer p:hover {
+    filter: contrast(0.5);
+}
 
 .parent-email {
     width: 50%;

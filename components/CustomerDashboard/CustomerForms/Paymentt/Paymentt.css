@@ -1,0 +1,192 @@
+.paymentt .box1 {
+
+
+    border-radius: 8px;
+}
+
+.paymentt {
+    width: 90%;
+    margin: auto;
+}
+
+.paymentt .box1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+
+}
+
+.paymentt .add-method {
+
+
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding-top: 1%; */
+    /* padding-bottom: 1%; */
+    border-radius: 8px;
+    margin-right: 5%;
+
+}
+
+.paymentt .imagecard-detail {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    flex-direction: row-reverse
+}
+
+.paymentt .cardmethod-information {
+
+    width: 55%;
+}
+
+.paymentt .imagecard-detail h6 {
+    font-size: 11px;
+}
+
+.paymentt .card-compponet-method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.paymentt .delete-card {
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+}
+
+.paymentt .delete-card button {
+    background: #332C32;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    /* width: 100%; */
+    padding: 1% 0%;
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    /* font-weight: 700; */
+    padding: 1% 11%;
+}
+
+.paymentt .return button {
+    background: #D17A52;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    padding: 1% 16%;
+
+}
+
+.paymentt .delete-card button:hover {
+    background: #D17A52;
+
+}
+
+.paymentt .image-card img {
+    width: 100%;
+    height: auto;
+}
+
+.paymentt .delete-card button img {
+    margin-left: 2%;
+
+}
+
+.paymentt .box2 .box2-content {
+
+    height: 50vh;
+    border-radius: 8px;
+}
+
+.paymentt .add-image {
+    width: 100%;
+}
+
+.paymentt .add-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.paymentt .addmo {
+    display: none;
+}
+
+@media(max-width:950px) {
+    .paymentt .cardmethod-information {
+        width: 80%;
+    }
+
+}
+
+@media(max-width:750px) {
+    .paymentt .image-card img {
+        width: 90%;
+        height: 100%;
+
+    }
+
+    .paymentt .box1 {
+        flex-wrap: wrap;
+    }
+
+
+    .paymentt .addmo {
+        display: block;
+        margin-bottom: 3%;
+    }
+
+    .paymentt .add {
+        display: none;
+    }
+
+    .paymentt .return button {
+
+        padding: 1% 9%;
+        font-size: 12px;
+
+    }
+
+    .box2 h2 {
+        font-size: 12px;
+    }
+
+    .paymentt .delete-card button {
+
+        width: 62%;
+
+        font-weight: unset;
+        padding: 3% 1%;
+        font-size: 13px;
+        font-weight: unset;
+    }
+
+    .paymentt .shadow-section {
+        width: 100% !important;
+    }
+
+    .paymentt .cardmethod-information {
+        width: 100%;
+    }
+}
+
+@media(max-width:550px) {
+    .paymentt .add-image img {
+        width: 80%;
+        height: 100%;
+
+    }
+
+    .paymentt .add-method {
+        margin-right: 0;
+    }
+}

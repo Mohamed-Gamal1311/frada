@@ -28,6 +28,8 @@ export default function Up() {
         setActiveCategoryId(categoryId);
     };
 
+
+
     const categoriesData = {
         "categories": [
             {
@@ -66,7 +68,7 @@ export default function Up() {
 
     return (
         // <div>
-        <div className='d-flex flex-column w-100  ' style={{ position: 'relative', zIndex: 9 }}>
+        <div className='d-flex flex-column w-100  ' style={{ position: 'relative', zIndex: 99999, width: '125px' }}>
             {/* <input className='w-100' /> */}
             <div style={{ height: '82px' }} className='d-flex flex-column justify-content-center align-items-center position-fixed w-100 back-white'>
                 <form style={{ position: 'absolute', top: 0 }} className="search-bar search-bar-mobile" action="">
@@ -93,15 +95,17 @@ export default function Up() {
                         <Image src={Arrow} className='flipped' alt="arrow-flipped" />
                     }
                 </Button>
-                <Collapse in={open} >
+
+                <Collapse in={open}>
                     <div className=' w-80 header-holder ' style={{ marginTop: '0', position: 'absolute', top: '50px' }}>
-                        <div style={{ height: '80vh' }}>
-                            <div className='py-5 d-flex flex-column align-items-center'>
+                        <div style={{ height: '80vh', background: '#332C32' }}>
+                            <div className='py-5 d-flex flex-column align-items-center ' >
 
 
                                 {categoriesData.categories.map((category, index) => (
 
                                     <div key={category.id} className='mb-2 fs-6  w-100' style={{ maxWidth: '400px' }}>
+
                                         <UpCategory
                                             categoryId={category.id}
                                             text={category.name}
@@ -109,6 +113,7 @@ export default function Up() {
                                             active={activeCategoryId === category.id}
                                             onClick={() => handleCategoryClick(category.id)}
                                         />
+
                                     </div>
                                 ))}
 

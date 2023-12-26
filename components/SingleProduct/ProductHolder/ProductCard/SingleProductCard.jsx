@@ -74,8 +74,8 @@ export default function SingleProductCard() {
 
     return (
         <>
-            <ImagesHolder id={product.ProductID} colorid={selectedColorID} images={images} main={main} />
-            <Card style={{
+            <div className='image-holder-content'> <ImagesHolder id={product.ProductID} colorid={selectedColorID} images={images} main={main} /></div>
+            <Card className='detail-content' style={{
                 backgroundColor: 'transparent', textAlign: 'right', border: 'none', width: '35%',
                 marginRight: '2.5%'
             }}>
@@ -86,9 +86,10 @@ export default function SingleProductCard() {
                     <div className='single-cors-holder'>
                         <h6 className='single-cors-code'>{product.Barcode}</h6>
                         <div className='single-cors-rating'>
-                            <Rating value={3} readOnly />
+                            <Rating value={5} readOnly />
                             <div >
-                                ١٥ تقييم
+                                {product.isReviewed}
+
                             </div>
                         </div>
                     </div>
@@ -96,7 +97,7 @@ export default function SingleProductCard() {
                         <p >اختر من الالوان</p>
                         <div className='color-image-holder flex-wrap'>
                             {product.Colors && product.Colors.map((color, index) => (
-                                <div key={index} style={{ cursor: 'pointer' }} onClick={() => handleImageClick(color.ColorID, color.Images, color.Images[0])}>
+                                <div className='image-color' key={index} style={{ cursor: 'pointer' }} onClick={() => handleImageClick(color.ColorID, color.Images, color.Images[0])}>
                                     <Image
                                         key={index}
                                         src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${product.ProductID}/${color.ColorID}/${color.Images[0]}`}
@@ -107,6 +108,7 @@ export default function SingleProductCard() {
 
 
                                     />
+
                                 </div>
                             ))}
 

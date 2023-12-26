@@ -8,7 +8,7 @@ import Botom5 from "./Botom5/Botom5"
 export default function Policies() {
     return (
         <div>
-            <Header />
+
             <TopPolicies />
             <Botom1 />
             <Botom2 />

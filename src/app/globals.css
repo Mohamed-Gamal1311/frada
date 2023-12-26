@@ -129,6 +129,12 @@ main {
   width: 60%
 }
 
+*,
+::after,
+::before {
+  box-sizing: border-box !important;
+}
+
 .w-80 {
   width: 80% !important;
 }
