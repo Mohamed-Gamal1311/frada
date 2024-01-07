@@ -11,41 +11,41 @@ export default function SingleProduct() {
 
 
 
-  const params = useParams();
+  // const params = useParams();
 
-  const [product, setProduct] = useState({});
+  // const [product, setProduct] = useState({});
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    // {{URL}}/getProductsBySub/1
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch(`https://back.fradaksa.net/api/getProduct/${params.ProductID}`);
-        const data = await response.json();
+  //   // {{URL}}/getProductsBySub/1
+  //   const fetchProducts = async () => {
+  //     try {
+  //       const response = await fetch(`https://back.fradaksa.net/api/getProduct/${params.ProductID}`);
+  //       const data = await response.json();
 
-        setProduct(data.data);
-
-
-
-        if (product.Sizes == undefined) {
-          setSizes(false)
-        }
+  //       setProduct(data.data);
 
 
-        setSelectedColorID(data.data.Colors[0].ColorID);
-        setImages(data.data.Colors[0].Images)
-        setMain(data.data.MainPhoto)
 
-      } catch (error) {
-        console.error('Error fetching products:', error);
-
-      }
-    };
+  //       // if (product.Sizes == undefined) {
+  //       //   setSizes(false)
+  //       // }
 
 
-    fetchProducts();
+  //       setSelectedColorID(data.data.Colors[0].ColorID);
+  //       setImages(data.data.Colors[0].Images)
+  //       setMain(data.data.MainPhoto)
 
-  }, [params.ProductID]);
+  //     } catch (error) {
+  //       console.error('Error fetching products:', error);
+
+  //     }
+  //   };
+
+
+  //   fetchProducts();
+
+  // }, [params.ProductID]);
 
 
 

@@ -16,6 +16,7 @@ export default function UpSubcategory(props) {
 
                 <Button
                     onClick={() => setOpen(!open)}
+                    
                     aria-controls="example-collapse-text"
                     aria-expanded={open}
                     className={` w-75 p-1 header-toggle-inverted ${open ? 'header-toggle-active' : ''}`}

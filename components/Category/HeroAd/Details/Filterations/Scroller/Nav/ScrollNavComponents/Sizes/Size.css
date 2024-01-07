@@ -1,0 +1,15 @@
+.row-cols-md-5>* {
+
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100% !important;
+
+}
+
+.col {
+    /* flex: 1 0; */
+    width: 25%;
+    flex: none !important;
+}

@@ -94,24 +94,37 @@ export default function SingleProductCard() {
                         </div>
                     </div>
                     <div className='color-product-holder'>
-                        <p >اختر من الالوان</p>
-                        <div className='color-image-holder flex-wrap'>
-                            {product.Colors && product.Colors.map((color, index) => (
-                                <div className='image-color' key={index} style={{ cursor: 'pointer' }} onClick={() => handleImageClick(color.ColorID, color.Images, color.Images[0])}>
-                                    <Image
-                                        key={index}
-                                        src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${product.ProductID}/${color.ColorID}/${color.Images[0]}`}
-                                        width={50}
-                                        height={50}
-                                        alt={`${color}-Image`}
-                                        className="ml-2"
 
-
-                                    />
-
-                                </div>
-                            ))}
-
+                        <div>
+                            <p>اختر من الألوان</p>
+                            <div className='color-image-holder flex-wrap'>
+                                {product.Colors && product.Colors.length > 1 ? (
+                                    product.Colors.map((color, index) => (
+                                        <div className='image-color' key={index} style={{ cursor: 'pointer' }} onClick={() => handleImageClick(color.ColorID, color.Images, color.Images[0])}>
+                                            <Image
+                                                key={index}
+                                                src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${product.ProductID}/${color.ColorID}/${color.Images[0]}`}
+                                                width={50}
+                                                height={50}
+                                                alt={`${color}-Image`}
+                                                className="ml-2"
+                                            />
+                                        </div>
+                                    ))
+                                ) : (
+                                    // product.map((nocolor, index) => (
+                                    product.Colors && product.Colors.map((color, index) => (
+                                        <div key={index}>
+                                            <Image
+                                                src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${product.ProductID}`}
+                                                width={50}
+                                                height={50}
+                                                className="ml-2"
+                                            />
+                                        </div>
+                                    ))
+                                )}
+                            </div>
                         </div>
 
                     </div>

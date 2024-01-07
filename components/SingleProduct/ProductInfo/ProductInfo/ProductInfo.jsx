@@ -2,35 +2,89 @@ import 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 import "./ProductInfo.css"
 import Nav from 'react-bootstrap/Nav';
-import { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 
 
 function ProductInfo(props) {
 
+    // const [infoTitle, setInfoTitle] = useState([]);
+    // const [infoDescription, setInfoDescription] = useState([]);
+    // const [product1, setProduct1] = useState({});
+    // const params = useParams();
 
-    const [productInfo, setProductInfo] = useState(null);
+    // useEffect(() => {
+    //     const fetchProductData = async () => {
+    //         try {
+    //             const response = await fetch(`https://back.fradaksa.net/api/additionalInfo/${params.ProductID}`);
+    //             if (response.ok) {
+    //                 const data = await response.json();
+    //                 setProduct1(data.data);
+    //                 setInfoDescription(data.data.InfoDescription); // تعيين قيمة infoDescription
+    //                 console.log(response);
+    //             } else {
+    //                 console.error('Failed to fetch product data');
+    //             }
+    //         } catch (error) {
+    //             console.error('Error:', error);
+    //         }
+    //     };
 
+    //     fetchProductData();
+    // }, []);
+
+
+
+    const [selectedColorID, setSelectedColorID] = useState(null);
+    const [images, setImages] = useState([]);
+
+    const [product, setProduct] = useState({});
+    const [main, setMain] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [sizes, setSizes] = useState(true);
+    const [isActive, setIsActive] = useState(null); // Use null to represent no active size
+    const params = useParams();
+
+    // console.log(params)
     useEffect(() => {
-        const fetchProductInfo = async () => {
+
+        // {{URL}}/getProductsBySub/1
+        const fetchProducts = async () => {
             try {
-                const response = await fetch(`API_ENDPOINT/products/${productId}`);
+                const response = await fetch(`https://back.fradaksa.net/api/getProduct/${params.ProductID}`);
                 const data = await response.json();
-                setProductInfo(data);
+
+                setProduct(data.data);
+
+                setLoading(false);
+
+                if (product.Sizes == undefined) {
+                    setSizes(false)
+                }
+
+
+                setSelectedColorID(data.data.Colors[0].ColorID);
+                setImages(data.data.Colors[0].Images)
+                setMain(data.data.MainPhoto)
+
             } catch (error) {
-                console.error('Error fetching product information:', error);
+                console.error('Error fetching products:', error);
+                setLoading(false);
             }
         };
 
-        fetchProductInfo();
-    }, [productId]);
+
+        fetchProducts();
+
+    }, [params.ProductID]);
+
 
     const [activeTab, setActiveTab] = useState('link-1'); // Initial active tab
 
     const handleTabSelect = (selectedKey) => {
         setActiveTab(selectedKey);
     };
-
+    { activeTab === 'link-2' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'> </p> }
     return (
 
 
@@ -62,12 +116,13 @@ function ProductInfo(props) {
 
             {/* Content based on the selected tab */}
             <div className='bg-white' style={{ height: '80%', borderRadius: '5px', width: '103%' }}>
-                {activeTab === 'link-1' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>
+                {activeTab === 'link-1' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5' dangerouslySetInnerHTML={{ __html: product.Description }}>
 
-                    {props.desc}
+                    {/* {product.Description} */}
 
                 </p>}
-                {activeTab === 'link-2' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>{props.info} </p>}
+                {activeTab === 'link-2' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5' dangerouslySetInnerHTML={{ __html: product.Additional_Info }}></p>}
+                {/* {activeTab === 'link-2' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>{InfoDescription} </p>} */}
                 {activeTab === 'link-3' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>Content for Option 3</p>}
                 {activeTab === 'link-4' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5'>Content for Option 4</p>}
             </div>
@@ -79,3 +134,4 @@ function ProductInfo(props) {
 }
 
 export default ProductInfo;
+

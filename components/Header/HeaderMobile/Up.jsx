@@ -15,12 +15,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Collapse from 'react-bootstrap/Collapse';
 import Button from 'react-bootstrap/Button';
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import "./Up.css"
 import UpCategory from './UpComponent/UpCategory';
 import Search from "../../../public/Images/Icons/2nd Bar/Union 1.svg"
 
 export default function Up() {
+
     const [open, setOpen] = useState(false);
     const [activeCategoryId, setActiveCategoryId] = useState(null);
 
@@ -30,42 +34,78 @@ export default function Up() {
 
 
 
+
+
+
+
     const categoriesData = {
         "categories": [
             {
                 "id": "1",
                 "name": "النعــــــــــــــــــال",
+                "cat": "category/1"
 
             },
+
             {
                 "id": "2",
-                "name": "أحذية الكـلاسيـك "
+                "name": "أحذية الكـلاسيـك ",
+                "cat": "category/2"
             },
             {
                 "id": "3",
-                "name": "أحذيــــة اسبـــــور "
+                "name": "أحذيــــة اسبـــــور ",
+                "cat": "category/3"
             },
             {
                 "id": "4",
                 "name": "العطـــــــــــــــــور"
+                , "cat": "category/4"
+
             },
             {
                 "id": "5",
-                "name": "الزي السعــــودي "
+                "name": "الزي السعــــودي ",
+                "cat": "category/5"
             },
             {
                 "id": "6",
-                "name": "الإكسســــــوارات"
+                "name": "الإكسســــــوارات",
+                "cat": "category/6"
             },
             {
                 "id": "7",
-                "name": "مستلزمات الرجال "
+                "name": "مستلزمات الرجال ",
+                "cat": "category/7"
             }
             // Add more categories as needed
         ]
     }
 
 
+    const [categories, setCategories] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const router = useRouter();
+    const route = usePathname();
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await fetch('https://back.fradaksa.net/api/categories');
+                const data = await response.json();
+                setCategories(data.data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+                setLoading(false);
+            }
+        };
+
+        fetchCategories();
+    }, []);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
     return (
         // <div>
         <div className='d-flex flex-column w-100  ' style={{ position: 'relative', zIndex: 99999, width: '125px' }}>
@@ -102,18 +142,25 @@ export default function Up() {
                             <div className='py-5 d-flex flex-column align-items-center ' >
 
 
-                                {categoriesData.categories.map((category, index) => (
 
-                                    <div key={category.id} className='mb-2 fs-6  w-100' style={{ maxWidth: '400px' }}>
+                                {categoriesData.categories.map((i, index) => (
 
-                                        <UpCategory
-                                            categoryId={category.id}
-                                            text={category.name}
-                                            img={"c" + index}
-                                            active={activeCategoryId === category.id}
-                                            onClick={() => handleCategoryClick(category.id)}
-                                        />
 
+
+                                    <div key={i.id} className='mb-2 fs-6  w-100' style={{ maxWidth: '400px' }}>
+                                        {/* <Link href={i.cat} style={{ textDecoration: 'none', color: 'unset', width: '48%' }} > */}
+                                        {/* <Link href={"category/" + categories.CategoryID} as={`/category/${categories.CategoryID}`} style={{ textDecoration: 'none' }} > */}
+                                        <Link href={`/category/${i.id}`} style={{ textDecoration: 'none' }} onClick={() => setOpen(!open)}>
+
+                                            <UpCategory
+                                                categoryId={i.id}
+                                                text={i.name}
+                                                img={"c" + index}
+                                                active={activeCategoryId === i.id}
+                                                onClick={() => handleCategoryClick(i.id)}
+                                            />
+                                        </Link>
+                                        {/* </Link> */}
                                     </div>
                                 ))}
 

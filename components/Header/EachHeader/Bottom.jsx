@@ -40,7 +40,7 @@ export default function Bottom() {
         <nav className="navigation-bar flex-rows">
 
             <ul className="nav-list flex-rows flex-row-reverse">
-                <li className="listed">الرئيسية</li>
+                <Link href={'/'} style={{ textDecoration: 'none', color: 'unset' }}> <li className="listed">الرئيسية</li></Link>
                 {/* <li className="listed">العروض والخصومات</li> */}
 
                 {categories.map((category) => (

@@ -91,8 +91,29 @@ export default function UpCategory(props) {
         setOpen(props.active);
     }, [props.active]);
 
+    const [categories, setCategories] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const router = useRouter();
+    const route = usePathname();
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await fetch('https://back.fradaksa.net/api/categories');
+                const data = await response.json();
+                setCategories(data.data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+                setLoading(false);
+            }
+        };
 
+        fetchCategories();
+    }, []);
 
+    if (loading) {
+        return <p>Loading...</p>;
+    }
     return (
         <>
             {/* <input className='w-100' /> */}
@@ -103,6 +124,7 @@ export default function UpCategory(props) {
                 <Button
                     onClick={() => {
                         setOpen(!open);
+
                         props.onClick(props.categoryId);
                     }}
                     aria-controls="example-collapse-text"
@@ -144,13 +166,15 @@ export default function UpCategory(props) {
                                     <div key={subcategory.SubcategoryID}>
                                         <div className='control-menu' >
 
-                                            <UpSubcategory
+                                            <Link key={subcategory.SubcategoryID} href={"category/" + categories.CategoryID + "/subcategory/" + subcategory.SubcategoryID} as={`/category/${categories.CategoryID}/subcategory/${subcategory.SubcategoryID}`} style={{ textDecoration: 'none' }}>
+                                                <UpSubcategory
 
-                                                name={subcategory.Name}
-                                                isFirst={index === 0}
-                                                isLast={index === filteredSubcategories.length - 1}
+                                                    name={subcategory.Name}
+                                                    isFirst={index === 0}
+                                                    isLast={index === filteredSubcategories.length - 1}
 
-                                            />
+                                                /> </Link>
+
                                         </div>
                                     </div>
                                 ))}

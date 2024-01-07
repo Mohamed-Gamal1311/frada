@@ -16,15 +16,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <Header />
+  
+      <Header /> 
 
       <main>
 
-        {children}
+     {children}   
 
       </main>
       <Footer />
       {/* <FooterMobile /> */}
+     
     </>
   )
 }

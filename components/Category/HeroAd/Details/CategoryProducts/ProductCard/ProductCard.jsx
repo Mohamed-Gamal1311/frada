@@ -13,7 +13,7 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
 
     const [isHovered, setIsHovered] = useState(false);
     const [hoveredPhoto, setHoveredPhoto] = useState(`https://www.fradaksa.net/back/Laravel/public/Attachment/${id}/${colorid}/${mainphoto}`);
-    console.log(photocolors)
+    // console.log(photocolors)
     const handlePhotoHoverSmall = (photo) => {
         console.log(photo)
         setHoveredPhoto(photo);

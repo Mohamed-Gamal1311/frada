@@ -67,14 +67,14 @@ export default function Bottom() {
                         </a>
                     </li>
                     <li className={`list ${activeIndex === 2 ? 'active' : ''}`}>
-                        <a href="#">
+                        <Link href="/">
                             <span className="icon" width="50px" height="50px">
 
                                 <ion-icon name="home-outline"><Image src={frada} width={25} height={25} alt="icon" /></ion-icon>
 
                             </span>
                             <span className="text">فرادا</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={`list ${activeIndex === 3 ? 'active' : ''}`}>
                         <a href="#">
