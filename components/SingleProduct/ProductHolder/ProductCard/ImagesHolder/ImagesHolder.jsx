@@ -51,10 +51,10 @@ export default function ImagesHolder(props) {
 
 
             </div>
-            <div className='slider-single-mo'>
+            <div className='slider-single-mo' >
                 <Carousel className='slider-single' interval={2000}>
                     {props.images.length > 0 ? props.images.map((image, index) => (
-                        <Carousel.Item>
+                        <Carousel.Item key={index}>
 
                             <Carousel.Caption key={index}>
 
