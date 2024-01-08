@@ -42,7 +42,7 @@ export default function ImagesHolder(props) {
 
                     {props.images.length > 0 ? props.images.map((image, index) => (
                         <div key={index} className='image-hover' onMouseEnter={() => handlePhotoHover(`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`)}>
-                            <Image src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={80} height={80} alt={`Image-${index}`} className="ml-2" />
+                            <Image key={props.id} src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={80} height={80} alt={`Image-${index}`} className="ml-2" />
                         </div>
                     )) : (<div>none</div>)}
 
@@ -58,7 +58,7 @@ export default function ImagesHolder(props) {
 
                             <Carousel.Caption>
 
-                                <Image src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={350} height={350} alt={`Image-${index}`} className="ml-2" />
+                                <Image key={props.id} src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={350} height={350} alt={`Image-${index}`} className="ml-2" />
                             </Carousel.Caption>
                         </Carousel.Item>
                     )) : (<div>none</div>)}

@@ -72,7 +72,7 @@ export default function EachSize(props) {
     return (
         <div style={{ width: '25%' }}>
             {productsSize.map(i => [
-                <Col onClick={handleColClick} style={colStyle} className='sizes' key={i.id} >{i}</Col>
+                <Col onClick={handleColClick} style={colStyle} className='sizes' key={params.CategoryID} >{i}</Col>
             ])}
         </div>
     )
