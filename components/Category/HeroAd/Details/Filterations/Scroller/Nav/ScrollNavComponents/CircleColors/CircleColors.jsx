@@ -68,7 +68,7 @@ export default function CircleColors(props) {
 
                     {componentsArray.map((index) => (
                         // <EachColor key={index} />
-                        <div></div>
+                        <div key={index} ></div>
 
                     ))}
 
