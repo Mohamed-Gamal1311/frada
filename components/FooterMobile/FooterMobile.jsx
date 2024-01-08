@@ -59,7 +59,7 @@ export default function FooterMobile() {
                                 <div className='name-cateogry'>
                                     {categories.map((category) => (
 
-                                        <Link href={"category/" + category.CategoryID} as={`/category/${category.CategoryID}`} style={{ textDecoration: 'none', color: 'unset', width: '40%' }} ><p key={category.CategoryID}>{category.Name}</p></Link>
+                                        <Link href={"category/" + category.CategoryID} as={`/category/${category.CategoryID}`} style={{ textDecoration: 'none', color: 'unset', width: '40%' }} key={category.CategoryID}><p >{category.Name}</p></Link>
 
                                     ))}
                                 </div>
