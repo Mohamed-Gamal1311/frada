@@ -10,10 +10,12 @@ export default function AdContainer() {
                 className="image-add"
                 src={Ad}
                 style={{ width: '100%', height: '100%' }}
+                alt="image"
             />
             <Image
                 className="image-add-mobile"
                 src={Admobile}
+                alt="image"
 
             />
         </div>

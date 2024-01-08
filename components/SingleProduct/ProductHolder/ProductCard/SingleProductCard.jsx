@@ -120,6 +120,7 @@ export default function SingleProductCard() {
                                                 width={50}
                                                 height={50}
                                                 className="ml-2"
+                                                alt='IMAGE'
                                             />
                                         </div>
                                     ))
