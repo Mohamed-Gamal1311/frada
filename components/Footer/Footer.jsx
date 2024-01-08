@@ -59,7 +59,7 @@ export default function Footer() {
                                         <div className='name-cateogry'>
                                             {categories.map((category) => (
 
-                                                <Link href={"category/" + category.CategoryID} as={`/category/${category.CategoryID}`} style={{ textDecoration: 'none', color: 'unset', width: '48%' }} ><p>{category.Name}</p></Link>
+                                                <Link href={"category/" + category.CategoryID} as={`/category/${category.CategoryID}`} style={{ textDecoration: 'none', color: 'unset', width: '48%' }} key={category.CategoryID}><p >{category.Name}</p></Link>
 
                                             ))}
                                         </div>
