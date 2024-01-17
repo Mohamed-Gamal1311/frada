@@ -70,7 +70,7 @@ export default function EachColor(props) {
     return (
         products.map((product) => (
             // <Col onClick={handleCircleClick} className='circle-colors' >{product.Colors.length > 0 ? product.Colors[0].ColorHex : ''}</Col>
-            <p>{product.Colors.length > 0 ? product.Colors[0].ColorHex : ''}</p>
+            <p key={product}>{product.Colors.length > 0 ? product.Colors[0].ColorHex : ''}</p>
         ))
     )
 

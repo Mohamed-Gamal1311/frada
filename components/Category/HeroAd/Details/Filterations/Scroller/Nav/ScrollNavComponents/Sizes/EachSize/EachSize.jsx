@@ -37,13 +37,13 @@ export default function EachSize() {
         }
     }
 
-    useEffect(() => {
-        if (params.CategoryID && !params.SubcategoryID) {
-            fetchProducts(params);
-        } else {
-            getProductsBySub(params);
-        }
-    }, [params.CategoryID, params.SubcategoryID]);
+    // useEffect(() => {
+    //     if (params.CategoryID && !params.SubcategoryID) {
+    //         fetchProducts(params);
+    //     } else {
+    //         getProductsBySub(params);
+    //     }
+    // }, [params.CategoryID, params.SubcategoryID]);
 
     useEffect(() => {
         // تحديث قائمة المنتجات في مكون CategoryProducts عند تغيير المقاس المحدد

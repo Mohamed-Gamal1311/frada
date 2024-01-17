@@ -77,7 +77,7 @@ export default function Cart() {
                         </div>
                     </div>
                     <div className='cobon'>
-                        <div className='mask-cart'><Image src={mask} style={{ width: '100%', height: 'auto' }} /></div>
+                        <div className='mask-cart'><Image src={mask} style={{ width: '100%', height: 'auto' }} alt='image' /></div>
                         <div className='input-cobon'>
                             <h1 style={{ textAlign: 'center', marginBottom: '5%' }}>كوبون الخصم</h1>
                             <div style={{ width: '70%', margin: 'auto' }}>  <input placeholder='أدخل كود الكوبون ...' type='text' /> </div>
@@ -106,7 +106,7 @@ export default function Cart() {
                             <div style={{ display: 'flex', justifyContent: 'end', width: '45%' }}>
                                 <nav>
 
-                                    <label for="touch"><span>اختر من العناوين المسجلة</span><Image src={aroww} style={{ width: '20px', marginLeft: '2%' }} /></label>
+                                    <label for="touch"><span>اختر من العناوين المسجلة</span><Image src={aroww} style={{ width: '20px', marginLeft: '2%' }} alt='image' /></label>
                                     <input type="checkbox" id="touch" />
 
                                     <ul class="slide">
