@@ -8,12 +8,14 @@ import "../../../Scroller.css"
 // import Col from 'react-bootstrap/Col';
 // import { useState, } from 'react';
 // import RangeSlider from 'react-bootstrap-range-slider';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import MultiRangeSlider from './MultiRangeSlider/MulltiRangeSlider';
+import { SizeContext } from '../../../../../../../../SizeContext/SizeContext';
 // import OffersDiscounts from './Nav/ScrollNavComponents/OffersDiscounts/OffersDiscounts';
 
 export default function Slider(props) {
+    const { maxPrice, setMaxPrice, minPrice, setMinPrice } = useContext(SizeContext);
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [productSize, setProductSize] = useState()
@@ -83,8 +85,12 @@ export default function Slider(props) {
                 <MultiRangeSlider
                     min={getMinPrice()}
                     max={getMaxPrice()}
-                    onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
+                    onChange={({ min, max }) => {
+                        setMinPrice(min);
+                        setMaxPrice(max);
+                    }}
                 />
+
 
                 {/* <p>أعلى سعر: {getMaxPrice()}</p>
             <p>أقل سعر: {getMinPrice()}</p> */}

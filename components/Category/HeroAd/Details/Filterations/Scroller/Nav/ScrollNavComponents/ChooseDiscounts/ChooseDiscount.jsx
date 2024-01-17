@@ -1,29 +1,62 @@
-"use client"
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 import Card from 'react-bootstrap/Card';
-// import ListGroup from 'react-bootstrap/ListGroup';
-import Form from 'react-bootstrap/Form'
-import "../../../Scroller.css"
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-// import { useState, } from 'react';
-// import RangeSlider from 'react-bootstrap-range-slider';
-// import MultiRangeSlider from './Nav/ScrollNavComponents/MultiRangeSlider/MulltiRangeSlider';
-// import OffersDiscounts from './Nav/ScrollNavComponents/OffersDiscounts/OffersDiscounts';
+import Form from 'react-bootstrap/Form';
 
+export default function ChooseDiscounts() {
+    const params = useParams();
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [uniqueDiscounts, setUniqueDiscounts] = useState([]);
 
-export default function ChooseDiscounts(props) {
+    async function fetchProducts(params) {
+        try {
+            const response = await fetch(`https://back.fradaksa.net/api/getProducts/${params.CategoryID}`);
+            const data = await response.json();
+            setProducts(data.data.Products);
+            setLoading(false);
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
+        }
+    }
+
+    async function getProductsBySub(params) {
+        try {
+            const response = await fetch(`https://back.fradaksa.net/api/getProductsBySub/${params.SubcategoryID}`);
+            const data = await response.json();
+            setProducts(data.data.Products);
+            setLoading(false);
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
+        }
+    }
+
+    useEffect(() => {
+        setLoading(true);
+        if (params.CategoryID && !params.SubcategoryID) {
+            fetchProducts(params);
+        } else {
+            getProductsBySub(params);
+        }
+    }, [params.CategoryID, params.SubcategoryID]);
+
+    useEffect(() => {
+        const discounts = [...new Set(products.map((product) => product.Discount))];
+        setUniqueDiscounts(discounts);
+    }, [products]);
 
     return (
-        <Card.Body className='border-bottom-1' style={{ height: 'min-content !important', textAlign: 'right' }}>
-            <Card.Title style={{ fontSize: '1.3em', marginBottom: '4%', color: '#D17A52', fontWeight: 'bold' }}> اختر من الخصومات</Card.Title>
+        <Card.Body className="border-bottom-1" style={{ height: 'min-content !important', textAlign: 'right' }}>
+            <Card.Title style={{ fontSize: '1.3em', marginBottom: '4%', color: '#D17A52', fontWeight: 'bold' }}>
+                اختر من الخصومات
+            </Card.Title>
             <Form.Select aria-label="Default select example" style={{ textAlign: 'right', borderColor: '#332c32', borderRadius: '20px', fontWeight: 'bold' }}>
-                <option>10%</option>
-                <option value="1">بدون خصومات</option>
-                <option value="2">20%</option>
-                <option value="3">30%</option>
+                {uniqueDiscounts.map((discount) => (
+                    <option key={discount}>{discount}</option>
+                ))}
             </Form.Select>
-
         </Card.Body>
-    )
+    );
 }

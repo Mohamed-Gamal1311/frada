@@ -70,3 +70,12 @@
     padding: 0;
     height: unset !important;
 }
+
+@media(max-width:750px) {
+
+
+    .filter-component {
+
+        height: 90vh;
+    }
+}

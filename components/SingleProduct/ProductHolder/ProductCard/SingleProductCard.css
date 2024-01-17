@@ -94,6 +94,7 @@
     .image-color img {
         width: 70px !important;
         height: 70px !important;
+        padding-bottom: 8% !important;
     }
 
 }

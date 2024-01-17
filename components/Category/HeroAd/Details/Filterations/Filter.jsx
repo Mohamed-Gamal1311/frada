@@ -1,7 +1,8 @@
 import Scroller from "./Scroller/Scroller"
+import './Filter.css'
 export default function Filter(props) {
     return (
-        <div className='filter pe-5' >
+        <div className='filter padding' >
             <Scroller />
         </div>
 

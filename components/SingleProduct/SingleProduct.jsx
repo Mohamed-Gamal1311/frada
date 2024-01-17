@@ -58,7 +58,7 @@ export default function SingleProduct() {
 
     <section>
 
-      <ProductHolder />
+     <ProductHolder />
       <AdContainer />
 
       {/* <Info desc={product.Description && product.Description.length > 0 ? product.Description[0] : ''} info={product.AdditionalInfo && product.AdditionalInfo > 0 ? product.AdditionalInfo[0] : ''} /> */}

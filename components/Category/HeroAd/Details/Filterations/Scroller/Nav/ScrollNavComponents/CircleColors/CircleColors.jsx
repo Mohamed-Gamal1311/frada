@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-// import EachColor from './EachColor/EachColor';
+import EachColor from './EachColor/EachColor';
 
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
@@ -67,8 +67,8 @@ export default function CircleColors(props) {
                 <Row className="justify-content-end" md={1} style={{ textAlign: 'center', fontWeight: 'bold' }}>
 
                     {componentsArray.map((index) => (
-                        // <EachColor key={index} />
-                        <div key={index} ></div>
+                        <EachColor key={index} />
+                        // <div key={index} ></div>
 
                     ))}
 

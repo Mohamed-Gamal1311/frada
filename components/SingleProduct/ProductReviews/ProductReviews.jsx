@@ -59,7 +59,7 @@ const ProductReviews = (props) => {
             </ListGroup>
 
             {/* Pagination */}
-            <div className="mt-3 border-0">
+            <div className="mt-3 border-0 review">
                 {props.reviews && props.reviews.length > 0 ? (
                     <Pagination>
                         {[...Array(Math.ceil(props.reviews && props.reviews.length / itemsPerPage)).keys()].map((page) => (

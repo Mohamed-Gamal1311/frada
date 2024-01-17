@@ -5,7 +5,7 @@ import Arrow from "../../../public/Images/Icons/3th/Arrow.svg"
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-
+import Spinner from 'react-bootstrap/Spinner';
 export default function Bottom() {
 
 
@@ -30,7 +30,7 @@ export default function Bottom() {
     }, []);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <Spinner animation="border" style={{ color: '#D17A52' }} />;
     }
 
 

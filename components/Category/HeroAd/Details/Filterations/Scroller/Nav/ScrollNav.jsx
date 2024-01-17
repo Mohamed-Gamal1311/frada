@@ -10,7 +10,7 @@ import Sizes from '../Nav/ScrollNavComponents/Sizes/Sizes';
 import CircleColors from '../Nav/ScrollNavComponents/CircleColors/CircleColors';
 import Slider from '../Nav/ScrollNavComponents/Slider/Slider';
 import EachColor from './ScrollNavComponents/CircleColors/EachColor/EachColor';
-
+import './Nav.css'
 
 export default function ScrollNav(props) {
 
@@ -18,10 +18,10 @@ export default function ScrollNav(props) {
 
     return (
         <div className='filter'>
-            <Card style={{ width: '18rem', height: '80vh', overflowY: 'scroll', textAlign: 'right', border: 'none', marginTop: '12.5%' }}>
+            <Card className='filter-component' style={{ height: '80vh', overflowY: 'scroll', textAlign: 'right', border: 'none' }}>
                 {/* <OffersDiscounts /> */}
-                {/* <ChooseDiscounts /> */}
-                {/* <Trademarks /> */}
+                <ChooseDiscounts />
+                <Trademarks />
                 <Sizes />
                 {/* <CircleColors /> */}
                 <Slider />

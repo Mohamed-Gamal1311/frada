@@ -1,5 +1,5 @@
 import { Cairo } from 'next/font/google'
-
+import { SizeProvider } from '../../components/SizeContext/SizeContext'
 import './globals.css'
 import Footer from '../../components/Footer/Footer'
 import FooterMobile from '../../components/FooterMobile/FooterMobile'
@@ -17,8 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
 
-      <body className={cairo.className} suppressHydrationWarning={true} >{children}
-
+      <body className={cairo.className} suppressHydrationWarning={true} >
+        <SizeProvider>
+          {children}
+        </SizeProvider>
       </body>
     </html>
   )

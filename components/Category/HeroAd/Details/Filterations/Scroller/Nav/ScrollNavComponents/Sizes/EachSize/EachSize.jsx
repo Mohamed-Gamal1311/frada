@@ -1,48 +1,29 @@
-"use client"
-import Card from 'react-bootstrap/Card';
-// import ListGroup from 'react-bootstrap/ListGroup';
-import Form from 'react-bootstrap/Form'
-import "../../../../Scroller.css"
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { useState, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { SizeContext } from '../../../../../../../../../SizeContext/SizeContext';
 import { useParams, useRouter } from 'next/navigation';
-import '../Size.css'
 
+import Col from 'react-bootstrap/Col';
 
-
-export default function EachSize(props) {
-
-
+export default function EachSize() {
     const params = useParams();
-    const [productsSize, setProductsSize] = useState([])
-    const [isClicked, setIsClicked] = useState(false);
-
-    const handleColClick = () => {
-        setIsClicked(!isClicked);
-    };
+    const { selectedSize, setSelectedSize } = useContext(SizeContext);
+    const [productsSize, setProductsSize] = useState([]);
 
     const colStyle = {
         padding: '3%',
         fontSize: '1.2em',
         cursor: 'pointer',
-        backgroundColor: isClicked ? '#332c32' : 'initial', // Change 'blue' to the desired background color
-        color: isClicked ? '#D17A52' : 'initial', // Change '#fff' to the desired text color
+        // backgroundColor: selectedSize ? '#332c32' : 'initial',
+        // color: selectedSize ? '#D17A52' : 'initial',
     };
-
 
     async function fetchProducts(params) {
         try {
             const response = await fetch(`https://back.fradaksa.net/api/getProducts/${params.CategoryID}`);
             const data = await response.json();
-            console.log("category")
             setProductsSize(data.data.Sizes);
-            // console.log(data.data)
-            console.log(data.data.Sizes)
-            console.log(productsSize)
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
@@ -50,30 +31,45 @@ export default function EachSize(props) {
         try {
             const response = await fetch(`https://back.fradaksa.net/api/getProductsBySub/${params.SubcategoryID}`);
             const data = await response.json();
-            console.log("sup category")
             setProductsSize(data.data.Sizes);
-            console.log(productsSize)
-            console.log(data.data.Sizes)
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
     useEffect(() => {
+        if (params.CategoryID && !params.SubcategoryID) {
+            fetchProducts(params);
+        } else {
+            getProductsBySub(params);
+        }
+    }, [params.CategoryID, params.SubcategoryID]);
 
-        fetchProducts(params)
+    useEffect(() => {
+        // تحديث قائمة المنتجات في مكون CategoryProducts عند تغيير المقاس المحدد
+        if (params.CategoryID && !params.SubcategoryID) {
+            fetchProducts(params);
+        } else {
+            getProductsBySub(params);
+        }
+    }, [selectedSize]); // تتبع تغيير selectedSize
 
-
-    }, [params, params.CategoryID, params.SubcategoryID]);
-
-
-
+    const handleColClick = (size) => {
+        setSelectedSize(size);
+    };
 
     return (
         <div style={{ width: '25%' }}>
-            {productsSize.map(i => [
-                <Col onClick={handleColClick} style={colStyle} className='sizes' key={params.CategoryID} >{i}</Col>
-            ])}
+            {productsSize.map((size) => (
+                <Col
+                    onClick={() => handleColClick(size)}
+                    style={colStyle}
+                    className={`sizes ${selectedSize === size ? 'selected' : ''}`}
+                    key={size}
+                >
+                    {size}
+                </Col>
+            ))}
         </div>
-    )
+    );
 }

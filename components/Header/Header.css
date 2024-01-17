@@ -387,7 +387,7 @@ input::placeholder {
 .listed-svg {
     transition: display 0.5s;
     position: absolute;
-    left: 10%;
+    left: 5%;
     top: 50%;
     transform: translateY(-50%);
 }

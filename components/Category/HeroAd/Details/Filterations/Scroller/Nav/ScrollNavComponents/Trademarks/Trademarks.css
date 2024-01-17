@@ -1,0 +1,8 @@
+.trademarkcontent .trademark:hover {
+    opacity: 0.5;
+}
+
+.trademark.selected {
+    color: rgb(209, 122, 82);
+    /* اختر لونًا يناسبك هنا */
+}

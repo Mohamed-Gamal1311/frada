@@ -28,7 +28,7 @@
 
 }
 
-.carousel img {
+.slider-single .carousel img {
     width: 350px !important;
     width: 100% !important;
     padding: 0 !important;
@@ -110,7 +110,12 @@
 
     }
 
+    .slider-single-mo .carousel img {
+        WIDTH: 100% !important;
+    }
+
     .slider-single-mo {
         display: block;
     }
+    
 }

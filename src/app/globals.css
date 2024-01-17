@@ -165,3 +165,14 @@ input[type=checkbox] {
 #dropdown-variants-transparent {
   font-weight: 700 !important;
 }
+
+body {
+  font-family: 'Cairo', sans-serif !important;
+
+}
+
+:root,
+[data-bs-theme=light] {
+  font-family: 'Cairo', sans-serif !important;
+
+}

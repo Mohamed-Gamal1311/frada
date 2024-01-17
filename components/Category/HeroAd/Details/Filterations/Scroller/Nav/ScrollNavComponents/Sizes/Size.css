@@ -5,11 +5,27 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100% !important;
-
+    justify-content: flex-end;
 }
 
 .col {
     /* flex: 1 0; */
     width: 25%;
     flex: none !important;
+}
+
+.sizes.selected {
+    background-color: #332C32;
+
+    color: #D17A52;
+
+}
+
+@media(max-width:750px) {
+    .col {
+        /* flex: 1 0; */
+        width: 20%;
+        flex: none !important;
+    }
+
 }

@@ -18,7 +18,7 @@ export default function Signinpage() {
 
 
     async function setDataUSer() {
-        let x = await axios.post(`http://127.0.0.1:8000/api/auth/login?Email=kareem@gmail.com&password=123456`);
+        let x = await axios.post(`https://back.fradaksa.net/api/auth/login?Email=kareem@gmail.com&password=123456`);
 
         console.log("Ahmed");
     }
@@ -38,7 +38,7 @@ export default function Signinpage() {
                     <Image src={image} alt='welcome' />
                 </div>
                 <div className='form-content'>
-                    <form>
+                    <form className='form-parent'>
                         <div>
                             <h2>  تسجيل الدخول مع فرادا  </h2>
 
@@ -62,14 +62,14 @@ export default function Signinpage() {
                                     <input type='password' />
                                 </div>
 
-                                <div className='security'>
-                                    <input type='checkbox' />
+                                {/* <div className='security'>
+                                    <input type='checkbox' style={{ marginLeft: '1%' }} />
                                     <p>
                                         عند قيامي بانشاء حساب فأنا اوافق على <span>سياسة الخصوصية</span>
 
                                         <br></br><span>شروط الخدمة</span><span className='and'>   و   </span> <span>تلقي الأخبار والإشعارات</span>
                                     </p>
-                                </div>
+                                </div> */}
                                 <div className='submit'>
                                     <button  > تسجيل الدخول</button>
                                 </div>

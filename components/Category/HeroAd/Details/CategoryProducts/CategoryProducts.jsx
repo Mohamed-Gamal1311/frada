@@ -1,34 +1,28 @@
-"use client"
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import img from "../../../../../public/Images/Hero.jpg"
-import { useState } from 'react';
-import Image from 'next/image';
+import { useContext, useEffect, useState } from 'react';
+import { SizeContext } from '../../../../SizeContext/SizeContext';
 import ProductCard from './ProductCard/ProductCard';
-import data from '../../../../../public/productsdata.jsx'
-import { useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
-import Slider from '../Filterations/Scroller/Nav/ScrollNavComponents/Slider/Slider';
-
-export default function CategoryProducts(props) {
-
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [productSize, setProductSize] = useState()
-    const router = useRouter();
+import { useParams } from 'next/navigation';
+import Pagination from 'react-bootstrap/Pagination';
+import './ProductCard/ProductCard.css'
+import Spinner from 'react-bootstrap/Spinner';
+export default function CategoryProducts() {
     const params = useParams();
 
+    const { selectedSize, selectedTrademark, maxPrice, setMaxPrice, minPrice, setMinPrice } = useContext(SizeContext);
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const productsPerPage = 18;
 
     async function fetchProducts(params) {
         try {
             const response = await fetch(`https://back.fradaksa.net/api/getProducts/${params.CategoryID}`);
             const data = await response.json();
-            console.log("category")
             setProducts(data.data.Products);
-            console.log(data);
-            console.log(products)
+            setLoading(false);
         } catch (error) {
-            console.log(error)
+            console.log(error);
+            setLoading(false);
         }
     }
 
@@ -36,95 +30,45 @@ export default function CategoryProducts(props) {
         try {
             const response = await fetch(`https://back.fradaksa.net/api/getProductsBySub/${params.SubcategoryID}`);
             const data = await response.json();
-            console.log("sup category")
             setProducts(data.data.Products);
-            console.log(data.data);
-            console.log(products)
+            setLoading(false);
         } catch (error) {
-            console.log(error)
+            console.log(error);
+            setLoading(false);
         }
     }
 
+    function handlePageChange(newPage) {
+        setCurrentPage(newPage);
+    }
+
     useEffect(() => {
-        if (params.CategoryID && params.SubcategoryID == null) {
-            fetchProducts(params)
+        setLoading(true);
+        if (params.CategoryID && !params.SubcategoryID) {
+            fetchProducts(params);
         } else {
-            getProductsBySub(params)
+            getProductsBySub(params);
         }
-        // // {{URL}}/getProductsBySub/1
-        // const fetchProducts = async () => {
-        //     try {
-        //         if (params.CategoryID && params.SubcategoryID == null) {
-        //             const response = await fetch(`https://back.fradaksa.net/api/getProducts/${params.CategoryID}`);
-        //             const data = await response.json();
-        //             //  setProductSize(data)
-        //             // setProducts(data.data);
-        //             console.log(data)
-        //             // console.log(products)
-
-        //         } else {
-        //             const response = await fetch(`https://back.fradaksa.net/api/getProductsBySub/${params.SubcategoryID}`);
-        //             const data = await response.json();
-        //             // setProducts(data.data);
-        //             // setProductSize(data)
-        //             // console.log(productSize)
-        //             // console.log(products)
-
-        //         }
-
-
-        //         setLoading(false);
-        //     } catch (error) {
-        //         console.error('Error fetching products:', error);
-        //         setLoading(false);
-        //     }
-        // };
-
-
-
-        // fetchProducts();
-
     }, [params.CategoryID, params.SubcategoryID]);
 
-
-
-
-
-
-    // useEffect(() => {
-
-
-    //     const fetchProducts2 = async () => {
-    //         try {
-    //             const response = await fetch(`http://127.0.0.1:8000/api/getProductsBySub/${params.SubcategoryID}`);
-    //             const data = await response.json();
-    //             setProducts(data.data);
-    //             setLoading(false);
-    //         } catch (error) {
-    //             console.error('Error fetching products:', error);
-    //             setLoading(false);
-    //         }
-    //     };
-
-
-    //     fetchProducts2();
-
-    // }, [params.SubcategoryID]);
-
-    // const [minPrice, setMinPrice] = useState(null);
-    // const [maxPrice, setMaxPrice] = useState(null);
-
-    // const handlePriceChange = (min, max) => {
-    //   setMinPrice(min);
-    //   setMaxPrice(max);
-    // };
+    const totalProducts = products.length;
+    const totalPages = Math.ceil(totalProducts / productsPerPage);
+    const startIndex = (currentPage - 1) * productsPerPage;
+    const endIndex = startIndex + productsPerPage;
+    const displayedProducts = products
+        .filter((product) =>
+            !selectedSize || (product.Sizes && product.Sizes[0] === selectedSize) &&
+            (!selectedTrademark || product.Trademark?.TrademarkName === selectedTrademark) &&
+            product.Price >= minPrice && product.Price <= maxPrice
+        )
+        .slice(startIndex, endIndex);
 
     return (
-        <div className='cards-holder ms-2 ms-lg-5 ms-xl-5 ms-md-5 ' style={{ fontSize: '15px' }}>
-
-            {products && products.length > 0 ? (
-                products.map((product) => (
-
+        <div className='cards-holder ms-2 ms-lg-5 ms-xl-5 ms-md-5' style={{ fontSize: '15px' }}>
+            {loading ? (
+                <Spinner animation="border" style={{ color: '#D17A52' }} />
+            ) : displayedProducts.length > 0 ? (
+                displayedProducts.map((product) => (
                     <ProductCard
                         key={product.ProductID}
                         id={product.ProductID}
@@ -136,23 +80,24 @@ export default function CategoryProducts(props) {
                         mainphoto={product.MainPhoto && product.MainPhoto.Image}
                         colornum={Number(product.NumOfColors)}
                         photocolors={product.Colors}
-
-
                     />
-
-
                 ))
-
             ) : (
-                <p style={{ textAlign: 'center' }}>لا توجد منتجات هنا</p>
+                <p>No products found.</p>
             )}
-
-
+            <Pagination style={{ position: 'absolute', bottom: '10px' }} className='pagnition-product'>
+                <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
+                {Array.from({ length: totalPages }, (_, index) => (
+                    <Pagination.Item
+                        key={index + 1}
+                        active={currentPage === index + 1}
+                        onClick={() => handlePageChange(index + 1)}
+                    >
+                        {index + 1}
+                    </Pagination.Item>
+                ))}
+                <Pagination.Next onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} />
+            </Pagination>
         </div>
     );
 }
-
-
-
-
-

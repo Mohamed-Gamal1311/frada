@@ -1,5 +1,27 @@
+.py-5 {
+    padding-top: 0 !important;
+}
+
+.SingleProductCardimge {
+    padding: 0 !important;
+}
+
 @media(max-width:1024px) {
     .single-parent {
         padding-right: 0 !important;
+    }
+}
+
+@media(max-width:750px) {
+    .SingleProductCardimge {
+        padding-top: 0 !important;
+    }
+
+    .py-5 {
+        padding-top: 0 !important;
+    }
+
+    #padding00 {
+        padding: 0;
     }
 }

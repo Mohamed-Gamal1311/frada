@@ -48,16 +48,23 @@ export default function DetailsMobile(props) {
             </nav>
 
             <div className='d-flex flex-row'>
-                <div style={{ width: '100%' }}>
-                    <CategoryProducts />
-                </div>
+                {isFilterModalVisible ? null : (
+                    <div style={{ width: '100%', position: 'relative' }}>
+                        <CategoryProducts />
+                    </div>
+                )}
 
                 {isFilterModalVisible && (
-                    <div className='filter-modal-overlay position-absolute' >
-                        <div id="filter" ref={filterRef} className='filter-modal-content' style={{ transition: "all 0.3s", height: '100vh' }}>
+                    <div className='filter-modal-overlay position-absolute' style={{ width: '100%' }} >
+                        <div id="filter" ref={filterRef} className='filter-modal-content position-sticky' style={{ transition: "all 0.5s", height: '100vh' }}>
                             <Filter />
                         </div>
+
+
+
+
                     </div>
+
                 )}
             </div>
         </section >

@@ -22,14 +22,14 @@ export default function Shoppingnow() {
                         </div>
                         <div className="shoppingnow-part2">
                             <div className='cheap2'>
-                                <div><Image src={block1} alt='block' /></div>
+                                <div><Image src={block1} alt='block' style={{ position: 'relative', right: '8%' }} /></div>
                                 <div className='image-cheap2'><Image src={shop3} alt='iamge' /></div>
 
                             </div>
                             <div className='botton-part2'><button>تسوق الان</button></div>
                         </div>
                         <div className="shoppingnow-part1 shoppingnow-part33">
-                            <div className='cheap1'>
+                            <div className='cheap1' >
                                 <div><Image src={block2} alt='block' /></div>
                                 <div className='image-cheap1 cheap3'><Image className='image-cheap3' style={{ width: '163%' }} src={shop1} alt='iamge' /></div>
                             </div>

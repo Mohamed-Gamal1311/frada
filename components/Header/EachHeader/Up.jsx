@@ -23,7 +23,7 @@ export default function Up() {
                 <p>تابع كل جديد من خلال الإشتراك في النشرة الإخبارية</p>
             </div>
             <div className="header-content-logos">
-                <Image className='header-svg' src={Facebook} alt="Facebook" />
+                <Image className='header-svg' src={Facebook} alt="Facebook" style={{ height: '70%', marginRight: '2px' }} />
                 <Image className='header-svg' src={Instagram} alt="Instagram" />
                 <Image className='header-svg' src={Snapchat} alt="Snapchat" />
                 <Image className='header-svg' src={Tiktok} alt="Tiktok" />

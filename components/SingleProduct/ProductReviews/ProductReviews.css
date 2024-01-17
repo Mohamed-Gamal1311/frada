@@ -24,7 +24,7 @@ li {
     color: #332c32;
 }
 
-.active>.page-link,
+.review .active>.page-link,
 .page-link.active {
     z-index: 3;
 
@@ -34,7 +34,7 @@ li {
     /* border-color: var(--bs-pagination-active-border-color); */
 }
 
-span.page-link {
+.review span.page-link {
     background-color: #d17a52 !important;
     color: #332c32 !important;
 }

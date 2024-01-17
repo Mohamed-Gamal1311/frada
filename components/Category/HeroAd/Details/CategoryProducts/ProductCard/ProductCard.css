@@ -2,6 +2,33 @@
     width: 32%;
 }
 
+.pagnition-product .page-link.active,
+.active>.page-link {
+    background: white !important;
+    color: #D17A52 !important;
+    /* border: 1px solid #332C32; */
+    border-radius: 3px !important;
+    border: none !important;
+}
+
+.pagnition-product .page-item:first-child .page-link {
+    border: none !important;
+}
+
+.pagnition-product .page-item:last-child .page-link {
+    border: none !important;
+}
+
+
+.pagnition-product a {
+    color: #332C32 !important;
+}
+
+.pagnition-product .page-item:not(:first-child) .page-link {
+    border: none !important;
+}
+
+
 @media (max-width:550px) {
     .card-product {
         width: 40%;

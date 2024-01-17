@@ -66,6 +66,13 @@
 
 }
 
+.back-image-dash {
+    background-image: url('../../../public/Images/Dahboard/draw.png');
+    background-repeat: no-repeat;
+    background-position-x: 6%;
+    background-position-y: 16%;
+}
+
 .col-sm-3 {
     width: 100%;
 }

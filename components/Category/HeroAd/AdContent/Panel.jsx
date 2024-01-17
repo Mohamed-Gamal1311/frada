@@ -1,12 +1,14 @@
 "use client"
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
-import Panel1 from "../../../../public/Images/Panels/Panel-1.jpg"
-import Panel2 from "../../../../public/Images/Panels/Panel-2.jpg"
-import Panel3 from "../../../../public/Images/Panels/Panel-3.jpg"
-import Panel4 from "../../../../public/Images/Panels/Panel-4.jpg"
-import Panel5 from "../../../../public/Images/Panels/Panel-5.jpg"
-import Panel6 from "../../../../public/Images/Panels/Panel-6.jpg"
+import Panel1 from "../../../../public/Images/Panels/panal-1.jpg"
+import Panel2 from "../../../../public/Images/Panels/panal-2.jpg"
+import Panel3 from "../../../../public/Images/Panels/panal-3.jpg"
+import Panel4 from "../../../../public/Images/Panels/panal-4.jpg"
+import Panel5 from "../../../../public/Images/Panels/panal-5.jpg"
+import Panel6 from "../../../../public/Images/Panels/panal-6.jpg"
+import Left from '../../../../public/Images/Panels/LEFT.png'
+import right from '../../../../public/Images/Panels/arrow-right.png'
 import "./Panel.css"
 import { useRef, useEffect, useState } from 'react'
 
@@ -71,9 +73,9 @@ export default function Panel() {
 
         <>
 
-            <div className="wrapper">
-                <i id="left" className="fa-solid fa-angle-left" onClick={() => handleScroll('left')}></i>
-
+            <div className="wrapper PANEL">
+                {/* <i id="left" className="fa-solid fa-angle-left" onClick={() => handleScroll('left')}></i> */}
+                <Image src={Left} alt='left' id="left" className="leftarrow fa-solid fa-angle-left" onClick={() => handleScroll('left')} />
                 <div className="carousel" ref={carouselRef}>
 
                     <Image
@@ -113,7 +115,8 @@ export default function Panel() {
                     />
 
                 </div>
-                <i id="right" className="fa-solid fa-angle-right" onClick={() => handleScroll('right')}></i>
+                {/* <i id="right" className="fa-solid fa-angle-right" onClick={() => handleScroll('right')}></i> */}
+                <Image src={right} alt='right' id="right" className="fa-solid fa-angle-right" onClick={() => handleScroll('right')} />
 
             </div>
 

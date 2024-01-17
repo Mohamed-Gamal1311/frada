@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
-import Hero from "../../../../public/Images/Hero.jpg"
+import Hero from "../../../../public/Images/Panels/Hero332.jpg"
+import hero2 from '../../../../public/Images/Panels/hero-test.jpg'
 import "./HeroAd.css"
 export default function HeroAd() {
     return (

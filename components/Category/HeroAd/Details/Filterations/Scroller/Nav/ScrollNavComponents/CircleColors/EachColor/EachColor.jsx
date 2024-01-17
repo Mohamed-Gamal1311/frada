@@ -13,40 +13,47 @@ import { useParams, useRouter } from 'next/navigation';
 
 
 export default function EachColor(props) {
-    // const [products, setProducts] = useState([]);
-    // const [loading, setLoading] = useState(true);
+    const params = useParams();
 
-    // const params = useParams();
-    // console.log(params)
-    // useEffect(() => {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
+    async function fetchProducts(params) {
+        try {
+            const response = await fetch(
+                `https://back.fradaksa.net/api/getProducts/${params.CategoryID}`
+            );
+            const data = await response.json();
+            setProducts(data.data.Products);
+            setLoading(false);
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
+        }
+    }
 
-    //     const fetchProducts = async () => {
-    //         try {
-    //             if (params.CategoryID && params.SubcategoryID == null) {
-    //                 const response = await fetch(`https://back.fradaksa.net/api/getProducts/${params.CategoryID}`);
-    //                 const data = await response.json();
-    //                 setProducts(data.data);
+    async function getProductsBySub(params) {
+        try {
+            const response = await fetch(
+                `https://back.fradaksa.net/api/getProductsBySub/${params.SubcategoryID}`
+            );
+            const data = await response.json();
+            setProducts(data.data.Products);
+            setLoading(false);
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
+        }
+    }
 
-    //             } else {
-    //                 const response = await fetch(`https://back.fradaksa.net/api/getProductsBySub/${params.SubcategoryID}`);
-    //                 const data = await response.json();
-    //                 setProducts(data.data);
-    //             }
-
-
-    //             setLoading(false);
-    //         } catch (error) {
-    //             console.error('Error fetching products:', error);
-    //             setLoading(false);
-    //         }
-    //     };
-
-
-
-    //     fetchProducts();
-
-    // }, [params.CategoryID, params.SubcategoryID]);
+    useEffect(() => {
+        setLoading(true);
+        if (params.CategoryID && !params.SubcategoryID) {
+            fetchProducts(params);
+        } else {
+            getProductsBySub(params);
+        }
+    }, [params.CategoryID, params.SubcategoryID]);
     const [isClickedCircle, setIsClickedCircle] = useState(false);
 
     const handleCircleClick = () => {
@@ -61,10 +68,10 @@ export default function EachColor(props) {
 
 
     return (
-        // products.map((product) => (
-        <Col onClick={handleCircleClick} className='circle-colors'></Col>
-        //<p> {product.Colors.length > 0 ? product.Colors[0].ColorHex : ''}</p>
-        // ))
+        products.map((product) => (
+            // <Col onClick={handleCircleClick} className='circle-colors' >{product.Colors.length > 0 ? product.Colors[0].ColorHex : ''}</Col>
+            <p>{product.Colors.length > 0 ? product.Colors[0].ColorHex : ''}</p>
+        ))
     )
 
 }

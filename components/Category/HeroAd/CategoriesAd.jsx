@@ -6,7 +6,7 @@ import Panel from './AdContent/Panel'
 export default function CategoriesAd(props) {
     return (
 
-        <section className='h-100 position-relative' style={{ marginBottom: '10%' }}>
+        <section className='h-100 position-relative' style={{ marginBottom: '10%', position: 'relative' }}>
             < HeroAd />
             {
                 props.subcategory == 0 &&
