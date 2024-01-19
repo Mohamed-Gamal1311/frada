@@ -8,7 +8,7 @@ import Cart from "../../../public/Images/SVG Header Icons/shop_now_icon.svg"
 import Exporters from "../../../public/Images/SVG Header Icons/Icon.svg"
 import Logo from "../../../public/Images/Icons/2nd Bar/Frada logo.svg"
 import Search from "../../../public/Images/Icons/2nd Bar/Union 1.svg"
-
+import Link from 'next/link'
 
 export default function Middle() {
 
@@ -25,8 +25,10 @@ export default function Middle() {
             </form>
             <div className="option-list flex-rows">
                 <div className="option  last-option">
-                    <Image src={MyAccount} alt="My Account" className='option-img' />
-                    <p className="option-desc">حسابي</p>
+                    <Link href="/dashboard" style={{ textDecoration: 'none', color: 'unset' }}>
+                        <Image src={MyAccount} alt="My Account" className='option-img' />
+                        <p className="option-desc">حسابي</p>
+                    </Link>
                 </div>
                 <div className="option">
                     <Image src={Help} alt="Help" className='option-img' />

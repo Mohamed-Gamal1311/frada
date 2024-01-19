@@ -8,7 +8,7 @@
     justify-content: flex-end;
 }
 
-.col {
+.size-filter .col {
     /* flex: 1 0; */
     width: 25%;
     flex: none !important;
@@ -22,7 +22,7 @@
 }
 
 @media(max-width:750px) {
-    .col {
+    .size-filter .col {
         /* flex: 1 0; */
         width: 20%;
         flex: none !important;

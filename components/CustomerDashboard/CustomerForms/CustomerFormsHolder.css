@@ -16,9 +16,17 @@
 }
 
 .CustomerFormsHolder a.nav-link .active {
-    background-color: #F6F6F6 !important;
+    background-color: inherit;
 
 
+}
+
+a.nav-link.active {
+    background-color: inherit !important;
+}
+
+.nav-pills {
+    --bs-nav-pills-link-active-bg: none !important;
 }
 
 
@@ -53,7 +61,7 @@
     color: inherit;
     width: 77%;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
 
 }
 
@@ -73,14 +81,34 @@
     background-position-y: 16%;
 }
 
+.nav-pills {
+
+    --bs-nav-pills-link-active-color: inherit !important;
+
+}
+
 .col-sm-3 {
     width: 100%;
+}
+
+@media(max-width:1600px) {
+    .button-menu a {
+
+        font-weight: 600;
+        font-size: 11px;
+
+    }
 }
 
 @media(max-width:1350px) {
     .CustomerFormsHolder-all {
         display: none;
     }
+
+    .CustomerFormsHolder .dashboard-menu {
+        width: 28%;
+    }
+
 }
 
 @media(max-width:1250px) {

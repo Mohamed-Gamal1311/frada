@@ -88,7 +88,7 @@ export default function Bottom() {
                     </li>
                     <li className={`list ${activeIndex === 4 ? 'active' : ''}`}>
 
-                        <Link href="dashboard">
+                        <Link href="/dashboard">
                             <span className="icon" width="50px" height="50px">
                                 <ion-icon name="home-outline"><Image src={My_account_icon} width={25} height={25} alt="icon" /></ion-icon>
 

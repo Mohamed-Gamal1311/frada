@@ -90,7 +90,7 @@ function ProductInfo(props) {
 
 
 
-        <div className='w-75 align-right pt-3 pe-5' >
+        <div className='w-75 align-right pt-3 pe-5 info-addition'  >
             <Nav variant="tabs" style={{ color: '#d17a52', flexDirection: 'row', justifyContent: 'flex-end', border: 'none' }} defaultActiveKey="link-1" onSelect={handleTabSelect}>
                 {props.info !== '' &&
                     <Nav.Item>

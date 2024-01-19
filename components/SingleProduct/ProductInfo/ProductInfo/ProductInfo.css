@@ -1,4 +1,4 @@
-.nav-link {
+.info-addition .nav-link {
     color: #d17a52 !important;
     font-weight: 700;
     font-size: small !important;
@@ -36,7 +36,7 @@
     color: #d17a52 !important;
 } */
 
-.active {
+.info-addition .active {
     color: #332c32 !important;
     font-weight: 700;
 }

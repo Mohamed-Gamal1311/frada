@@ -59,7 +59,7 @@ export default function EachSize() {
     };
 
     return (
-        <div style={{ width: '25%' }}>
+        <div style={{ width: '25%' }} className='size-filter'>
             {productsSize.map((size) => (
                 <Col
                     onClick={() => handleColClick(size)}
