@@ -11,7 +11,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import "./Bottom.css";
 
 export default function Bottom() {
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(2);
 
     useEffect(() => {
         const listElements = document.querySelectorAll('.list');

@@ -167,7 +167,7 @@
 
 @media(max-width:1300px) {
     .PANEL .carousel img {
-        border-radius: 10px;
+        border-radius: 10px !important;
     }
 }
 

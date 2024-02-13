@@ -33,4 +33,11 @@
     .card-product {
         width: 40%;
     }
+
+    .pagnition-product {
+        position: relative !important;
+        margin-bottom: 24% !important;
+    }
+
+
 }

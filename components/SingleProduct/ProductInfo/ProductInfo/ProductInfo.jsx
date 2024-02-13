@@ -115,8 +115,8 @@ function ProductInfo(props) {
             </Nav>
 
             {/* Content based on the selected tab */}
-            <div className='bg-white' style={{ height: '80%', borderRadius: '5px', width: '103%' }}>
-                {activeTab === 'link-1' && <p style={{ textAlign: 'right', paddingTop: '3em', marginTop: '-2px' }} className='nav-text px-5' dangerouslySetInnerHTML={{ __html: product.Description }}>
+            <div className='bg-white' style={{ height: 'auto%', borderRadius: '5px', width: '103%' }}>
+                {activeTab === 'link-1' && <p style={{ textAlign: 'right', paddingTop: '2em', marginTop: '-2px' }} className='nav-text px-5' dangerouslySetInnerHTML={{ __html: product.Description }}>
 
                     {/* {product.Description} */}
 

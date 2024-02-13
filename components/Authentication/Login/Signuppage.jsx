@@ -10,6 +10,9 @@ import { useState } from 'react';
 
 export default function Signuppage() {
     const [password, setPassword] = useState('');
+    const [name, setname] = useState("");
+    const [Pass, setpass] = useState("");
+    const [email, setemail] = useState("");
     const passwordStrength = zxcvbn(password);
 
     const handlePasswordChange = (e) => {
@@ -34,7 +37,20 @@ export default function Signuppage() {
     const hrStyle = {
         backgroundColor: getPasswordStrengthColor(),
     };
-
+    async function SignUp() {
+        let item = { name, Pass, email };
+        console.warn(item)
+        let result = await fetch("https://back.fradaksa.net/api/auth/register", {
+            method: 'POST',
+            body: JSON.stringify(item),
+            headers: {
+                "Content_Type": 'application/json',
+                "Accept": 'application/json'
+            }
+        })
+        result = await result.json()
+        console.log("result", result)
+    }
     return (
         <div className="Login-page" dir='rtl' lang='en'>
             <div className="login-components">
@@ -59,15 +75,25 @@ export default function Signuppage() {
                             <div className='form-input'>
                                 <div className='input-content'>
                                     <label>الاسم بالكامل</label>
-                                    <input type='text' />
+                                    <input type='text'
+                                        value={name}
+                                        onChange={(e) => setname(e.target.value)}
+                                    />
                                 </div>
                                 <div className='input-content'>
                                     <label>البريد الإلكتروني </label>
-                                    <input type='email' />
+                                    <input type='email'
+                                        value={email}
+                                        onChange={(e) => setemail(e.target.value)}
+                                    />
                                 </div>
                                 <div className='input-content'>
                                     <label> كلمة السر </label>
-                                    <input type='password' onChange={handlePasswordChange} />
+                                    <input type='password'
+                                        //onChange={handlePasswordChange} 
+                                        value={Pass}
+                                        onChange={(e) => setpass(e.target.value)}
+                                    />
                                 </div>
                                 <div className='strong-password'>
                                     <p> كلمة المرور قوية  </p>
@@ -87,7 +113,7 @@ export default function Signuppage() {
                                     </p>
                                 </div>
                                 <div className='submit'>
-                                    <button>أنشى الحساب</button>
+                                    <button onClick={SignUp}>أنشى الحساب</button>
                                 </div>
 
                             </div>

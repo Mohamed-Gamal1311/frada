@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import './ProductVideo.css'
 function ProductVideo(props) {
 
     const [selectedColorID, setSelectedColorID] = useState(null);
@@ -51,7 +52,12 @@ function ProductVideo(props) {
     return (
 
         <section className='d-flex justify-content-center px-5 py-5'>
-            <Card className="d-flex flex-row-reverse w-100" style={{ textAlign: "right", border: "1px solid #d17a52" }} >
+            <Card className="d-flex flex-row-reverse w-100 conteant_video" style={{ textAlign: "right", border: "1px solid #d17a52" }} >
+
+                <Card.Body className='w-50 descriptionvideo' >
+                    {/* <h1>{product.Videos ? '' : 'No video available'}</h1> */}
+                    <div dangerouslySetInnerHTML={{ __html: product.Video_Description }}></div>
+                </Card.Body>
                 <Card.Body className='w-50'>
                     <Card.Title style={{ color: "#d17a52", textDecoration: 'underline', fontSize: '2.2em' }}>{props.title}</Card.Title>
                     <Card.Text className='pe-2 pt-2' style={{ textAlign: "right", lineHeight: '2em' }} >
@@ -59,15 +65,10 @@ function ProductVideo(props) {
                             {props.desc !== null ? props.desc : ''}
                         </span>
                     </Card.Text>
-                    <div className='d-flex '>
+                    {/* <div className='d-flex '>
                         <Button className="button-product-video" style={{ textAlign: "left", marginTop: '5%', backgroundColor: "#d17a52", border: 'none', fontWeight: 'bold' }} variant="primary">اعرف المزيد</Button>
-                    </div>
+                    </div> */}
                 </Card.Body>
-                <Card.Body className='w-50' >
-                    {/* <h1>{product.Videos ? '' : 'No video available'}</h1> */}
-                    <div dangerouslySetInnerHTML={{ __html: product.Video_Description }}></div>
-                </Card.Body>
-
             </Card>
         </section>
     );

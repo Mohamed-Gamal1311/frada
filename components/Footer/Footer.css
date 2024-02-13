@@ -59,6 +59,10 @@
     width: 100%;
 }
 
+.footer-frada .footer-cont .footer-flex .logo-footer .frada-log:hover {
+    filter: contrast(0);
+}
+
 .footer-frada .footer-cont .footer-flex .logo-footer .frada-log Image {
     width: 100%;
 }

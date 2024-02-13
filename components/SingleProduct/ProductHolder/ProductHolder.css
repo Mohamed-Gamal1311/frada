@@ -1,9 +1,11 @@
 .py-5 {
     padding-top: 0 !important;
+    justify-content: space-around !important;
 }
 
 .SingleProductCardimge {
     padding: 0 !important;
+    justify-content: space-around !important;
 }
 
 @media(max-width:1024px) {

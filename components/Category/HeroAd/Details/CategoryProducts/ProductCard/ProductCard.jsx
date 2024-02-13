@@ -12,7 +12,7 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
 
 
     const [isHovered, setIsHovered] = useState(false);
-    const [hoveredPhoto, setHoveredPhoto] = useState(`https://www.fradaksa.net/back/Laravel/public/Attachment/${id}/${colorid}/${mainphoto}`);
+    const [hoveredPhoto, setHoveredPhoto] = useState(`https://back.fradaksa.net/back/Laravel/public/Attachment/${id}/${colorid}/${mainphoto}`);
     // console.log(photocolors)
     const handlePhotoHoverSmall = (photo) => {
         console.log(photo)
@@ -35,16 +35,16 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
                 <Card.Body>
                     {!isHovered &&
                         <div>
-                            <Card.Title style={{ fontWeight: 'bold', fontSize: '1em' }}>{name}</Card.Title>
-                            <Card.Text style={{ fontWeight: 'bold', fontSize: '0.95em', color: '#9A9A9A' }}>
+                            <Card.Title className='name_product' style={{ fontWeight: 'bold', fontSize: '1em' }}>{name}</Card.Title>
+                            <Card.Text className='code_product' style={{ fontWeight: 'bold', fontSize: '0.95em', color: '#9A9A9A' }}>
                                 {code}
                             </Card.Text>
-                            <Card.Text style={{ fontWeight: '600', fontSize: '1em' }}>
+                            <Card.Text className='color_product' style={{ fontWeight: '600', fontSize: '1em' }}>
                                 {colornum} الوان
                             </Card.Text>
 
 
-                            <Card.Text style={{ fontWeight: '600', fontSize: '0.95em' }}>
+                            <Card.Text className='price_product' style={{ fontWeight: '600', fontSize: '0.95em' }}>
                                 <span style={{ fontWeight: 'bold' }}>
                                     ر.س{price}
                                 </span>
@@ -64,8 +64,8 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
                                 <p className='mx-2 d-flex align-items-center' style={{ fontWeight: "bold", fontSize: '1.2em', color: '#9A9A9A' }}>{colornum - 4 > 0 ? colornum - 4 : <span></span>}+</p>
 
                                 {photocolors.length > 0 && photocolors.slice(0, 4).map((color, index) => (
-                                    <div key={index} style={{ marginLeft: "2%" }} onMouseEnter={() => handlePhotoHoverSmall(`https://www.fradaksa.net/back/Laravel/public/Attachment/${id}/${color.ColorID}/${color.Image}`)}>
-                                        <Image src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${id}/${color.ColorID}/${color.Image}`} alt={`Image ${index}`} className="ml-2" width={40} height={40} />
+                                    <div key={index} style={{ marginLeft: "2%" }} onMouseEnter={() => handlePhotoHoverSmall(`https://back.fradaksa.net/Laravel/public/Attachment/${id}/${color.ColorID}/${color.Image}`)}>
+                                        <Image src={`https://back.fradaksa.net/Laravel/public/Attachment/${id}/${color.ColorID}/${color.Image}`} alt={`Image ${index}`} className="ml-2" width={40} height={40} />
                                     </div>
                                 ))}
 

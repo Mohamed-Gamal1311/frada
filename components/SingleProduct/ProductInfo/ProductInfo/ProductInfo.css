@@ -41,6 +41,10 @@
     font-weight: 700;
 }
 
+.info-addition {
+    margin-bottom: 2%;
+}
+
 a.nav-link.active {
     background-color: white !important;
     border: 1px solid transparent;

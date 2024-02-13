@@ -2,3 +2,11 @@
      background-color: white !important;
      color: #d17a52 !important
  }
+
+ .descriptionvideo {
+     width: 100% !important;
+ }
+
+ .conteant_video {
+     flex-wrap: wrap !important;
+ }

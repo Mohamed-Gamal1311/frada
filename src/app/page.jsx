@@ -20,16 +20,16 @@ export default function Home() {
   return (
     // <Header />
     <>
-    
-      <Header />
+
+      {/* <Header /> */}
       {/* <AdContainer /> */}
       {/* <ProductInfo /> */}
       {/* <DynamicAd /> */}
       {/* <ProductVideo /> */}
       {/* <ProductReviews /> */}
       <Homepage />
-      <Footer />
-      <FooterMobile />
+      {/* <Footer /> */}
+      {/* <FooterMobile /> */}
 
     </>
   )

@@ -18,8 +18,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={cairo.className} suppressHydrationWarning={true} >
+
         <SizeProvider>
+          <Header />
           {children}
+          <Footer />
+          <FooterMobile />
         </SizeProvider>
       </body>
     </html>

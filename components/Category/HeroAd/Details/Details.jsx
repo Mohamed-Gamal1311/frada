@@ -58,7 +58,7 @@ export default function Details(props) {
 
     return (
         <section>
-            <nav className='me-5 d-flex flex-row-reverse' >
+            <nav className='d-flex flex-row-reverse title-filter' style={{ marginRight: '0.1rem' }}  >
 
 
 

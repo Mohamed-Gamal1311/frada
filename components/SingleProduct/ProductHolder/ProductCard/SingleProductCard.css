@@ -65,6 +65,10 @@
     height: auto;
 }
 
+.image-holder-content {
+    margin-right: 7%;
+}
+
 .active-size {
     background-color: #323232;
     color: #D17A52 !important;
@@ -114,6 +118,10 @@
     .detail-content {
         width: 100% !important;
         background-color: #fff;
+    }
+
+    .image-holder-content {
+        margin-right: 0;
     }
 
     .single-cors-holder h6 {

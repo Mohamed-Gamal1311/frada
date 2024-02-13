@@ -23,11 +23,11 @@ export default function Up() {
                 <p>تابع كل جديد من خلال الإشتراك في النشرة الإخبارية</p>
             </div>
             <div className="header-content-logos">
-                <Image className='header-svg' src={Facebook} alt="Facebook" style={{ height: '70%', marginRight: '2px' }} />
-                <Image className='header-svg' src={Instagram} alt="Instagram" />
-                <Image className='header-svg' src={Snapchat} alt="Snapchat" />
-                <Image className='header-svg' src={Tiktok} alt="Tiktok" />
-                <Image className='header-svg' src={Twitter} alt="Twitter" />
+                <Image className='header-svg' src={Facebook} alt="Facebook" style={{ height: '86%', marginRight: '2px' }} />
+                <a href='https://www.instagram.com/fbyfarada/?hl=ar' style={{ textDecoration: 'none' }}> <Image className='header-svg' src={Instagram} alt="Instagram" /></a>
+                <a href='https://www.snapchat.com/add/fradaksa?locale=ar' style={{ textDecoration: 'none' }} > <Image className='header-svg' src={Snapchat} alt="Snapchat" /></a>
+                <a href='https://www.tiktok.com/tag/%D9%81%D8%B1%D8%A7%D8%AF%D8%A7' style={{ textDecoration: 'none' }}> <Image className='header-svg' src={Tiktok} alt="Tiktok" /></a>
+                <a href='https://twitter.com/fradaksa?lang=ar' style={{ textDecoration: 'none' }}> <Image className='header-svg' src={Twitter} alt="Twitter" /></a>
 
 
             </div>

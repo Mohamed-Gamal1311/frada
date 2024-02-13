@@ -8,10 +8,10 @@ export default function ColorProduct() {
             <div className='color-image-holder'>
 
                 <div style={{ cursor: 'pointer' }}>
-                    <Image src="https://i.ibb.co/VTjkqx7/7.jpg" width={80} height={80} alt={'small-Image'} className="ml-2" />
+                    {/* <Image src="https://i.ibb.co/VTjkqx7/7.jpg" width={80} height={80} alt={'small-Image'} className="ml-2" /> */}
                 </div>
                 <div style={{ cursor: 'pointer' }}>
-                    <Image src="https://i.ibb.co/VTjkqx7/7.jpg" width={80} height={80} alt={'small-Image'} className="ml-2" />
+                    {/* <Image src="https://i.ibb.co/VTjkqx7/7.jpg" width={80} height={80} alt={'small-Image'} className="ml-2" /> */}
                 </div>
             </div>
             {/* <Image width={50} height={50} /> */}

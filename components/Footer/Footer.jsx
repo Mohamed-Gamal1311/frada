@@ -47,7 +47,12 @@ export default function Footer() {
                     <div className='footer-cont'>
                         <div className='footer-flex'>
                             <div className='logo-footer'>
-                                <div className='frada-log'><Image src={logofrada} style={{ width: '75%', marginRight: '15px', fill: 'white' }} alt='logofrada' priority="auto" /></div>
+                                <div className='frada-log'>
+
+                                    <Link href="/" style={{ textDecoration: 'none' }}>
+                                        <Image src={logofrada} style={{ width: '75%', marginRight: '15px', fill: 'white' }} alt='logofrada' priority="auto" />
+                                    </Link>
+                                </div>
 
 
                             </div>
@@ -109,10 +114,12 @@ export default function Footer() {
                             </div>
 
                             <div className='socialdisk' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '23%' }}>
-                                <div className='content-social'> <Image src={snapchat} className='social-media' alt='snapchat' />
-                                    <Image src={tiktok} className='social-media' alt='tiktok' />
-                                    <Image src={twitter} className='social-media' alt='twitter' />
-                                    <Image src={insta} className='social-media' alt='insta' />
+                                <div className='content-social'>
+
+                                    <a href='https://www.snapchat.com/add/fradaksa?locale=ar' style={{ textDecoration: 'none' }} > <Image src={snapchat} className='social-media' alt='snapchat' /> </a>
+                                    <a href='https://www.tiktok.com/tag/%D9%81%D8%B1%D8%A7%D8%AF%D8%A7' style={{ textDecoration: 'none' }}>  <Image src={tiktok} className='social-media' alt='tiktok' /> </a>
+                                    <a href='https://twitter.com/fradaksa?lang=ar' style={{ textDecoration: 'none' }}>  <Image src={twitter} className='social-media' alt='twitter' /> </a>
+                                    <a href='https://www.instagram.com/fbyfarada/?hl=ar' style={{ textDecoration: 'none' }}> <Image src={insta} className='social-media' alt='insta' /> </a>
                                     <Image src={facebook} className='social-media' alt='facebook' />
                                 </div>
                             </div>
@@ -138,7 +145,7 @@ export default function Footer() {
 
             </div>
 
-        </div>
+        </div >
     )
 }
 
