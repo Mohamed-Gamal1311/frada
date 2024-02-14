@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 
 export default function SingleProductCard() {
-
+    // const { ProductID } = router.query;
 
     const [selectedColorID, setSelectedColorID] = useState(null);
     const [images, setImages] = useState([]);
@@ -27,7 +27,8 @@ export default function SingleProductCard() {
         // {{URL}}/getProductsBySub/1
         const fetchProducts = async () => {
             try {
-                const response = await fetch(`https://back.fradaksa.net/api/getProduct/${params.ProductID}`);
+                const response = await fetch(`https://back.fradaksa.net/api/getProduct/${params.ProductID}`, { caches: 'no-cache' });
+
                 const data = await response.json();
 
                 setProduct(data.data);
@@ -101,7 +102,7 @@ export default function SingleProductCard() {
                                 {product.Colors && product.Colors.length > 1 ? (
                                     product.Colors.map((color, index) => (
                                         <div className='image-color' key={index} style={{ cursor: 'pointer' }} onClick={() => handleImageClick(color.ColorID, color.Images, color.Images[0])}>
-                                            <Image
+                                            <img
                                                 key={index}
                                                 src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${product.ProductID}/${color.ColorID}/${color.Images[0]}`}
                                                 width={50}
@@ -109,14 +110,15 @@ export default function SingleProductCard() {
                                                 alt={`${color}-Image`}
                                                 className="ml-2"
                                             />
+
                                         </div>
                                     ))
                                 ) : (
                                     // product.map((nocolor, index) => (
                                     product.Colors && product.Colors.map((color, index) => (
                                         <div key={index}>
-                                            <Image
-                                                src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${product.ProductID}`}
+                                            <img
+                                                src={`https://back.fradaksa.net/back/Laravel/public/Attachment/${product.ProductID}`}
                                                 width={50}
                                                 height={50}
                                                 className="ml-2"
