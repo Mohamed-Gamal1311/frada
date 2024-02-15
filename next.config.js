@@ -38,6 +38,7 @@ module.exports = {
         domains: ['fradaksa.com'],
     },
 };
+
 // module.exports = {
 //     webpack(config) {
 //         config.module.rules.push({

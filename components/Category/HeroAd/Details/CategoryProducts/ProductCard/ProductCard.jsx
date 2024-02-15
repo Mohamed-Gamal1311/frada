@@ -12,7 +12,7 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
 
 
     const [isHovered, setIsHovered] = useState(false);
-    const [hoveredPhoto, setHoveredPhoto] = useState(`https://www.fradaksa.net/back/Laravel/public/Attachment/${id}/${colorid}/${mainphoto}`);
+    const [hoveredPhoto, setHoveredPhoto] = useState(`https://www.fradaksa.net/back/Laravel/public/Attachment/${id}/${colorid}/${mainphoto}`, { next: { revalidate: 3 } });
     // console.log(photocolors)
     const handlePhotoHoverSmall = (photo) => {
         console.log(photo)
@@ -65,7 +65,7 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
 
                                 {photocolors.length > 0 && photocolors.slice(0, 4).map((color, index) => (
                                     <div key={index} style={{ marginLeft: "2%" }} onMouseEnter={() => handlePhotoHoverSmall(`https://back.fradaksa.net/Laravel/public/Attachment/${id}/${color.ColorID}/${color.Image}`)}>
-                                        <Image src={`https://back.fradaksa.net/Laravel/public/Attachment/${id}/${color.ColorID}/${color.Image}`} alt={`Image ${index}`} className="ml-2" width={40} height={40} />
+                                        <img src={`https://back.fradaksa.net/Laravel/public/Attachment/${id}/${color.ColorID}/${color.Image}`} alt={`Image ${index}`} className="ml-2" width={40} height={40} />
                                     </div>
 
                                 ))}
@@ -96,3 +96,4 @@ export default function ProductCard({ id, name, colorid, code, price, discount, 
     )
 
 }
+// export const revalidate = 3;

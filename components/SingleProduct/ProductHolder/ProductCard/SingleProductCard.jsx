@@ -27,7 +27,7 @@ export default function SingleProductCard() {
         // {{URL}}/getProductsBySub/1
         const fetchProducts = async () => {
             try {
-                const response = await fetch(`https://back.fradaksa.net/api/getProduct/${params.ProductID}`, { caches: 'no-cache' });
+                const response = await fetch(`https://back.fradaksa.net/api/getProduct/${params.ProductID} `, { next: { revalidate: 120 } });
 
                 const data = await response.json();
 
@@ -168,4 +168,4 @@ export default function SingleProductCard() {
     )
 }
 
-
+export const revalidate = 120;

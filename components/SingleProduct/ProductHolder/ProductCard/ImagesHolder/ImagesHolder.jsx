@@ -15,7 +15,7 @@ export default function ImagesHolder(props) {
 
 
     const [hoveredPhoto, setHoveredPhoto] = useState(null);
-    const photo = `https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${props.images[0]}`
+    const photo = (`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${props.images[0]}`, { next: { revalidate: 3 } })
     const handlePhotoHover = (photo) => {
         setHoveredPhoto(photo);
     };
@@ -24,7 +24,7 @@ export default function ImagesHolder(props) {
     useEffect(() => {
 
 
-        setHoveredPhoto(`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${props.images[0]}`)
+        setHoveredPhoto(`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${props.images[0]}`, { next: { revalidate: 3 } })
 
 
     }, [props.images, props.id, props.colorid]);
@@ -35,14 +35,14 @@ export default function ImagesHolder(props) {
             <div className='images-holder'>
                 <div className='mainimage-holder'>
                     {/* <MouseParallax> */}
-                    <Image src={hoveredPhoto === null ? (photo) : (hoveredPhoto)} width={500} height={500} alt={'main-img'} />
+                    <img src={hoveredPhoto === null ? (photo) : (hoveredPhoto)} width={500} height={500} alt={'main-img'} />
                     {/* </MouseParallax> */}
                 </div>
                 <div className='subimage-holder'>
 
                     {props.images.length > 0 ? props.images.map((image, index) => (
                         <div key={index} className='image-hover' onMouseEnter={() => handlePhotoHover(`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`)}>
-                            <Image src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={80} height={80} alt={"IMAGE"} className="ml-2" />
+                            <img src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={80} height={80} alt={"IMAGE"} className="ml-2" />
                         </div>
                     )) : (<div>none</div>)}
 
@@ -58,7 +58,7 @@ export default function ImagesHolder(props) {
 
                             <Carousel.Caption key={index}>
 
-                                <Image src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={350} height={350} alt={"IMAGE"} className="ml-2" />
+                                <img src={`https://www.fradaksa.net/back/Laravel/public/Attachment/${props.id}/${props.colorid}/${image}`} width={350} height={350} alt={"IMAGE"} className="ml-2" />
                             </Carousel.Caption>
                         </Carousel.Item>
                     )) : (<div>none</div>)}
@@ -68,3 +68,4 @@ export default function ImagesHolder(props) {
     )
 }
 
+// export const revalidate = 3
